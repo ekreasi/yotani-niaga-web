@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+html, body {
+    height: 100%;
+}
+body, input {
+    font-family: 'Nunito', sans-serif;
+}
+a {
+    color: #F26327;
+}
+a:hover {
+    text-decoration: none;
+    color: #F26327;
+}
+.no-padding {
+    padding: 0 !important;
+}
+.no-margin {
+    margin: 0 !important;
+}
+.btn {
+    font-size: 16px !important;
+    border-radius: 5px !important;
+}
+.btn-primary {
+    color: #fff !important;
+    background-color: #F26327 !important;
+    border-color: #F26327 !important;
+    padding: 10px 36px;
+}
+[class*="col-"] {
+    float: left;
+}
+.form-group {
+    position: relative;
+}
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+    margin-right: 9px;
+}
+.checkbox input {
+    width: 21px;
+    height: 21px;
+    vertical-align: sub;
+}
+.forgot-pass-text {
+    color: #F26327;
+    font-style: italic;
+}
+.forgot-pass-text:hover {
+    color: #F26327;
+}
+.center-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.pad-lr-80 {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.pad-r-40 {
+    padding-right: 40px;
+}
+.pad-r-80 {
+    padding-right: 80px;
+}
+.pad-l-40 {
+    padding-left: 40px;
+}
+.pad-b-40 {
+    padding-bottom: 40px;
+}
+.toggle-password {
+    position: absolute;
+    bottom: 12px;
+    right: 10px;
+    cursor: pointer;
+}
+.fa {
+    color: #4D4D4D;
+}

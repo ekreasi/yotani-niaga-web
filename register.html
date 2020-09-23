@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yotani Niaga</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">  
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/icons/fontawesome/styles.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="d-flex flex-column h-100">
+    <div class="card card-body  justify-content-center no-border">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="scroll-form pad-b-20 col-md-4 col-lg-4 col-sm-4">
+                    <h4 class="font-weight-bold mb-4">Selamat Datang Di YoTani Niaga</h4>
+                    <h5 class="title mb-4">Silahkan Lengkapi Data Anda</h5>
+                    <form class="form-signin">
+                        <div class="form-group">
+                            <label for="inputCompany" class="">Nama Perusahaan<span class="text-danger"> *</span></label>
+                            <input type="text" id="inputUsername" class="form-control" placeholder="Nama Perusahaan Anda" required autofocus="">
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                        <h4 class="font-weight-bold mt-4 mb-3">PIC</h4>
+                        <div class="form-group">
+                            <label for="inputName" class="">Nama Lengkap<span class="text-danger"> *</span></label>
+                            <input type="text" id="inputPassword" class="form-control" placeholder="Nama Lengkap Anda" required>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPhone" class="">No. Telepon<span class="text-danger"> *</span></label>
+                            <input type="text" id="inputPhone" class="form-control" placeholder="No. Telepon Anda" required>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="">Email<span class="text-danger"> *</span></label>
+                            <input type="email" id="inputEmail" class="form-control" placeholder="email@email.com" required>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="">PIC?<span class="text-danger"> *</span></label>
+                            <div class="btn-group d-block btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-radio mr-3 active">
+                                <input type="radio" name="options" id="picYes" autocomplete="off" checked> Ya
+                                <span class="checkmark2"></span>
+                                </label>
+                                <label class="btn btn-radio">
+                                <input type="radio" name="options" id="picNo" autocomplete="off"> Tidak
+                                <span class="checkmark2"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword" class="">Kata Sandi</label>
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Kata Sandi" required>
+                            <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="retypePassword" class="">Konfirmasi Kata Sandi</label>
+                            <input type="password" id="retypePassword" class="form-control" placeholder="Ulangi Kata Sandi" required>
+                            <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                        </div>
+                        <button class="btn btn-primary btn-block mt-5 mb-3" type="submit">Daftar</button>
+                        <button class="btn btn-secondary btn-block mb-3" type="button">Kembali</button>
+                    </form>
+                </div>
+                <div class="pad-l-40 col-md-8 col-lg-8 col-sm-8">
+                    <img src="assets/img/yotani_register.png" alt="" class="col-md-12">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-muted">
+
+        <!-- Copyright -->
+        <div class="footer-copyright bg-green text-center py-3">Copyright © 2020 by PT. Indocyber Global Teknologi</div>
+        <!-- Copyright -->
+  
+    </footer>
+    <!-- Footer -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!-- Library  -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -52,12 +52,12 @@
             <a class="nav-link" href="#">Petani</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Transaksi
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">Kuota Pabrik</a>
-              <a class="dropdown-item" href="penerimaan-petani.html">Penerimaan Dari Petani</a>
+              <a class="dropdown-item" href="#">Penerimaan Dari Petani</a>
               <!-- <div class="dropdown-divider"></div> -->
               <a class="dropdown-item" href="#">Pembayaran</a>
             </div>
@@ -132,7 +132,7 @@
         <div aria-label="breadcrumb" class="row">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="transaksi.html">Transaksi</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Kuota Pabrik</li>
+            <li class="breadcrumb-item active" aria-current="page">Penerimaan Dari Petani</li>
           </ol>
         </div>
       </div>
@@ -141,7 +141,7 @@
     <section class="content">
       <div class="container-fluid no-padding">
         <div class="card">
-          <div class="card-header">
+          <!-- <div class="card-header">
             <div class='container-fluid'>
               <div class="row align-items-center">
                 <div class="mr-auto ">
@@ -153,39 +153,55 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <div class="card-body">
             <div class="font-title col-md-12 mb-4">
-              <h6 class="no-margin">Daftar Supplier yang Telah Melakukan Booking Supply</h6>
+              <h6 class="no-margin">Daftar Penerimaan Dari Petani</h6>
             </div>
             <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
               <thead>
               <tr>
                 <th>No</th>
-                <th>Nama Petani</th>
-                <th>Tanggal</th>
-                <th>Jumlah TBS</th>
+                <th>Nama Supplier</th>
+                <th>Tanggal Pengiriman</th>
+                <th>Status Transaksi</th>
+                <th>Kebun Petani</th>
+                <th>Lokasi Kebun</th>
+                <th>Jumlah Penerimaan</th>
+                <th>Aksi</th>
               </tr>
               </thead>
               <tbody>
               <tr>
                 <td>1</td>
                 <td>Sarman</td>
-                <td>03/09/2020  11:00</td>
+                <td>07/09/2020  08:00</td>
+                <td>Proses</td>
+                <td>Kebun 1</td>
+                <td>Kebun Sektor 1</td>
                 <td>50.000 Kg</td>
+                <td><a href="#"><span class="fa fa-eye orange d-none ml-2"></span></a></td>
               </tr>
               <tr>
                 <td>2</td>
-                <td>Andika</td>
-                <td>03/09/2020  17:44</td>
+                <td>CV Palmia Loka Jaya</td>
+                <td>07/09/2020  17:44</td>
+                <td>Proses</td>
+                <td>Kebun 1</td>
+                <td>Kebun Sektor 2</td>
                 <td>40.000 Kg</td>
+                <td><a data-toggle="modal" data-target="#detailPenerimaan"><span class="fa fa-eye orange ml-2"></span></a></td>
               </tr>
               <tr>
                 <td>3</td>
                 <td>Rahmawati</td>
-                <td>03/09/2020  10:00</td>
+                <td>07/09/2020  18:00</td>
+                <td>Proses</td>
+                <td>Kebun 2</td>
+                <td>Kebun Sektor 3</td>
                 <td>40.000 Kg</td>
+                <td><a href="#"><span class="fa fa-eye orange d-none ml-2"></span></a></td>
               </tr>
               
               </tbody>
@@ -215,31 +231,23 @@
   </footer>
   <!-- Footer -->
   <!-- Modal -->
-  <div class="modal fade" id="filterModalForm" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="filterModalFormLabel" aria-hidden="true">
+  <div class="modal fade" id="detailPenerimaan" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="detailPenerimaanLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header bg-hijau">
-                <h6 class="modal-title" id="filterModalFormLabel">Atur Nilai Kuota</h6>
+                <h6 class="modal-title" id="detailPenerimaanLabel">Detail Penerimaan</h6>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <form id="transactionFilterForm">
+                <form>
                     <div class="col-md-12 no-padding">
                       <div class="col-md-6 float-left">
+                        <h6 class="green font-weight-bold mb-3">Petani</h6>
                         <div class="form-group">
-                            <label for="" class="">Tipe Penerimaan<span class="text-danger"> *</span></label>
-                            <div class="btn-group d-block btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-radio font-weight-normal mr-3 active">
-                                <input type="radio" name="options" id="picYes" autocomplete="off" checked> Terbuka
-                                <span class="checkmark2"></span>
-                                </label>
-                                <label class="btn btn-radio font-weight-normal">
-                                <input type="radio" name="options" id="picNo" autocomplete="off"> Tertutup
-                                <span class="checkmark2"></span>
-                                </label>
-                            </div>
+                            <p class="mb-0">Kartika Wati</p>
+                            <b>08123456789</b>
                         </div>
                         <div class="form-group">
                             <label for="" class="">Jam Operasional<span class="text-danger"> *</span></label>

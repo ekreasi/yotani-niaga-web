@@ -372,3 +372,41 @@ label.btn-radio {
 .green {
     color: #009444;
 }
+.timer-wrap {
+    background-image: url(../img/img-time-otp.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+}
+.timer-wrap h1 {
+    text-align: center;
+    padding: 125px 0px;
+    font-weight: 400;
+    color: #4D4D4D;
+}
+.otp-wrap form .form-group .otp-input {
+    padding: 0px 5px;
+    display: block;
+    width: 25%;
+    float: left;
+}
+.login-wrap span.register-link-wrap, .otp-wrap span.otp-link-wrap {
+    margin: 20px auto;
+    text-align: center;
+    display: block;
+}
+.forgot-wrap p, .register-wrap p {
+    font-size: 20px;
+    color: #4D4D4D;
+    margin-bottom: 20px !important;
+}
+.forgot-wrap h2, .register-wrap h2 {
+    font-weight: 700;
+    font-size: 22px;
+    color: #4d4d4d;
+    margin: 0px 0px 20px 0px;
+}
+.forgot-wrap {
+    margin-top: 80px;
+}

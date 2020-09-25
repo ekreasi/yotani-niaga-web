@@ -52,14 +52,14 @@
             <a class="nav-link" href="#">Petani</a>
           </li>
           <li class="nav-item active dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Transaksi <span class="sr-only">(current)</span>
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Transaksi<span class="sr-only">(current)</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="kuota-pabrik.html">Kuota Pabrik</a>
-              <a class="dropdown-item" href="">Penerimaan Dari Petani</a>
+              <a class="dropdown-item" href="penerimaan-petani.html">Penerimaan Dari Petani</a>
               <!-- <div class="dropdown-divider"></div> -->
-              <a class="dropdown-item" href="pembayaran.html">Pembayaran</a>
+              <a class="dropdown-item" href="#">Pembayaran</a>
             </div>
           </li>
           <li class="nav-item">
@@ -132,7 +132,7 @@
         <div aria-label="breadcrumb" class="row">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="transaksi.html">Transaksi</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Daftar Penerimaan Dari Petani</li>
+            <li class="breadcrumb-item active" aria-current="page">Pembayaran</li>
           </ol>
         </div>
       </div>
@@ -163,45 +163,49 @@
               <thead>
               <tr>
                 <th>No</th>
-                <th>Nama Supplier</th>
-                <th>Tanggal Pengiriman</th>
+                <th>No. Invoice</th>
+                <th>Nama Petani</th>
+                <th>Tanggal</th>
+                <th>Jumlah TBS</th>
+                <th>Rekening Tujuan</th>
+                <th>Harga ToTal Pembelian</th>
+                <th>Nilai Transfer</th>
                 <th>Status Transaksi</th>
-                <th>Kebun Petani</th>
-                <th>Lokasi Kebun</th>
-                <th>Jumlah Penerimaan</th>
-                <th>Aksi</th>
               </tr>
               </thead>
               <tbody>
               <tr>
                 <td>1</td>
+                <td>VIII/XX/2020081/982922</td>
                 <td>Sarman</td>
-                <td>07/09/2020  08:00</td>
-                <td>Proses</td>
-                <td>Kebun 1</td>
-                <td>Kebun Sektor 1</td>
+                <td>07/09/2020  09:21</td>
                 <td>50.000 Kg</td>
-                <td><a href="#"><span class="fa fa-eye orange d-none ml-2"></span></a></td>
+                <td>BCA</td>
+                <td>Rp 355.980,93</td>
+                <td>Rp 349.000,92</td>
+                <td>Baru</td>
               </tr>
               <tr>
                 <td>2</td>
-                <td>CV Palmia Loka Jaya</td>
-                <td>07/09/2020  17:44</td>
-                <td>Proses</td>
-                <td>Kebun 1</td>
-                <td>Kebun Sektor 2</td>
+                <td>VIII/XX/2020081/98229</td>
+                <td>Andika</td>
+                <td>07/09/2020  08:33</td>
                 <td>40.000 Kg</td>
-                <td><a data-toggle="modal" data-target="#detailPenerimaan"><span class="fa fa-eye orange ml-2"></span></a></td>
+                <td>BCA</td>
+                <td>Rp 245.095,08</td>
+                <td>Rp 233.432,89</td>
+                <td>Proses</td>
               </tr>
               <tr>
                 <td>3</td>
+                <td>VII/XX/2020081/232323</td>
                 <td>Rahmawati</td>
-                <td>07/09/2020  18:00</td>
-                <td>Proses</td>
-                <td>Kebun 2</td>
-                <td>Kebun Sektor 3</td>
+                <td>06/09/2020  19:35</td>
                 <td>40.000 Kg</td>
-                <td><a href="#"><span class="fa fa-eye orange d-none ml-2"></span></a></td>
+                <td>Mandiri</td>
+                <td>Rp 1.282.400,68</td>
+                <td>Rp 1.221.333,99</td>
+                <td>Proses</td>
               </tr>
               
               </tbody>
@@ -228,39 +232,96 @@
       <div class="footer-copyright bg-green text-center py-3">Copyright © 2020 by PT Indocyber Global Teknologi</div>
       <!-- Copyright -->
 
-    </footer>
-    <!-- Footer -->
-    <!-- Modal -->
-    <div class="modal fade" id="detailPenerimaan" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="detailPenerimaanLabel" aria-hidden="true">
-      <div class="modal-dialog modal-sm">
-          <div class="modal-content">
-              <div class="modal-header bg-hijau">
-                  <h6 class="modal-title" id="detailPenerimaanLabel">Detail Penerimaan</h6>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
-              <div class="modal-body">
-                  <div class="col-md-12 no-padding">
-                    <h6 class="green font-weight-bold mb-3">Petani</h6>
-                    <div class="form-group">
-                        <p class="mb-0">Kartika Wati</p>
-                        <b>08123456789</b>
+  </footer>
+  <!-- Footer -->
+  <!-- Modal -->
+  <!-- <div class="modal fade" id="filterModalForm" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="filterModalFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-hijau">
+                <h6 class="modal-title" id="filterModalFormLabel">Atur Nilai Kuota</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="transactionFilterForm">
+                    <div class="col-md-12 no-padding">
+                      <div class="col-md-6 float-left">
+                        <div class="form-group">
+                            <label for="" class="">Tipe Penerimaan<span class="text-danger"> *</span></label>
+                            <div class="btn-group d-block btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-radio font-weight-normal mr-3 active">
+                                <input type="radio" name="options" id="picYes" autocomplete="off" checked> Terbuka
+                                <span class="checkmark2"></span>
+                                </label>
+                                <label class="btn btn-radio font-weight-normal">
+                                <input type="radio" name="options" id="picNo" autocomplete="off"> Tertutup
+                                <span class="checkmark2"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="">Jam Operasional<span class="text-danger"> *</span></label>
+                            <div class="input-group">
+                              <input type="time" class="form-control" required>
+                              <span class="input-group-addon">-</span>
+                              <input type="time" class="form-control" required>
+                            </div>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                        <div class="form-group">
+                            <label class="">Kuota Pabrik<span class="text-danger"> *</span></label>
+                            <input type="email" class="form-control" required>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 float-left">
+                        <div class="form-group">
+                            <input type="checkbox" autocomplete="off"> Sedang dalam pemeliharaan
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="">Periode Pemeliharaan</label>
+                            <div class="input-group">
+                              <input type="date" class="form-control">
+                              <span class="input-group-addon">-</span>
+                              <input type="time" class="form-control">
+                            </div>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="">Mulai Beroperasi</label>
+                            <div class="input-group">
+                              <input type="date" class="form-control">
+                              <span class="input-group-addon">-</span>
+                              <input type="time" class="form-control">
+                            </div>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                        <div class="form-group">
+                            <label class="">Terakhir Terima</label>
+                            <input type="email" class="form-control">
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="form-group">
-                        <p class="mb-0">Diana Santri</p>
-                        <b>08123456789</b>
-                    </div>
-                    <div class="form-group">
-                        <p class="mb-0">Jaro Petang</p>
-                        <b>089567827228</b>
-                    </div>
+                   
+                </form>
+            </div>
+            <div class="modal-footer">
+              <div class="row">
+                  <div class="col no-padding-left">
+                      <a  href="" class="btn btn-secondary btn-block">Kembali</a>
+                  </div>
+                  <div class="col no-padding-right">
+                      <a href="" class="btn btn-secondary-gradient btn-block">Simpan</a>
                   </div>
               </div>
-          </div>
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
+    </div> -->
+</div>
 
   <!-- jQuery -->
   <script src="assets/libs/jquery/jquery.min.js"></script>

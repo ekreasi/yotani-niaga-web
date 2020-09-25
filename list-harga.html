@@ -36,7 +36,7 @@
     
       <div class="collapse navbar-collapse font-weight-medium" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="index.html">Beranda</a>
           </li>
           <li class="nav-item">
@@ -51,19 +51,19 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Petani</a>
           </li>
-          <li class="nav-item active dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Transaksi <span class="sr-only">(current)</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="kuota-pabrik.html">Kuota Pabrik</a>
-              <a class="dropdown-item" href="">Penerimaan Dari Petani</a>
+              <a class="dropdown-item" href="">Kuota Pabrik</a>
+              <a class="dropdown-item" href="penerimaan-petani.html">Penerimaan Dari Petani</a>
               <!-- <div class="dropdown-divider"></div> -->
               <a class="dropdown-item" href="pembayaran.html">Pembayaran</a>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="list-harga.html">List Harga</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">List Harga</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Report</a>
@@ -131,8 +131,8 @@
       <div class="container-fluid">
         <div aria-label="breadcrumb" class="row">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="transaksi.html">Transaksi</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Daftar Penerimaan Dari Petani</li>
+            <li class="breadcrumb-item">List Harga</li>
+            <li class="breadcrumb-item active" aria-current="page"></li>
           </ol>
         </div>
       </div>
@@ -148,60 +148,42 @@
                   <h6 class="no-margin">Kuota Hari ini belum diatur</h6>
                 </div>
                 <div class="ml-auto no-padding">
-                  <a class="btn btn-secondary " data-toggle="modal" data-target="#filterModalForm">Atur Nilai Kuota</a>
-                  <a class="btn btn-secondary-gradient ml-2" data-toggle="" data-target="">Reset Kuota Hari Ini</a>
+                  <a class="btn btn-secondary " data-toggle="modal" data-target="#filterModalForm">Tambah Harga</a>
                 </div>
               </div>
             </div>
           </div> -->
 
           <div class="card-body">
-            <div class="font-title col-md-12 mb-4">
-              <h6 class="no-margin">Daftar Pembayaran</h6>
+            <div class="font-title col-md-12 mb-3">
+              <h6 class="no-margin">Daftar Harga Tandan Buah Segar (TBS)</h6>
+            </div>
+            <div class="ml-auto mb-3 no-padding">
+              <a class="btn btn-secondary " data-toggle="modal" data-target="#addPrice">Tambah Harga</a>
             </div>
             <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
               <thead>
               <tr>
                 <th>No</th>
-                <th>Nama Supplier</th>
-                <th>Tanggal Pengiriman</th>
-                <th>Status Transaksi</th>
-                <th>Kebun Petani</th>
-                <th>Lokasi Kebun</th>
-                <th>Jumlah Penerimaan</th>
-                <th>Aksi</th>
+                <th>Harga TBS</th>
+                <th>Tanggal</th>
               </tr>
               </thead>
               <tbody>
               <tr>
                 <td>1</td>
-                <td>Sarman</td>
-                <td>07/09/2020  08:00</td>
-                <td>Proses</td>
-                <td>Kebun 1</td>
-                <td>Kebun Sektor 1</td>
-                <td>50.000 Kg</td>
-                <td><a href="#"><span class="fa fa-eye orange d-none ml-2"></span></a></td>
+                <td>Rp 1.485,72</td>
+                <td>08/09/2020</td>
               </tr>
               <tr>
                 <td>2</td>
-                <td>CV Palmia Loka Jaya</td>
-                <td>07/09/2020  17:44</td>
-                <td>Proses</td>
-                <td>Kebun 1</td>
-                <td>Kebun Sektor 2</td>
-                <td>40.000 Kg</td>
-                <td><a data-toggle="modal" data-target="#detailPenerimaan"><span class="fa fa-eye orange ml-2"></span></a></td>
+                <td>Rp 1.860,43</td>
+                <td>07/09/2020</td>
               </tr>
               <tr>
                 <td>3</td>
-                <td>Rahmawati</td>
-                <td>07/09/2020  18:00</td>
-                <td>Proses</td>
-                <td>Kebun 2</td>
-                <td>Kebun Sektor 3</td>
-                <td>40.000 Kg</td>
-                <td><a href="#"><span class="fa fa-eye orange d-none ml-2"></span></a></td>
+                <td>Rp 1.648,80</td>
+                <td>06/09/2020</td>
               </tr>
               
               </tbody>
@@ -230,37 +212,47 @@
 
     </footer>
     <!-- Footer -->
-    <!-- Modal -->
-    <div class="modal fade" id="detailPenerimaan" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="detailPenerimaanLabel" aria-hidden="true">
-      <div class="modal-dialog modal-sm">
-          <div class="modal-content">
-              <div class="modal-header bg-hijau">
-                  <h6 class="modal-title" id="detailPenerimaanLabel">Detail Penerimaan</h6>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
-              <div class="modal-body">
-                  <div class="col-md-12 no-padding">
-                    <h6 class="green font-weight-bold mb-3">Petani</h6>
-                    <div class="form-group">
-                        <p class="mb-0">Kartika Wati</p>
-                        <b>08123456789</b>
+  <!-- Modal -->
+  <div class="modal fade" id="addPrice" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="addPriceLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header bg-hijau">
+                <h6 class="modal-title" id="addPriceLabel">Detail Penerimaan</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="col-md-12 no-padding">
+                      <h6 class="green font-weight-bold mb-3">Petani</h6>
+                      <div class="form-group">
+                          <label class="">Harga TBS<span class="text-danger"> *</span></label>
+                          <input type="text" class="form-control" required>
+                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                      </div>
+                      <div class="form-group">
+                          <label class="">Tanggal<span class="text-danger"> *</span></label>
+                          <input type="date" class="form-control" required>
+                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                      </div>
                     </div>
-                    <div class="form-group">
-                        <p class="mb-0">Diana Santri</p>
-                        <b>08123456789</b>
-                    </div>
-                    <div class="form-group">
-                        <p class="mb-0">Jaro Petang</p>
-                        <b>089567827228</b>
-                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <div class="row no-margin">
+                  <div class="col pl-0">
+                      <a  href="" class="btn btn-secondary btn-block">Kembali</a>
+                  </div>
+                  <div class="col pr-0">
+                      <a href="" class="btn btn-secondary-gradient btn-block">Simpan</a>
                   </div>
               </div>
-          </div>
-      </div>
+            </div>
+        </div>
     </div>
   </div>
+</div>
 
   <!-- jQuery -->
   <script src="assets/libs/jquery/jquery.min.js"></script>

@@ -410,3 +410,6 @@ label.btn-radio {
 .forgot-wrap {
     margin-top: 80px;
 }
+.modal-dialog {
+    margin: 15% auto !important;
+}

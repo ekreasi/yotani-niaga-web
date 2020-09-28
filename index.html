@@ -14,10 +14,14 @@
   <link rel="stylesheet" href="assets/libs/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <link rel="stylesheet" href="assets/libs/icheck-bootstrap/icheck-bootstrap.min.css">
   <link rel="stylesheet" href="assets/libs/jqvmap/jqvmap.min.css">
+  <link rel="stylesheet" href="assets/css/adminlte.min.css">
   <link rel="stylesheet" href="assets/libs/overlayScrollbars/css/OverlayScrollbars.min.css">
   <link rel="stylesheet" href="assets/libs/daterangepicker/daterangepicker.css">
   <link rel="stylesheet" href="assets/libs/summernote/summernote-bs4.css">
-  <link rel="stylesheet" href="assets/css/adminlte.min.css">
+
+  <!-- DataTables -->
+  <link rel="stylesheet" href="assets/libs/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="assets/libs/datatables-responsive/css/responsive.bootstrap4.min.css">
 </head>
 
 <body>
@@ -36,117 +40,184 @@
             <a class="nav-link" href="index.html">Beranda <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Dashboard</a>
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Profil Pabrik</a>
+          <a class="nav-link" href="profil-pabrik.html">Profil Pabrik</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Kelola Pengguna</a>
+          <a class="nav-link" href="kelola-pengguna.html">Kelola Pengguna</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Petani</a>
+          <a class="nav-link" href="petani.html">Petani</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Transaksi
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="kuota-pabrik.html">Kuota Pabrik</a>
-              <a class="dropdown-item" href="penerimaan-petani.html">Penerimaan Dari Petani</a>
-              <!-- <div class="dropdown-divider"></div> -->
-              <a class="dropdown-item" href="#">Pembayaran</a>
+                <a class="dropdown-item" href="kuota-pabrik.html">Kuota Pabrik</a>
+                <a class="dropdown-item" href="penerimaan-petani.html">Penerimaan Dari Petani</a>
+                <a class="dropdown-item" href="pembayaran.html">Pembayaran</a>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">List Harga</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Report</a>
-          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="list-harga.html">List Harga</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="report.html">Report</a>
+            </li>
         </ul>
+        <!-- Notif -->
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown notification-wrap no-arrow">
+            <li class="nav-item dropdown notification-wrap no-arrow">
             <a class="nav-link notif" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fa fa-bell fa-fw green"></i>
-              <!-- Counter - Alerts -->
-              <span class="badge badge-warning badge-counter navbar-badge"> </span>
+                <i class="fa fa-bell fa-fw green"></i>
+                <!-- Counter - Alerts -->
+                <span class="badge badge-warning badge-counter navbar-badge"> </span>
             </a>
             <!-- Dropdown - Alerts -->
             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-              <h6 class="dropdown-header">
+                <h6 class="dropdown-header">
                 Alerts Center
-              </h6>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
                 <div class="mr-3">
-                  <div class="icon-circle bg-primary">
+                    <div class="icon-circle bg-primary">
                     <i class="fas fa-file-alt text-white"></i>
-                  </div>
+                    </div>
                 </div>
                 <div>
-                  <div class="small text-gray-500">December 12, 2019</div>
-                  <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                    <div class="small text-gray-500">December 12, 2019</div>
+                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
                 </div>
-              </a>
-              <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
             </div>
-          </li>
-          <li class="nav-item dropdown no-arrow">
+            </li>
+            <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img class="img-profile rounded-circle mr-1" width="24px" height="24px" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
-              <span class="mr-3 d-none d-lg-inline font-weight-normal">Valerie Luna</span>
+                <img class="img-profile rounded-circle mr-1" width="24px" height="24px" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                <span class="mr-3 d-none d-lg-inline font-weight-normal">Valerie Luna</span>
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-              <a class="dropdown-item" href="#">
-                <i class="fa fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                <a class="dropdown-item" href="">
                 Profile
-              </a>
-              <a class="dropdown-item" href="#">
-                <i class="fa fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                </a>
+                <a class="dropdown-item" href="settings.html">
                 Settings
-              </a>
-              <a class="dropdown-item" href="#">
-                <i class="fa fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                Activity Log
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                <i class="fa fa-sign-out fa-sm fa-fw mr-2 text-gray-400"></i>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="login.html" data-toggle="" data-target="">
                 Logout
-              </a>
+                </a>
             </div>
-          </li>
+            </li>
         </ul>
+        <!-- /Notif -->
       </div>
     </nav>
   </header>
 
-  <div class="content-wrapper no-margin vh-100">
-    <div class="content-header bg-white">
+  <div class="content-wrapper no-margin">
+      <div class="content-header bg-white">
       <div class="container-fluid">
-        <div aria-label="breadcrumb" class="row">
+          <div aria-label="breadcrumb" class="row">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
-            <!-- <li class="breadcrumb-item active" aria-current="page">Library</li> -->
+              <li class="breadcrumb-item text-green">Beranda</li>
+              <li class="breadcrumb-item active" aria-current="page"></li>
           </ol>
-        </div>
+          </div>
       </div>
-    </div>
+      </div>
+      <!-- Main content -->
+      <section class="content">
+          <div class="container-fluid no-padding">
+              <div class="card">
+                  <div class="card-body">
+                      On Queue
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!-- /Main content -->
+
+      <!-- Footer -->
+      <footer class="text-muted">
+          <!-- Copyright -->
+          <div class="footer-copyright bg-green text-center py-3">Copyright © 2020 by PT Indocyber Global Teknologi</div>
+          <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+
+      <!-- Modal -->
+      <!-- <div class="modal fade" id="addPrice" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="addPriceLabel" aria-hidden="true">
+          <div class="modal-dialog modal-md">
+              <div class="modal-content">
+                  <div class="modal-header bg-hijau">
+                      <h6 class="modal-title" id="addPriceLabel">Detail Penerimaan</h6>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <form>
+                          <div class="col-md-12 no-padding">
+                          <h6 class="green font-weight-bold mb-3">Petani</h6>
+                          <div class="form-group">
+                              <label class="">Harga TBS<span class="text-danger"> *</span></label>
+                              <input type="text" class="form-control" required>
+                              <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                          <div class="form-group">
+                              <label class="">Tanggal<span class="text-danger"> *</span></label>
+                              <input type="date" class="form-control" required>
+                              <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                          </div>
+                      </form>
+                  </div>
+                  <div class="modal-footer">
+                  <div class="row no-margin">
+                      <div class="col pl-0">
+                          <a  href="" class="btn btn-secondary btn-block">Kembali</a>
+                      </div>
+                      <div class="col pr-0">
+                          <a href="" class="btn btn-secondary-gradient btn-block">Simpan</a>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+          </div>
+      </div> -->
   </div>
 
-  <!-- Footer -->
-  <footer class="text-muted">
 
-      <!-- Copyright -->
-      <div class="footer-copyright bg-green text-center py-3">Copyright © 2020 by PT Indocyber Global Teknologi</div>
-      <!-- Copyright -->
-
-  </footer>
-  <!-- Footer -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <!-- Library  -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- jQuery -->
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="assets/libs/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+      $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+    <script src="assets/js/adminlte.min.js"></script>
+    <script src="assets/js/demo.js"></script>
+    <!-- DataTables -->
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/libs/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script>
+    $(function () {
+      $("#pabrik").DataTable({
+        "scrollX": true
+       
+      });
+    });
+    </script>
 </body>
 </html>

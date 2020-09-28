@@ -25,6 +25,9 @@ a:hover {
 li.breadcrumb-item {
     font-size: 13px;
     font-weight: 600;
+    color: #009444 !important;
+}
+li.breadcrumb-item.active {
     color: #9d9d9d !important;
 }
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -106,6 +109,9 @@ label {
     margin: 0 !important;
 }
 .fa.green {
+    color: #009444;
+}
+.text-green {
     color: #009444;
 }
 .btn {
@@ -325,9 +331,20 @@ label.btn-radio {
 }
 .content-wrapper {
     background: rgba(207, 216, 220, 0.3) !important;
+    position: relative;
+    min-height: calc(100vh - 77px) !important;
 }
 .content-wrapper>.content {
-    padding: 24px 40px 40px !important;
+    padding: 24px 40px 96px !important;
+}
+header {
+    position: relative;
+    z-index: 9;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 .font-title {
     padding: 0 !important;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Yotani Niaga | List Harga</title>
+  <title>Yotani Niaga | Kelola Pengguna</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">  
@@ -45,14 +45,14 @@
           <li class="nav-item">
           <a class="nav-link" href="profil-pabrik.html">Profil Pabrik</a>
           </li>
-          <li class="nav-item">
-          <a class="nav-link" href="kelola-pengguna.html">Kelola Pengguna</a>
+          <li class="nav-item active">
+          <a class="nav-link" href="">Kelola Pengguna <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
           <a class="nav-link" href="petani.html">Petani</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Transaksi
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -60,13 +60,12 @@
                 <a class="dropdown-item" href="penerimaan-petani.html">Penerimaan Dari Petani</a>
                 <a class="dropdown-item" href="pembayaran.html">Pembayaran</a>
             </div>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="">List Harga <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
+            <li class="nav-item">
+            <a class="nav-link" href="list-harga.html">List Harga</a>
+            </li>
+            <li class="nav-item">
             <a class="nav-link" href="report.html">Report</a>
-          </li>
+            </li>
         </ul>
         <!-- Notif -->
         <ul class="navbar-nav ml-auto">
@@ -121,158 +120,104 @@
   </header>
 
   <div class="content-wrapper no-margin">
-    <div class="content-header bg-white">
+      <div class="content-header bg-white">
       <div class="container-fluid">
-        <div aria-label="breadcrumb" class="row">
+          <div aria-label="breadcrumb" class="row">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item">List Harga</li>
-            <li class="breadcrumb-item active" aria-current="page"></li>
+              <li class="breadcrumb-item text-green">Kelola Pengguna</li>
+              <li class="breadcrumb-item active" aria-current="page"></li>
           </ol>
-        </div>
-      </div>
-    </div>
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid no-padding">
-        <div class="card">
-          <!-- <div class="card-header">
-            <div class='container-fluid'>
-              <div class="row align-items-center">
-                <div class="mr-auto ">
-                  <h6 class="no-margin">Kuota Hari ini belum diatur</h6>
-                </div>
-                <div class="ml-auto no-padding">
-                  <a class="btn btn-secondary " data-toggle="modal" data-target="#filterModalForm">Tambah Harga</a>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <div class="card-body">
-            <div class="font-title col-md-12 mb-3">
-              <h6 class="no-margin">Daftar Harga Tandan Buah Segar (TBS)</h6>
-            </div>
-            <div class="ml-auto mb-3 no-padding">
-              <a class="btn btn-secondary " data-toggle="modal" data-target="#addPrice">Tambah Harga</a>
-            </div>
-            <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
-              <thead>
-              <tr>
-                <th>No</th>
-                <th>Harga TBS</th>
-                <th>Tanggal</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>1</td>
-                <td>Rp 1.485,72</td>
-                <td>08/09/2020</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Rp 1.860,43</td>
-                <td>07/09/2020</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Rp 1.648,80</td>
-                <td>06/09/2020</td>
-              </tr>
-              
-              </tbody>
-              <!-- <tfoot>
-                <tr>
-                  <td colspan="3">Total Booking</td>
-                  <td>130.000 Kg</td>
-                </tr>
-              </tfoot> -->
-              
-            </table>
           </div>
-          <!-- /.card-body -->
-        </div>
-        <!-- /.card -->
       </div>
-    </section>
-    <!-- /.content -->
-
-    <!-- Footer -->
-    <footer class="text-muted">
-
-      <!-- Copyright -->
-      <div class="footer-copyright bg-green text-center py-3">Copyright © 2020 by PT Indocyber Global Teknologi</div>
-      <!-- Copyright -->
-
-    </footer>
-    <!-- Footer -->
-  <!-- Modal -->
-  <div class="modal fade" id="addPrice" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="addPriceLabel" aria-hidden="true">
-    <div class="modal-dialog modal-md">
-        <div class="modal-content">
-            <div class="modal-header bg-hijau">
-                <h6 class="modal-title" id="addPriceLabel">Detail Penerimaan</h6>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="col-md-12 no-padding">
-                      <h6 class="green font-weight-bold mb-3">Petani</h6>
-                      <div class="form-group">
-                          <label class="">Harga TBS<span class="text-danger"> *</span></label>
-                          <input type="text" class="form-control" required>
-                          <div class="invalid-feedback">Mohon isi kolom ini</div>
-                      </div>
-                      <div class="form-group">
-                          <label class="">Tanggal<span class="text-danger"> *</span></label>
-                          <input type="date" class="form-control" required>
-                          <div class="invalid-feedback">Mohon isi kolom ini</div>
-                      </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-              <div class="row no-margin">
-                  <div class="col pl-0">
-                      <a  href="" class="btn btn-secondary btn-block">Kembali</a>
-                  </div>
-                  <div class="col pr-0">
-                      <a href="" class="btn btn-secondary-gradient btn-block">Simpan</a>
+      </div>
+      <!-- Main content -->
+      <section class="content">
+          <div class="container-fluid no-padding">
+              <div class="card">
+                  <div class="card-body">
+                      On Queue
                   </div>
               </div>
-            </div>
-        </div>
-    </div>
+          </div>
+      </section>
+      <!-- /Main content -->
+
+      <!-- Footer -->
+      <footer class="text-muted">
+          <!-- Copyright -->
+          <div class="footer-copyright bg-green text-center py-3">Copyright © 2020 by PT Indocyber Global Teknologi</div>
+          <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+
+      <!-- Modal -->
+      <!-- <div class="modal fade" id="addPrice" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="addPriceLabel" aria-hidden="true">
+          <div class="modal-dialog modal-md">
+              <div class="modal-content">
+                  <div class="modal-header bg-hijau">
+                      <h6 class="modal-title" id="addPriceLabel">Detail Penerimaan</h6>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <form>
+                          <div class="col-md-12 no-padding">
+                          <h6 class="green font-weight-bold mb-3">Petani</h6>
+                          <div class="form-group">
+                              <label class="">Harga TBS<span class="text-danger"> *</span></label>
+                              <input type="text" class="form-control" required>
+                              <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                          <div class="form-group">
+                              <label class="">Tanggal<span class="text-danger"> *</span></label>
+                              <input type="date" class="form-control" required>
+                              <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                          </div>
+                      </form>
+                  </div>
+                  <div class="modal-footer">
+                  <div class="row no-margin">
+                      <div class="col pl-0">
+                          <a  href="" class="btn btn-secondary btn-block">Kembali</a>
+                      </div>
+                      <div class="col pr-0">
+                          <a href="" class="btn btn-secondary-gradient btn-block">Simpan</a>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+          </div>
+      </div> -->
   </div>
-</div>
 
-  <!-- jQuery -->
-  <script src="assets/libs/jquery/jquery.min.js"></script>
-  <!-- jQuery UI 1.11.4 -->
-  <script src="assets/libs/jquery-ui/jquery-ui.min.js"></script>
-  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-  <script>
-    $.widget.bridge('uibutton', $.ui.button)
-  </script>
-  <!-- Bootstrap 4 -->
-  <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <script src="assets/js/adminlte.min.js"></script>
-  <script src="assets/js/demo.js"></script>
-  <!-- DataTables -->
-  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-  <script src="assets/libs/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-  <script src="assets/libs/datatables-responsive/js/dataTables.responsive.min.js"></script>
-  <script src="assets/libs/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-  <script>
-  $(function () {
-    $("#pabrik").DataTable({
-      "scrollX": true
-     
+    <!-- jQuery -->
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="assets/libs/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+      $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+    <script src="assets/js/adminlte.min.js"></script>
+    <script src="assets/js/demo.js"></script>
+    <!-- DataTables -->
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/libs/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script>
+    $(function () {
+      $("#pabrik").DataTable({
+        "scrollX": true
+       
+      });
     });
-  });
-</script>
+    </script>
 </body>
 </html>

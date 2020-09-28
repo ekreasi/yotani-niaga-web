@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Yotani Niaga</title>
+  <title>Yotani Niaga | Report</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">  
@@ -34,41 +34,42 @@
         <span class="navbar-toggler-icon"></span>
       </button>
     
+      <!-- Menu Bar -->
       <div class="collapse navbar-collapse font-weight-medium" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Dashboard</a>
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Profil Pabrik</a>
+            <a class="nav-link" href="profil-pabrik.html">Profil Pabrik</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Kelola Pengguna</a>
+            <a class="nav-link" href="kelola-pengguna.html">Kelola Pengguna</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Petani</a>
+            <a class="nav-link" href="petani.html">Petani</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Transaksi <span class="sr-only">(current)</span>
+              Transaksi
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="">Kuota Pabrik</a>
+              <a class="dropdown-item" href="kuota-pabrik.html">Kuota Pabrik</a>
               <a class="dropdown-item" href="penerimaan-petani.html">Penerimaan Dari Petani</a>
-              <!-- <div class="dropdown-divider"></div> -->
               <a class="dropdown-item" href="pembayaran.html">Pembayaran</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">List Harga</a>
+            <a class="nav-link" href="list-harga.html">List Harga</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Report</a>
+            <a class="nav-link" href="">Report <span class="sr-only">(current)</span></a>
           </li>
         </ul>
+        <!-- Notif -->
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown notification-wrap no-arrow">
             <a class="nav-link notif" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -102,27 +103,23 @@
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-              <a class="dropdown-item" href="#">
-                <i class="fa fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+              <a class="dropdown-item" href="profile.html">
                 Profile
               </a>
-              <a class="dropdown-item" href="#">
-                <i class="fa fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+              <a class="dropdown-item" href="settings.html">
                 Settings
               </a>
-              <a class="dropdown-item" href="#">
-                <i class="fa fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                Activity Log
-              </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                <i class="fa fa-sign-out fa-sm fa-fw mr-2 text-gray-400"></i>
+              <a class="dropdown-item" href="login.html" data-toggle="" data-target="">
                 Logout
               </a>
             </div>
           </li>
         </ul>
+        <!-- /Notif -->
       </div>
+      <!-- /Menu Bar -->
+
     </nav>
   </header>
 
@@ -159,8 +156,8 @@
               <h6 class="no-margin">Report Pembayaran</h6>
             </div>
             <div class="ml-auto mb-3 no-padding">
-              <a class="btn btn-secondary mr-2" data-toggle="modal" data-target="#addPrice">Export Excel</a>
-              <a class="btn btn-secondary " data-toggle="modal" data-target="#addPrice">Export PDF</a>
+              <a class="btn btn-secondary mr-2" data-toggle="" data-target="">Export Excel</a>
+              <a class="btn btn-secondary " data-toggle="" data-target="">Export PDF</a>
             </div>
             <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
               <thead>
@@ -210,7 +207,7 @@
         <!-- /.card -->
       </div>
     </section>
-    <!-- /.content -->
+    <!-- /Main content -->
 
     <!-- Footer -->
     <footer class="text-muted">
@@ -221,8 +218,8 @@
 
     </footer>
     <!-- Footer -->
-  <!-- Modal -->
-  <div class="modal fade" id="addPrice" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="addPriceLabel" aria-hidden="true">
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="addPrice" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="addPriceLabel" aria-hidden="true">
     <div class="modal-dialog modal-md">
         <div class="modal-content">
             <div class="modal-header bg-hijau">
@@ -260,8 +257,8 @@
             </div>
         </div>
     </div>
+  </div> -->
   </div>
-</div>
 
   <!-- jQuery -->
   <script src="assets/libs/jquery/jquery.min.js"></script>

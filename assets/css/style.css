@@ -140,6 +140,9 @@ label {
     border-color: linear-gradient(135deg, #FD763D 0%, #E35317 100%) !important;
     padding: 10px 36px;
 }
+.btn-third .fa {
+    color: #fff;
+}
 label.btn-radio {
     border-radius: 24px !important;
 }
@@ -180,9 +183,9 @@ label.btn-radio {
     border-radius: 10px;
     display: block;
 }
-/* [class*="col-"] {
+[class*="col-"] {
     float: left;
-} */
+}
 .form-group {
     position: relative;
 }
@@ -286,6 +289,10 @@ label.btn-radio {
     background-color: #009444 !important;
     color: #fff !important;
 }
+.input-group>.input-group-append>.btn, .input-group>.input-group-append>.input-group-text, .input-group>.input-group-prepend:first-child>.btn:not(:first-child), .input-group>.input-group-prepend:first-child>.input-group-text:not(:first-child), .input-group>.input-group-prepend:not(:first-child)>.btn, .input-group>.input-group-prepend:not(:first-child)>.input-group-text {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
 .font-weight-medium {
     font-weight: 600;
 }
@@ -341,12 +348,13 @@ header {
     position: relative;
     z-index: 9;
 }
-footer {
+.content-wrapper footer {
     position: absolute;
     bottom: 0;
     width: 100%;
 }
 .font-title {
+    display: flex;
     padding: 0 !important;
     margin-bottom: 30px !important;
 }
@@ -429,4 +437,26 @@ footer {
 }
 .modal-dialog {
     margin: 15% auto !important;
+}
+.highlight-price {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+.input-search input {
+    background-color: #f7f7f7;
+    border: none;
+    border-radius: 5px;
+}
+.input-search .btn {
+    width: 66px;
+}
+.news .card-body {
+    padding: 8px 0 !important;
+}
+.news a {
+    color: inherit !important;
+}
+.news .card-text {
+    color: #9d9d9d;
 }

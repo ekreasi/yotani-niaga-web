@@ -193,14 +193,14 @@
         border-color: #009444  !important;
         color:#fff !important;
     }
-    .btn-secondary {
-        background-color: #FF8900 !important;
-        border-color: #FF8900 !important;
+    /* .btn-secondary {
+        background-color: #F26327 !important;
+        border-color: #F26327 !important;
         color:#fff !important;
-    }
+    } */
     .btn-third {
-        background-color: #FFAB40 !important;
-        border-color: #FFAB40 !important;
+        background-color: #F26327 !important;
+        border-color: #F26327 !important;
         color:#fff !important;
     }
     .btn-secondary-gradient {

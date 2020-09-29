@@ -326,7 +326,7 @@
             green_gradient.addColorStop(1, 'rgba(115, 212, 160, 0)');
         var myLineChart1 = new Chart(ctx1, {
             type: "line",
-            data: {labels: ["29/08/2020", "30/08/2020", "31/08/2020", "01/09/2020", "02/09/2020", "03/09/2020", "04/09/2020"],
+            data: {labels: ["29/08", "30/08", "31/08", "01/09", "02/09", "03/09", "04/09"],
             datasets: [{label: "", lineTension: 0,  
             data: [700, 1200, 650, 1800, 1300, 1500, 1100],
             backgroundColor: green_gradient,
@@ -334,7 +334,11 @@
             hoverBorderWidth: 2,
             hoverBorderColor: "#F26327",
             borderWidth: 2,
-            borderColor: "#009444"
+            borderColor: "#009444",
+            pointColor : "#fff",
+            pointStrokeColor : "#009444",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "#009444",
             }
             ]
 
@@ -371,7 +375,7 @@
         var ctx2 = document.getElementById("lineChart2").getContext('2d');
         var myLineChart2 = new Chart(ctx2, {
             type: "line",
-            data: {labels: ["29/08/2020", "30/08/2020", "31/08/2020", "01/09/2020", "02/09/2020", "03/09/2020", "04/09/2020"],
+            data: {labels: ["29/08", "30/08", "31/08", "01/09", "02/09", "03/09", "04/09"],
             datasets: [{label: "", lineTension: 0,  
             data: [700, 1200, 650, 1800, 1300, 1500, 1100],
             backgroundColor: green_gradient,
@@ -416,7 +420,7 @@
         var ctx3 = document.getElementById("lineChart3").getContext('2d');
         var myLineChart3 = new Chart(ctx3, {
             type: "line",
-            data: {labels: ["29/08/2020", "30/08/2020", "31/08/2020", "01/09/2020", "02/09/2020", "03/09/2020", "04/09/2020"],
+            data: {labels: ["29/08", "30/08", "31/08", "01/09", "02/09", "03/09", "04/09"],
             datasets: [{label: "US Dollar per Metric Ton", lineTension: 0,  
             data: [600000, 600000, 800000, 620000, 680000, 700000, 650000],
             backgroundColor: green_gradient,
@@ -430,6 +434,15 @@
 
             },
             options: {
+                title: {
+                    display: true,
+                    position: 'left',
+                    text: 'US Dollar per Metric Ton',
+                    fontSize: '14'
+                },
+                legend: {
+                    display: false
+                },
                 responsive: true,
                 tooltips: {
                     callbacks: {
@@ -458,7 +471,7 @@
         var ctx4 = document.getElementById("barChart1").getContext('2d');
         var myBarChart1 = new Chart(ctx4, {
             type: "bar",
-            data: {labels: ["29/08/2020", "30/08/2020", "31/08/2020", "01/09/2020", "02/09/2020", "03/09/2020", "04/09/2020"],
+            data: {labels: ["29/08", "30/08", "31/08", "01/09", "02/09", "03/09", "04/09"],
             datasets: [
                 {
                     label: "Target", 
@@ -484,7 +497,9 @@
             options: {
                 responsive: true,
                 legend: {
-                    display: true
+                    display: true,
+                    position:'bottom',
+                    align: 'start',
                 },
                 tooltips: {
                     callbacks: {

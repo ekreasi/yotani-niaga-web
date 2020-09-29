@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/libs/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="assets/css/icons/fontawesome/styles.min.css">
+  <link rel="stylesheet" href="assets/css/basic.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <link rel="stylesheet" href="assets/libs/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
@@ -125,7 +126,7 @@
           <div aria-label="breadcrumb" class="row">
           <ol class="breadcrumb">
               <li class="breadcrumb-item text-green">Profil Pabrik</li>
-              <li class="breadcrumb-item active" aria-current="page"></li>
+              <li class="breadcrumb-item active" aria-current="page">Ubah Data Profil Pabrik</li>
           </ol>
           </div>
       </div>
@@ -134,105 +135,81 @@
       <section class="content">
           <div class="container-fluid no-padding">
               <div class="card">
-                <div class="card-body">
-                    <div class="font-title col-md-12 mb-4">
-                      <h6 class="no-margin">Daftar Pembayaran</h6>
+                  <div class='container-fluid'>
+                    <div class="row no-padding">
+                        <ul class="nav nav-tabs col no-padding text-center">
+                            <li class="nav-item col-md-3">
+                                <a class="nav-link active" data-toggle="tab" data-target="#biodataPT">Biodata Perusahaan</a>
+                            </li>
+                            <li class="nav-item col-md-3">
+                                <a class="nav-link" data-toggle="tab" data-target="#biodataPT">Alamat</a>
+                            </li>
+                            <li class="nav-item col-md-3">
+                                <a class="nav-link" data-toggle="tab" data-target="#biodataPT">Info Lahan / Kebun</a>
+                            </li>
+                            <li class="nav-item col-md-3">
+                                <a class="nav-link" data-toggle="tab" data-target="#biodataPT">Dokumen</a>
+                            </li>
+                        </ul>
                     </div>
-                    <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
-                      <thead>
-                      <tr>
-                        <th>No</th>
-                        <th>Head Office</th>
-                        <th>Nama Perusahaan</th>
-                        <th>Alamat</th>
-                        <th>Jenis Perkebunan</th>
-                        <th>Kapasitas</th>
-                        <th>NPWP</th>
-                        <th>NIB</th>
-                        <th>Website</th>
-                        <th>Jumlah Karyawan</th>
-                        <th>Nama PIC</th>
-                        <th>No. HP</th>
-                        <th>Email</th>
-                        <th>Username</th>
-                        <th>Aksi</th>
-                      </tr>
-                      </thead>
-                      <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Kantor Pusat</td>
-                        <td>PT. Padang Palma</td>
-                        <td>Jl. Binturung</td>
-                        <td>Kelapa Sawit</td>
-                        <td>5 Ton</td>
-                        <td>09357692918240</td>
-                        <td>3959312839</td>
-                        <td>www.pdpalapa.com</td>
-                        <td>400.000</td>
-                        <td>Kartika Wati</td>
-                        <td>08232212345</td>
-                        <td>kartika@mail.com</td>
-                        <td>082322abc</td>
-                        <td>
-                            <a href="#"><span class="fa fa-eye orange ml-2"></span></a>
-                            <a href="ubah-profil-pabrik.html"><span class="fa fa-pencil orange ml-2"></span></a>
-                            <a href="#"><span class="fa fa-ban orange ml-2"></span></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Kantor Pusat</td>
-                        <td>PT. Kridatama</td>
-                        <td>Jl. Harapan Baru</td>
-                        <td>Kelapa Sawit</td>
-                        <td>6 Ton</td>
-                        <td>27482945290123</td>
-                        <td>2229637777</td>
-                        <td>www.kridapanama.com</td>
-                        <td>500.000</td>
-                        <td>Ayu Mustika</td>
-                        <td>08019487772</td>
-                        <td>ayu@mail.com</td>
-                        <td>011341vvv</td>
-                        <td>
-                            <a href="#"><span class="fa fa-eye-slash orange ml-2"></span></a>
-                            <a href="ubah-profil-pabrik.html"><span class="fa fa-pencil orange ml-2"></span></a>
-                            <a href="#"><span class="fa fa-check-circle-o orange ml-2"></span></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>Kantor Pusat</td>
-                        <td>PT. Gersindo</td>
-                        <td>Jl. Tanju Pangkal</td>
-                        <td>Kelapa Sawit</td>
-                        <td>6 Ton</td>
-                        <td>87589928467582</td>
-                        <td>3881310987</td>
-                        <td>www.gresindo.com</td>
-                        <td>300.000</td>
-                        <td>Sigit Setiawan</td>
-                        <td>082847957872</td>
-                        <td>sigit@mail.com</td>
-                        <td>192322asc</td>
-                        <td>
-                            <a href="#"><span class="fa fa-eye orange ml-2"></span></a>
-                            <a href="ubah-profil-pabrik.html"><span class="fa fa-pencil orange ml-2"></span></a>
-                            <a href="#"><span class="fa fa-ban orange ml-2"></span></a>
-                        </td>
-                      </tr>
-                      
-                      </tbody>
-                      <!-- <tfoot>
-                        <tr>
-                          <td colspan="3">Total Booking</td>
-                          <td>130.000 Kg</td>
-                        </tr>
-                      </tfoot> -->
-                      
-                    </table>
                   </div>
+                <div class="tab-content card-body">
+                  <form id="biodataPT">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="" class="">Head Office<span class="text-danger"> *</span></label>
+                          <div class="btn-group d-block btn-group-toggle" data-toggle="buttons">
+                              <label class="btn btn-radio mr-3 active">
+                              <input type="radio" name="options" id="picPusat" autocomplete="off" checked> Kantor Pusat
+                              <span class="checkmark2"></span>
+                              </label>
+                              <label class="btn btn-radio">
+                              <input type="radio" name="options" id="picCabang" autocomplete="off"> Kantor Cabang
+                              <span class="checkmark2"></span>
+                              </label>
+                              <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="" class="">Nama Perusahaan</label>
+                          <input type="text" id="" class="form-control" placeholder="Perusahaan Anda">
+                      </div>
+                      <div class="form-group">
+                          <label for="" class="">Jumlah Karyawan</label>
+                          <input type="text" id="" class="form-control" placeholder="">
+                      </div>
+                      <div class="form-group">
+                          <label for="" class="">Website<span class="text-danger"> *</span></label>
+                          <input type="text" id="" class="form-control" placeholder="www.perusahaan.com" required>
+                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <h4 class="font-weight-bold mb-3">PIC</h4>
+                      <div class="form-group">
+                          <label for="" class="">Nama PIC<span class="text-danger"> *</span></label>
+                          <input type="text" id="" class="form-control" placeholder="Nama PIC" required>
+                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                      </div>
+                      <div class="form-group">
+                          <label for="" class="">Nomor Telepon<span class="text-danger"> *</span></label>
+                          <input type="text" id="" class="form-control" placeholder="Nomor Telepon PIC" required>
+                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                      </div>
+                      <div class="form-group">
+                          <label for="" class="">Email<span class="text-danger"> *</span></label>
+                          <input type="email" id="" class="form-control" placeholder="Email PIC" required>
+                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="card-footer">
+                  <div class="row no-margin">
+                    <div class="col no-padding-left"><a href="" class="btn btn-secondary btn-block">Kembali</a></div>
+                    <div class="col no-padding-right"><a href="" class="btn btn-primary btn-block">Simpan</a></div>
+                  </div>
+                </div>
               </div>
           </div>
       </section>

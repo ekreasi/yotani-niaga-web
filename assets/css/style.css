@@ -157,6 +157,21 @@ label {
 .nav-tabs.btn-tab {
     border: none;
 }
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-item .nav-link:hover {
+    color: #009444 !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: unset;
+    border-bottom: 3px solid #009444 !important;
+}
+.nav-tabs .nav-item {
+    cursor: pointer;
+    padding: 0;
+}
+.nav-tabs .nav-item a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 label.btn-radio {
     border-radius: 24px !important;
 }
@@ -347,6 +362,9 @@ label.btn-radio {
     padding-left: 60px !important;
     padding-right: 60px !important;
 }
+.card {
+    border-radius: 10px !important;
+}
 .card-header, .card-body {
     padding: 24px 30px !important;
 }
@@ -491,4 +509,11 @@ header {
 .chart-grid .card-header {
     padding-top: 10px !important;
     padding-bottom: 10px !important;
+}
+.card-footer {
+    display: flex;
+    padding: 20px !important;
+    justify-content: flex-end;
+    background-color: #fff !important;
+    border-radius: 0 0 10px 10px !important;
 }

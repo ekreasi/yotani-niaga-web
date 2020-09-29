@@ -139,10 +139,10 @@
                     <div class="row no-padding">
                         <ul class="nav nav-tabs col no-padding text-center">
                             <li class="nav-item col-md-3">
-                                <a class="nav-link active" data-toggle="tab" data-target="#biodataPT">Biodata Perusahaan</a>
+                                <a class="nav-link" data-toggle="tab" data-target="#biodataPT">Biodata Perusahaan</a>
                             </li>
                             <li class="nav-item col-md-3">
-                                <a class="nav-link disabled" data-toggle="tab" data-target="#biodataPT">Alamat</a>
+                                <a class="nav-link active" data-toggle="tab" data-target="#biodataPT">Alamat</a>
                             </li>
                             <li class="nav-item col-md-3">
                                 <a class="nav-link disabled" data-toggle="tab" data-target="#biodataPT">Info Lahan / Kebun</a>
@@ -155,59 +155,74 @@
                   </div>
                 <div class="tab-content card-body">
                   <form id="biodataPT">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="" class="">Head Office<span class="text-danger"> *</span></label>
-                          <div class="btn-group d-block btn-group-toggle" data-toggle="buttons">
-                              <label class="btn btn-radio mr-3 active">
-                              <input type="radio" name="options" id="picPusat" autocomplete="off" checked> Kantor Pusat
-                              <span class="checkmark2"></span>
-                              </label>
-                              <label class="btn btn-radio">
-                              <input type="radio" name="options" id="picCabang" autocomplete="off"> Kantor Cabang
-                              <span class="checkmark2"></span>
-                              </label>
-                              <div class="invalid-feedback">Mohon isi kolom ini</div>
-                          </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label for="" class="">Titik Koordinat<span class="text-danger"> *</span></label>
+                          <div id="map" style="height: 220px;"></div>
                       </div>
                       <div class="form-group">
-                          <label for="" class="">Nama Perusahaan</label>
-                          <input type="text" id="" class="form-control" placeholder="Perusahaan Anda">
-                      </div>
-                      <div class="form-group">
-                          <label for="" class="">Jumlah Karyawan</label>
+                        <div class="col-md-6 no-padding-left">
+                          <label for="" class="">Longitude</label>
                           <input type="text" id="" class="form-control" placeholder="">
+                        </div>
+                        <div class="col-md-6 no-padding-right">
+                          <label for="" class="">Latitude</label>
+                          <input type="text" id="" class="form-control" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                          <label for="" class="">Alamat<span class="text-danger"> *</span></label>
+                          <textarea type="text" id="" class="form-control" placeholder="Alamat Perusahaan" required style="height: 100px"></textarea>
+                          <div class="invalid-feedback">Mohon isi kolom ini</div>
                       </div>
                       <div class="form-group">
-                          <label for="" class="">Website<span class="text-danger"> *</span></label>
-                          <input type="text" id="" class="form-control" placeholder="www.perusahaan.com" required>
+                        <div class="row no-margin">
+                          <div class="col no-padding-left">
+                            <label for="" class="">RT<span class="text-danger"> *</span></label>
+                            <input type="text" id="" class="form-control" placeholder="">
+                          </div>
+                          <div class="col no-padding-right">
+                            <label for="" class="">RW<span class="text-danger"> *</span></label>
+                            <input type="text" id="" class="form-control" placeholder="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="" class="">Provinsi<span class="text-danger"> *</span></label>
+                          <input type="text" id="" class="form-control" placeholder="" required>
                           <div class="invalid-feedback">Mohon isi kolom ini</div>
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <h4 class="font-weight-bold mb-3">PIC</h4>
+                    <div class="col-md-4">
                       <div class="form-group">
-                          <label for="" class="">Nama PIC<span class="text-danger"> *</span></label>
-                          <input type="text" id="" class="form-control" placeholder="Nama PIC" required>
-                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        <label for="" class="">Kota / Kabupaten<span class="text-danger"> *</span></label>
+                        <input type="text" id="" class="form-control" placeholder="" required>
+                        <div class="invalid-feedback">Mohon isi kolom ini</div>
                       </div>
                       <div class="form-group">
-                          <label for="" class="">Nomor Telepon<span class="text-danger"> *</span></label>
-                          <input type="text" id="" class="form-control" placeholder="Nomor Telepon PIC" required>
-                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        <label for="" class="">Kecamatan<span class="text-danger"> *</span></label>
+                        <input type="text" id="" class="form-control" placeholder="" required>
+                        <div class="invalid-feedback">Mohon isi kolom ini</div>
                       </div>
                       <div class="form-group">
-                          <label for="" class="">Email<span class="text-danger"> *</span></label>
-                          <input type="email" id="" class="form-control" placeholder="Email PIC" required>
-                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        <label for="" class="">Kelurahan / Desa<span class="text-danger"> *</span></label>
+                        <input type="text" id="" class="form-control" placeholder="" required>
+                        <div class="invalid-feedback">Mohon isi kolom ini</div>
+                      </div>
+                      <div class="form-group">
+                        <label for="" class="">Kode Pos<span class="text-danger"> *</span></label>
+                        <input type="text" id="" class="form-control" placeholder="" required>
+                        <div class="invalid-feedback">Mohon isi kolom ini</div>
                       </div>
                     </div>
                   </form>
                 </div>
                 <div class="card-footer">
                   <div class="row no-margin">
-                    <div class="col no-padding-left"><a href="profil-pabrik.html" class="btn btn-secondary btn-block">Batal</a></div>
-                    <div class="col no-padding-right"><a href="ubah-alamat-pabrik.html" class="btn btn-primary btn-block">Selanjutnya</a></div>
+                    <div class="col no-padding-left"><a href="ubah-profil-pabrik.html" class="btn btn-secondary btn-block">Kembali</a></div>
+                    <div class="col no-padding-right"><a href="ubah-lahan-pabrik.html" class="btn btn-primary btn-block">Selanjutnya</a></div>
                   </div>
                 </div>
               </div>
@@ -267,6 +282,48 @@
 
 
     <!-- jQuery -->
+    <script>
+      var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 6
+        });
+        infoWindow = new google.maps.InfoWindow;
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+    </script>
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+    </script>
     <script src="assets/libs/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="assets/libs/jquery-ui/jquery-ui.min.js"></script>

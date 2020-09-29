@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Yotani Niaga | Dashboard</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">  
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/libs/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/icons/fontawesome/styles.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+    <title>Yotani Niaga | Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">  
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/libs/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/icons/fontawesome/styles.min.css">
+    <link rel="stylesheet" href="assets/libs/chart.js/Chart.css">
+    <link rel="stylesheet" href="assets/libs/chart.js/Chart.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
-  <link rel="stylesheet" href="assets/libs/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-  <link rel="stylesheet" href="assets/libs/icheck-bootstrap/icheck-bootstrap.min.css">
-  <link rel="stylesheet" href="assets/libs/jqvmap/jqvmap.min.css">
-  <link rel="stylesheet" href="assets/css/adminlte.min.css">
-  <link rel="stylesheet" href="assets/libs/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <link rel="stylesheet" href="assets/libs/daterangepicker/daterangepicker.css">
-  <link rel="stylesheet" href="assets/libs/summernote/summernote-bs4.css">
+    <link rel="stylesheet" href="assets/libs/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <link rel="stylesheet" href="assets/libs/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="assets/libs/jqvmap/jqvmap.min.css">
+    <link rel="stylesheet" href="assets/css/adminlte.min.css">
+    <link rel="stylesheet" href="assets/libs/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="assets/libs/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="assets/libs/summernote/summernote-bs4.css">
 
-  <!-- DataTables -->
-  <link rel="stylesheet" href="assets/libs/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="assets/libs/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="assets/libs/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="assets/libs/datatables-responsive/css/responsive.bootstrap4.min.css">
+
+    <script src="assets/libs/chart.js/Chart.bundle.js"></script>
+    <script src="assets/libs/chart.js/Chart.bundle.min.js"></script>
+    <script src="assets/libs/chart.js/Chart.js"></script>
+    <script src="assets/libs/chart.js/Chart.min.js"></script>
 </head>
 
 <body>
@@ -132,13 +139,132 @@
       </div>
       <!-- Main content -->
       <section class="content">
-          <div class="container-fluid no-padding">
-              <div class="card">
-                  <div class="card-body">
-                      On Queue
-                  </div>
-              </div>
-          </div>
+        <div class="container-fluid no-padding">
+            <div class="card">
+                <div class="card-body">
+                    <div class="font-title col-md-12 mb-3">
+                      <h6 class="no-margin">Menampilkan Data</h6>
+                    </div>
+                    <div class="row mb-3 no-padding">
+                        <ul class="nav nav-tabs btn-tab col">
+                            <li>
+                                <a class="btn btn-fourth mr-2 active" type="button" data-toggle="tab" data-target="#dashboardData">Hari Ini</a>
+                            </li>
+                            <li>
+                                <a class="btn btn-fourth mr-2 " type="button" data-toggle="tab" data-target="#dashboardData">Kemarin</a>
+                            </li>
+                            <li>
+                                <a class="btn btn-fourth mr-2" type="button" data-toggle="tab" data-target="#dashboardData">7 hari</a>
+                            </li>
+                            <li>
+                                <a class="btn btn-fourth " type="button" data-toggle="tab" data-target="#dashboardData">1 Bulan</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content col-md-12" id="dashboardData">
+                        <div class="col-md-6">
+                            <div class="card card-info chart-grid no-padding">
+                                <div class="card-header bg-hijau">
+                                <h6 class="card-title">Grafik Tren Harga TBS</h6>
+                                </div>
+                                <div class="card-body">
+                                <div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                                    <canvas id="lineChart1" style="min-height: 250px; max-height: 250px; max-width: 100%; display: block;" width="620" height="333" class=""></canvas>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card card-info chart-grid no-padding">
+                                <div class="card-header bg-hijau">
+                                <h6 class="card-title">Grafik Tren Harga CPO</h6>
+                                </div>
+                                <div class="card-body">
+                                <div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                                    <canvas id="lineChart2" style="min-height: 250px; max-height: 250px; max-width: 100%; display: block;" width="620" height="333" class=""></canvas>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card card-info chart-grid no-padding">
+                                <div class="card-header bg-hijau">
+                                <h6 class="card-title">Grafik Tren Harga PK (Palm Kernel)</h6>
+                                </div>
+                                <div class="card-body">
+                                <div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                                    <canvas id="lineChart3" style="min-height: 250px; max-height: 250px; max-width: 100%; display: block;" width="620" height="333" class=""></canvas>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card card-info chart-grid no-padding">
+                                <div class="card-header bg-hijau">
+                                    <h6 class="card-title">Grafik Tren Harga PK (Palm Kernel)</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart">
+                                        <canvas id="barChart1" style="min-height: 250px; max-height: 250px; max-width: 100%; display: block;" width="620" height="333" class=""></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="card card-info chart-grid no-padding">
+                                <div class="card-header bg-hijau">
+                                    <h6 class="card-title">Top 5 Supplier</h6>
+                                </div>
+                                <table id="top5" class="table nowrap mb-0"  style="width:100%" >
+                                <thead>
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Qty(kg)</th>
+                                    <th>Harga Total</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Saman</td>
+                                    <td>9.000</td>
+                                    <td>Rp 13.371.750</td>
+                                </tr>
+                                <tr>
+                                    <td>Andika</td>
+                                    <td>8.600</td>
+                                    <td>Rp 12.908.011</td>
+                                </tr>
+                                <tr>
+                                    <td>Rahma</td>
+                                    <td>7.000</td>
+                                    <td>Rp 11.900.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Irwan</td>
+                                    <td>6.890</td>
+                                    <td>Rp 9.980.789</td>
+                                </tr>
+                                <tr>
+                                    <td>Marwan</td>
+                                    <td>6.700</td>
+                                    <td>Rp 8.909.897</td>
+                                </tr>
+                                
+                                </tbody>
+                                <!-- <tfoot>
+                                    <tr>
+                                    <td colspan="3">Total Booking</td>
+                                    <td>130.000 Kg</td>
+                                    </tr>
+                                </tfoot> -->
+                                
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
       </section>
       <!-- /Main content -->
 
@@ -192,7 +318,198 @@
       </div> -->
   </div>
 
+    <script>
+        //line
+        var ctx1 = document.getElementById("lineChart1").getContext('2d');
+        var green_gradient = ctx1.createLinearGradient(0, 0, 0, 300);
+            green_gradient.addColorStop(0, '#63DB9A');
+            green_gradient.addColorStop(1, 'rgba(115, 212, 160, 0)');
+        var myLineChart1 = new Chart(ctx1, {
+            type: "line",
+            data: {labels: ["29/08/2020", "30/08/2020", "31/08/2020", "01/09/2020", "02/09/2020", "03/09/2020", "04/09/2020"],
+            datasets: [{label: "", lineTension: 0,  
+            data: [700, 1200, 650, 1800, 1300, 1500, 1100],
+            backgroundColor: green_gradient,
+            hoverBackgroundColor: green_gradient,
+            hoverBorderWidth: 2,
+            hoverBorderColor: "#F26327",
+            borderWidth: 2,
+            borderColor: "#009444"
+            }
+            ]
 
+            },
+            options: {
+                responsive: true,
+                legend: {
+                    display: false
+                },
+                tooltips: {
+                    callbacks: {
+                    label: function(tooltipItem) {
+                            return tooltipItem.yLabel;
+                    }
+                    }
+                },
+                scales: { 
+                    xAxes: [{ gridLines: { color: "rgba(0, 0, 0, 0)", } }], 
+                    yAxes: [{ 
+                        gridLines: { color: "rgb(166, 172, 190, 0.5)", 
+                        borderDash: [4, 6] },
+                        ticks: {
+                            suggestedMin: 0,
+                            beginAtZero: true,
+                            steps: 5,
+                            stepSize: 500,
+                            max: 2000,
+                        }
+                     }] 
+                }
+            }
+        });
+
+        var ctx2 = document.getElementById("lineChart2").getContext('2d');
+        var myLineChart2 = new Chart(ctx2, {
+            type: "line",
+            data: {labels: ["29/08/2020", "30/08/2020", "31/08/2020", "01/09/2020", "02/09/2020", "03/09/2020", "04/09/2020"],
+            datasets: [{label: "", lineTension: 0,  
+            data: [700, 1200, 650, 1800, 1300, 1500, 1100],
+            backgroundColor: green_gradient,
+            hoverBackgroundColor: green_gradient,
+            hoverBorderWidth: 2,
+            hoverBorderColor: "#F26327",
+            borderWidth: 2,
+            borderColor: "#009444"
+            }
+            ]
+
+            },
+            options: {
+                responsive: true,
+                legend: {
+                    display: false
+                },
+                tooltips: {
+                    callbacks: {
+                    label: function(tooltipItem) {
+                            return tooltipItem.yLabel;
+                    }
+                    }
+                },
+                scales: { 
+                    xAxes: [{ gridLines: { color: "rgba(0, 0, 0, 0)", } }], 
+                    yAxes: [{ 
+                        gridLines: { color: "rgb(166, 172, 190, 0.5)", 
+                        borderDash: [4, 6] },
+                        ticks: {
+                            suggestedMin: 0,
+                            beginAtZero: true,
+                            steps: 5,
+                            stepSize: 500,
+                            max: 2000,
+                        }
+                     }] 
+                }
+            }
+        });
+
+        var ctx3 = document.getElementById("lineChart3").getContext('2d');
+        var myLineChart3 = new Chart(ctx3, {
+            type: "line",
+            data: {labels: ["29/08/2020", "30/08/2020", "31/08/2020", "01/09/2020", "02/09/2020", "03/09/2020", "04/09/2020"],
+            datasets: [{label: "US Dollar per Metric Ton", lineTension: 0,  
+            data: [600000, 600000, 800000, 620000, 680000, 700000, 650000],
+            backgroundColor: green_gradient,
+            hoverBackgroundColor: green_gradient,
+            hoverBorderWidth: 2,
+            hoverBorderColor: "#F26327",
+            borderWidth: 2,
+            borderColor: "#009444"
+            }
+            ]
+
+            },
+            options: {
+                responsive: true,
+                tooltips: {
+                    callbacks: {
+                    label: function(tooltipItem) {
+                            return tooltipItem.yLabel;
+                    }
+                    }
+                },
+                scales: { 
+                    xAxes: [{ gridLines: { color: "rgba(0, 0, 0, 0)", } }], 
+                    yAxes: [{ 
+                        gridLines: { color: "rgb(166, 172, 190, 0.5)", 
+                        borderDash: [4, 6] },
+                        ticks: {
+                            min: 550000,
+                            beginAtZero: false,
+                            steps: 6,
+                            stepSize: 50000,
+                            max: 800000,
+                        }
+                     }] 
+                }
+            }
+        });
+
+        var ctx4 = document.getElementById("barChart1").getContext('2d');
+        var myBarChart1 = new Chart(ctx4, {
+            type: "bar",
+            data: {labels: ["29/08/2020", "30/08/2020", "31/08/2020", "01/09/2020", "02/09/2020", "03/09/2020", "04/09/2020"],
+            datasets: [
+                {
+                    label: "Target", 
+                    barPercentage: 0.5,
+                    barThickness: 5,
+                    maxBarThickness: 5,
+                    minBarLength: 2,
+                    data: [380, 300, 490, 180, 220, 200, 160],
+                    backgroundColor: "#009444",
+                },
+                {
+                    label: "Realisasi",  
+                    barPercentage: 1,
+                    barThickness: 5,
+                    maxBarThickness: 5,
+                    minBarLength: 2,
+                    data: [320, 120, 290, 140, 160, 190, 140],
+                    backgroundColor: "#F26327",
+                }
+            ]
+
+            },
+            options: {
+                responsive: true,
+                legend: {
+                    display: true
+                },
+                tooltips: {
+                    callbacks: {
+                    label: function(tooltipItem) {
+                            return tooltipItem.yLabel;
+                    }
+                    }
+                },
+                scales: { 
+                    xAxes: [{ gridLines: { color: "rgba(0, 0, 0, 0)", } }], 
+                    yAxes: [{ 
+                        gridLines: { color: "rgb(166, 172, 190, 0.5)", 
+                        borderDash: [4, 6] },
+                        ticks: {
+                            min: 0,
+                            beginAtZero: true,
+                            steps: 5,
+                            stepSize: 100,
+                            max: 500,
+                        }
+                     }] 
+                }
+            }
+        });
+    </script>
     <!-- jQuery -->
     <script src="assets/libs/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->

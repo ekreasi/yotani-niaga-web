@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/libs/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="assets/css/icons/fontawesome/styles.min.css">
+  <link rel="stylesheet" href="assets/css/basic.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <link rel="stylesheet" href="assets/libs/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
@@ -120,76 +121,326 @@
   </header>
 
   <div class="content-wrapper no-margin">
-      <div class="content-header bg-white">
+    <div class="content-header bg-white">
       <div class="container-fluid">
-          <div aria-label="breadcrumb" class="row">
+        <div aria-label="breadcrumb" class="row">
           <ol class="breadcrumb">
-              <li class="breadcrumb-item text-green">Kelola Pengguna</li>
-              <li class="breadcrumb-item active" aria-current="page"></li>
+            <li class="breadcrumb-item">Kelola Pengguna</li>
+            <li class="breadcrumb-item active" aria-current="page"></li>
           </ol>
+        </div>
+      </div>
+    </div>
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid no-padding">
+        <div class="card">
+          <!-- <div class="card-header">
+            <div class='container-fluid'>
+              <div class="row align-items-center">
+                <div class="mr-auto ">
+                  <h6 class="no-margin">Kuota Hari ini belum diatur</h6>
+                </div>
+                <div class="ml-auto no-padding">
+                  <a class="btn btn-secondary " data-toggle="modal" data-target="#filterModalForm">Tambah Harga</a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="card-body">
+            <div class="font-title col-md-12 mb-3">
+              <h6 class="no-margin">Daftar Pengguna</h6>
+            </div>
+            <div class="ml-auto mb-3 no-padding">
+              <a class="btn btn-secondary " data-toggle="modal" data-target="#addAdmin">Tambah Admin</a>
+            </div>
+            <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
+                <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Nama Admin</th>
+                  <th>No. Telepon</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Nama PKS</th>
+                  <th>Provinsi</th>
+                  <th>Kabupaten</th>
+                  <th>Aksi</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Kartika Wati</td>
+                  <td>08123456789</td>
+                  <td>kartika.wati@email.com</td>
+                  <td>PIC Kantor Pusat</td>
+                  <td>PT Padang Palma</td>
+                  <td>Aceh</td>
+                  <td>Kabupaten Aceh Timur</td>
+                  <td>
+                      <a type="button" data-toggle="modal" data-target="#editUser"><span class="fa fa-pencil orange ml-2"></span></a>
+                      <a type="button" data-toggle="modal" data-target=""><span class="fa fa-ban orange ml-2"></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Ayu Mustika</td>
+                  <td>08345673443</td>
+                  <td>ayu.mustika@email.com</td>
+                  <td>PIC Kantor Cabang</td>
+                  <td>PT Padang Palma</td>
+                  <td>Aceh</td>
+                  <td>Kabupaten Aceh Timur</td>
+                  <td>
+                    <a type="button" data-toggle="modal" data-target="#editUser"><span class="fa fa-pencil orange ml-2"></span></a>
+                    <a type="button" data-toggle="modal" data-target=""><span class="fa fa-ban orange ml-2"></span></a>
+                  </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sigit Setiawan</td>
+                    <td>08956789113</td>
+                    <td>sigit.setiawan@email.com</td>
+                    <td>PIC Kantor Cabang</td>
+                    <td>PT Padang Palma</td>
+                    <td>Aceh</td>
+                    <td>Kabupaten Aceh Timur</td>
+                  <td>
+                    <a type="button" data-toggle="modal" data-target="#editUser"><span class="fa fa-pencil orange ml-2"></span></a>
+                    <a type="button" data-toggle="modal" data-target=""><span class="fa fa-ban orange ml-2"></span></a>
+                  </td>
+                </tr>
+                
+                </tbody>
+                <!-- <tfoot>
+                  <tr>
+                    <td colspan="3">Total Booking</td>
+                    <td>130.000 Kg</td>
+                  </tr>
+                </tfoot> -->
+                
+              </table>
           </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
       </div>
-      </div>
-      <!-- Main content -->
-      <section class="content">
-          <div class="container-fluid no-padding">
-              <div class="card">
-                  <div class="card-body">
-                      On Queue
+    </section>
+    <!-- /.content -->
+
+    <!-- Footer -->
+    <footer class="text-muted">
+
+      <!-- Copyright -->
+      <div class="footer-copyright bg-green text-center py-3">Copyright © 2020 by PT Indocyber Global Teknologi</div>
+      <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+  <!-- Modal -->
+  <div class="modal fade" id="addAdmin" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="addAdminLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-hijau">
+                <h6 class="modal-title" id="addAdminLabel">Tambah Data Admin</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="col-md-12 no-padding mb-3">
+                      <h6 class="green font-weight-bold mb-3">Admin Aktif</h6>
+                      <div class="col-md-6 no-padding-left">
+                        <div class="form-group">
+                          <label for="" class="">Nama Admin<span class="text-danger"> *</span></label>
+                          <input type="text" id="" class="form-control" placeholder="" required>
+                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                        <div class="form-group">
+                          <label for="" class="">No. Telepon<span class="text-danger"> *</span></label>
+                          <input type="text" id="" class="form-control" placeholder="" required>
+                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                        <div class="form-group">
+                          <label for="" class="">No. Rekening<span class="text-danger"> *</span></label>
+                          <input type="email" id="" class="form-control" placeholder="" required>
+                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 no-padding-right">
+                        <div class="form-group">
+                            <label for="" class="">PKS<span class="text-danger"> *</span></label>
+                            <select class="form-control no-margin" id="inputGroupSelect">
+                              <option selected>- Pilih -</option>
+                              <option value="5">5</option>
+                              <option value="10">10</option>
+                              <option value="15">15</option>
+                            </select>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="">Provinsi<span class="text-danger"> *</span></label>
+                            <select class="form-control no-margin" id="inputGroupSelect">
+                              <option selected>- Pilih -</option>
+                              <option value="5">5</option>
+                              <option value="10">10</option>
+                              <option value="15">15</option>
+                            </select>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="">Kabupaten<span class="text-danger"> *</span></label>
+                            <select class="form-control no-margin" id="inputGroupSelect">
+                              <option selected>- Pilih -</option>
+                              <option value="5">5</option>
+                              <option value="10">10</option>
+                              <option value="15">15</option>
+                            </select>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 no-padding">
+                      <h6 class="green font-weight-bold mb-3">Kata Sandi</h6>
+                      <div class="col-md-6 no-padding-left">
+                        <div class="form-group">
+                          <label for="" class="">Kata Sandi<span class="text-danger"> *</span></label>
+                          <input type="password" id="" class="form-control" placeholder="" required>
+                          <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 no-padding-right">
+                        <div class="form-group">
+                          <label for="" class="">Konfirmasi Kata Sandi<span class="text-danger"> *</span></label>
+                          <input type="password" id="" class="form-control" placeholder="" required>
+                          <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                      </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <div class="row no-margin">
+                  <div class="col pl-0">
+                      <a  href="" class="btn btn-secondary btn-block">Kembali</a>
+                  </div>
+                  <div class="col pr-0">
+                      <a href="" class="btn btn-secondary-gradient btn-block">Simpan</a>
                   </div>
               </div>
-          </div>
-      </section>
-      <!-- /Main content -->
+            </div>
+        </div>
+    </div>
+  </div>
 
-      <!-- Footer -->
-      <footer class="text-muted">
-          <!-- Copyright -->
-          <div class="footer-copyright bg-green text-center py-3">Copyright © 2020 by PT Indocyber Global Teknologi</div>
-          <!-- Copyright -->
-      </footer>
-      <!-- Footer -->
-
-      <!-- Modal -->
-      <!-- <div class="modal fade" id="addPrice" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="addPriceLabel" aria-hidden="true">
-          <div class="modal-dialog modal-md">
-              <div class="modal-content">
-                  <div class="modal-header bg-hijau">
-                      <h6 class="modal-title" id="addPriceLabel">Detail Penerimaan</h6>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                  <div class="modal-body">
-                      <form>
-                          <div class="col-md-12 no-padding">
-                          <h6 class="green font-weight-bold mb-3">Petani</h6>
-                          <div class="form-group">
-                              <label class="">Harga TBS<span class="text-danger"> *</span></label>
-                              <input type="text" class="form-control" required>
-                              <div class="invalid-feedback">Mohon isi kolom ini</div>
-                          </div>
-                          <div class="form-group">
-                              <label class="">Tanggal<span class="text-danger"> *</span></label>
-                              <input type="date" class="form-control" required>
-                              <div class="invalid-feedback">Mohon isi kolom ini</div>
-                          </div>
-                          </div>
-                      </form>
-                  </div>
-                  <div class="modal-footer">
-                  <div class="row no-margin">
-                      <div class="col pl-0">
-                          <a  href="" class="btn btn-secondary btn-block">Kembali</a>
+  <div class="modal fade" id="editUser" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="editUserLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-hijau">
+                <h6 class="modal-title" id="editUserLabel">Ubah Data Admin</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="col-md-12 no-padding mb-3">
+                      <h6 class="green font-weight-bold mb-3">Admin Aktif</h6>
+                      <div class="col-md-6 no-padding-left">
+                        <div class="form-group">
+                          <label for="" class="">Nama Admin<span class="text-danger"> *</span></label>
+                          <input type="text" id="" class="form-control" placeholder="" required value="Kartika Wati">
+                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                        <div class="form-group">
+                          <label for="" class="">No. Telepon<span class="text-danger"> *</span></label>
+                          <input type="text" id="" class="form-control" placeholder="" required value="08123456789">
+                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                        <div class="form-group">
+                          <label for="" class="">No. Rekening<span class="text-danger"> *</span></label>
+                          <input type="email" id="" class="form-control" placeholder="" required value="kartika.wati@email.com">
+                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
                       </div>
-                      <div class="col pr-0">
-                          <a href="" class="btn btn-secondary-gradient btn-block">Simpan</a>
+                      <div class="col-md-6 no-padding-right">
+                        <div class="form-group">
+                            <label for="" class="">PKS<span class="text-danger"> *</span></label>
+                            <select class="form-control no-margin" id="inputGroupSelect">
+                              <option>- Pilih -</option>
+                              <option selected value="5">PT Padang Palma</option>
+                              <option value="10">10</option>
+                              <option value="15">15</option>
+                            </select>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="">Provinsi<span class="text-danger"> *</span></label>
+                            <select class="form-control no-margin" id="inputGroupSelect">
+                              <option>- Pilih -</option>
+                              <option selected value="5">Aceh</option>
+                              <option value="10">10</option>
+                              <option value="15">15</option>
+                            </select>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="">Kabupaten<span class="text-danger"> *</span></label>
+                            <select class="form-control no-margin" id="inputGroupSelect">
+                              <option>- Pilih -</option>
+                              <option selected value="5">Kabupaten Aceh Timur</option>
+                              <option value="10">10</option>
+                              <option value="15">15</option>
+                            </select>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
                       </div>
+                    </div>
+                    <div class="col-md-12 no-padding">
+                      <h6 class="green font-weight-bold mb-3">Kata Sandi</h6>
+                      <div class="col-md-6 no-padding-left">
+                        <div class="form-group">
+                          <label for="" class="">Kata Sandi Lama<span class="text-danger"> *</span></label>
+                          <input type="password" id="" class="form-control" placeholder="" required value="12345678">
+                          <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                        <div class="form-group">
+                          <label for="" class="">Konfirmasi Kata Sandi Baru<span class="text-danger"> *</span></label>
+                          <input type="password" id="" class="form-control" placeholder="" required value="12345678">
+                          <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 no-padding-right">
+                        <div class="form-group">
+                          <label for="" class="">Kata Sandi Baru<span class="text-danger"> *</span></label>
+                          <input type="password" id="" class="form-control" placeholder="" required value="12345678">
+                          <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        </div>
+                      </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <div class="row no-margin">
+                  <div class="col pl-0">
+                      <a  href="" class="btn btn-secondary btn-block">Kembali</a>
                   </div>
+                  <div class="col pr-0">
+                      <a href="" class="btn btn-secondary-gradient btn-block">Simpan</a>
                   </div>
               </div>
-          </div>
-      </div> -->
+            </div>
+        </div>
+    </div>
+  </div>
   </div>
 
 

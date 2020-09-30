@@ -529,6 +529,9 @@ header {
     color: #9d9d9d !important;
     font-weight: 400 !important;
 }
+.custom-file-label.selected {
+    color: #009444 !important;
+}
 .custom-file-input:lang(en)~.custom-file-label::after {
     content: "Unggah" !important;
     border-radius: 4px !important;
@@ -540,4 +543,16 @@ header {
     color: #9d9d9d;
     font-size: 12px;
     margin-top: 6px !important;
+}
+.form-control-plaintext {
+    color: inherit !important;
+}
+input.form-control-plaintext, textarea.form-control-plaintext {
+    padding: 0 !important;
+}
+.separator {
+    width: 100%;
+    display: flex;
+    margin: 10px 0 28px;
+    border-bottom: 1px solid #e0e0e0;
 }

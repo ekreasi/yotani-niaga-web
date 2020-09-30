@@ -157,44 +157,56 @@
                   <form id="biodataPT">
                     <div class="col-md-4">
                       <div class="form-group">
-                          <label for="" class="">Head Office<span class="text-danger"> *</span></label>
-                          <div class="btn-group d-block btn-group-toggle" data-toggle="buttons">
-                              <label class="btn btn-radio mr-3 active">
-                              <input type="radio" name="options" id="picPusat" autocomplete="off" checked> Kantor Pusat
-                              <span class="checkmark2"></span>
-                              </label>
-                              <label class="btn btn-radio">
-                              <input type="radio" name="options" id="picCabang" autocomplete="off"> Kantor Cabang
-                              <span class="checkmark2"></span>
-                              </label>
-                              <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        <label for="" class="">NPWP<span class="text-danger"> *</span></label>
+                        <input type="text" id="" class="form-control" placeholder="" required>
+                        <div class="invalid-feedback">Mohon isi kolom ini</div>
+                      </div>
+                      <div class="form-group">
+                        <form>
+                          <p>Akta Perusahaan<span class="text-danger"> *</span></p>
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile" name="filename">
+                            <label class="custom-file-label" for="customFile">Tidak ada data</label>
                           </div>
+                          <p class="hint-text">Tipe file png/jpeg/jpg, setiap foto berukuran maksimal 2Mb</p>
+                        </form>
                       </div>
                     </div>
                     <div class="col-md-4">
                       <div class="form-group">
-                          <label for="" class="">Kapasitas<span class="text-danger"> *</span></label>
-                          <select class="custom-select no-margin" id="inputGroupSelect">
-                            <option selected>- Pilih -</option>
-                            <option value="5">5</option>
-                            <option value="10">10</option>
-                            <option value="15">15</option>
-                          </select>
-                          <label class="checkwrap mt-2">
-                              <input type="checkbox" value=""> Line Extendable
-                              <span class="checkmark"></span>
-                          </label>
-                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                        <label for="" class="">No. Izin Berusaha<span class="text-danger"> *</span></label>
+                        <input type="text" id="" class="form-control" placeholder="" required>
+                        <div class="invalid-feedback">Mohon isi kolom ini</div>
+                      </div>
+                      <div class="form-group">
+                        <label for="" class="">Nama Akun Bank<span class="text-danger"> *</span></label>
+                        <input type="text" id="" class="form-control" placeholder="" required>
+                        <div class="invalid-feedback">Mohon isi kolom ini</div>
                       </div>
                     </div>
                     <div class="col-md-4">
+                      <div class="form-group">
+                        <form>
+                          <p>SIUP Pengolahan<span class="text-danger"> *</span></p>
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile" name="filename">
+                            <label class="custom-file-label" for="customFile">Tidak ada data</label>
+                          </div>
+                          <p class="hint-text">Tipe file png/jpeg/jpg, setiap foto berukuran maksimal 2Mb</p>
+                        </form>
+                      </div>
+                      <div class="form-group">
+                        <label for="" class="">No. Rekening<span class="text-danger"> *</span></label>
+                        <input type="text" id="" class="form-control" placeholder="" required>
+                        <div class="invalid-feedback">Mohon isi kolom ini</div>
+                      </div>
                     </div>
                   </form>
                 </div>
                 <div class="card-footer">
                   <div class="row no-margin">
-                    <div class="col no-padding-left"><a href="ubah-lahan-pabrik.html" class="btn btn-secondary btn-block">Kembali</a></div>
-                    <div class="col no-padding-right"><a href="ubah-dokumen-pabrik.html" class="btn btn-primary btn-block">Selanjutnya</a></div>
+                    <div class="col no-padding-left"><a href="ubah-dokumen-pabrik.html" class="btn btn-secondary btn-block">Sebelumnya</a></div>
+                    <div class="col no-padding-right"><a href="" class="btn btn-primary btn-block">Simpan</a></div>
                   </div>
                 </div>
               </div>
@@ -254,20 +266,6 @@
 
 
     <!-- jQuery -->
-    <script>
-      let map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: -34.397, lng: 150.644 },
-          zoom: 8,
-        });
-      }
-    </script>
-    <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
-    defer
-  ></script>
-    </script>
     <script src="assets/libs/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="assets/libs/jquery-ui/jquery-ui.min.js"></script>
@@ -292,6 +290,13 @@
        
       });
     });
+    </script>
+    <script>
+      // Add the following code if you want the name of the file appear on select
+      $(".custom-file-input").on("change", function() {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+      });
     </script>
 </body>
 </html>

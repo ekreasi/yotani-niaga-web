@@ -252,8 +252,11 @@
                         </div>
                       </div>
                       <div class="col-md-6 float-left">
-                        <div class="form-group">
-                            <input type="checkbox" autocomplete="off"> Sedang dalam pemeliharaan
+                        <div class="form-group checkbox">
+                          <label class="checkwrap">
+                            <input type="checkbox" value=""> Sedang dalam pemeliharaan
+                            <span class="checkmark"></span>
+                          </label>
                         </div>
                         <div class="form-group">
                             <label for="" class="">Periode Pemeliharaan</label>
@@ -286,7 +289,7 @@
             <div class="modal-footer">
               <div class="row">
                   <div class="col no-padding-left">
-                      <a  href="" class="btn btn-secondary btn-block">Kembali</a>
+                      <a data-dismiss="modal" class="btn btn-secondary btn-block">Kembali</a>
                   </div>
                   <div class="col no-padding-right">
                       <a href="" class="btn btn-secondary-gradient btn-block">Simpan</a>

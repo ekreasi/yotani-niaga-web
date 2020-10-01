@@ -142,63 +142,119 @@
         <div class="container-fluid no-padding">
             <div class="card">
                 <div class="card-body">
-                    <div class="font-title col-md-12 mb-3">
-                      <h6 class="no-margin">Menampilkan Data</h6>
-                    </div>
-                    <div class="row mb-3 no-padding">
-                        <ul class="nav nav-tabs btn-tab col">
-                            <li>
-                                <a class="btn btn-fourth mr-2 active" type="button" data-toggle="tab" data-target="#dashboardData">Hari Ini</a>
-                            </li>
-                            <li>
-                                <a class="btn btn-fourth mr-2 " type="button" data-toggle="tab" data-target="#dashboardData">Kemarin</a>
-                            </li>
-                            <li>
-                                <a class="btn btn-fourth mr-2" type="button" data-toggle="tab" data-target="#dashboardData">7 hari</a>
-                            </li>
-                            <li>
-                                <a class="btn btn-fourth " type="button" data-toggle="tab" data-target="#dashboardData">1 Bulan</a>
-                            </li>
-                        </ul>
-                    </div>
                     <div class="tab-content col-md-12" id="dashboardData">
-                        <div class="col-md-6">
+                        <div class="col-md-6 mb-3">
                             <div class="card card-info chart-grid no-padding">
                                 <div class="card-header bg-hijau">
                                 <h6 class="card-title">Grafik Tren Harga TBS</h6>
                                 </div>
                                 <div class="card-body">
-                                <div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                                    <canvas id="lineChart1" style="min-height: 250px; max-height: 250px; max-width: 100%; display: block;" width="620" height="333" class=""></canvas>
-                                </div>
+                                    <div class="chart">
+                                        <canvas id="lineChart1" style="min-height: 250px; max-height: 250px; max-width: 100%; display: block;" width="620" height="333" class=""></canvas>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="row mb-3 no-margin no-padding">
+                                <div class="font-title col-md-12 mb-2">
+                                  <h6 class="no-margin">Menampilkan Data</h6>
+                                </div>
+                                <ul class="nav nav-tabs btn-tab col">
+                                    <li>
+                                        <a class="btn btn-fourth mr-2" type="button" data-toggle="tab" data-target="#dashboardData">1 Hari</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth mr-2 active" type="button" data-toggle="tab" data-target="#dashboardData">1 Minggu</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth mr-2" type="button" data-toggle="tab" data-target="#dashboardData">1 Bulan</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth mr-2 " type="button" data-toggle="tab" data-target="#dashboardData">3 Bulan</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth mr-2 " type="button" data-toggle="tab" data-target="#dashboardData">1 tahun</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth " type="button" data-toggle="tab" data-target="#dashboardData">5 tahun</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 mb-3">
                             <div class="card card-info chart-grid no-padding">
                                 <div class="card-header bg-hijau">
                                 <h6 class="card-title">Grafik Tren Harga CPO</h6>
                                 </div>
                                 <div class="card-body">
-                                <div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                                    <canvas id="lineChart2" style="min-height: 250px; max-height: 250px; max-width: 100%; display: block;" width="620" height="333" class=""></canvas>
-                                </div>
+                                    <div class="chart">
+                                        <canvas id="lineChart2" style="min-height: 250px; max-height: 250px; max-width: 100%; display: block;" width="620" height="333" class=""></canvas>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="row mb-3 no-margin no-padding">
+                                <div class="font-title col-md-12 mb-2">
+                                  <h6 class="no-margin">Menampilkan Data</h6>
+                                </div>
+                                <ul class="nav nav-tabs btn-tab col">
+                                    <li>
+                                        <a class="btn btn-fourth mr-2" type="button" data-toggle="tab" data-target="#dashboardData">1 Hari</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth mr-2 active" type="button" data-toggle="tab" data-target="#dashboardData">1 Minggu</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth mr-2" type="button" data-toggle="tab" data-target="#dashboardData">1 Bulan</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth mr-2 " type="button" data-toggle="tab" data-target="#dashboardData">3 Bulan</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth mr-2 " type="button" data-toggle="tab" data-target="#dashboardData">1 tahun</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth " type="button" data-toggle="tab" data-target="#dashboardData">5 tahun</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 mb-3">
                             <div class="card card-info chart-grid no-padding">
                                 <div class="card-header bg-hijau">
                                 <h6 class="card-title">Grafik Tren Harga PK (Palm Kernel)</h6>
                                 </div>
                                 <div class="card-body">
-                                <div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                                    <canvas id="lineChart3" style="min-height: 250px; max-height: 250px; max-width: 100%; display: block;" width="620" height="333" class=""></canvas>
-                                </div>
+                                    <div class="chart">
+                                        <canvas id="lineChart3" style="min-height: 250px; max-height: 250px; max-width: 100%; display: block;" width="620" height="333" class=""></canvas>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="row mb-3 no-margin no-padding">
+                                <div class="font-title col-md-12 mb-2">
+                                  <h6 class="no-margin">Menampilkan Data</h6>
+                                </div>
+                                <ul class="nav nav-tabs btn-tab col">
+                                    <li>
+                                        <a class="btn btn-fourth mr-2" type="button" data-toggle="tab" data-target="#dashboardData">1 Hari</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth mr-2 active" type="button" data-toggle="tab" data-target="#dashboardData">1 Minggu</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth mr-2" type="button" data-toggle="tab" data-target="#dashboardData">1 Bulan</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth mr-2 " type="button" data-toggle="tab" data-target="#dashboardData">3 Bulan</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth mr-2 " type="button" data-toggle="tab" data-target="#dashboardData">1 tahun</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth " type="button" data-toggle="tab" data-target="#dashboardData">5 tahun</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 mb-3">
                             <div class="card card-info chart-grid no-padding">
                                 <div class="card-header bg-hijau">
                                     <h6 class="card-title">Grafik Tren Harga PK (Palm Kernel)</h6>
@@ -209,56 +265,157 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row mb-3 no-margin no-padding">
+                                <div class="font-title col-md-12 mb-2">
+                                  <h6 class="no-margin">Menampilkan Data</h6>
+                                </div>
+                                <ul class="nav nav-tabs btn-tab col">
+                                    <li>
+                                        <a class="btn btn-fourth mr-2" type="button" data-toggle="tab" data-target="#dashboardData">1 Hari</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth mr-2 active" type="button" data-toggle="tab" data-target="#dashboardData">1 Minggu</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth mr-2" type="button" data-toggle="tab" data-target="#dashboardData">1 Bulan</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth mr-2 " type="button" data-toggle="tab" data-target="#dashboardData">3 Bulan</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth mr-2 " type="button" data-toggle="tab" data-target="#dashboardData">1 tahun</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth " type="button" data-toggle="tab" data-target="#dashboardData">5 tahun</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="col-md-12">
                             <div class="card card-info chart-grid no-padding">
                                 <div class="card-header bg-hijau">
-                                    <h6 class="card-title">Top 5 Supplier</h6>
+                                    <h6 class="card-title pl-0 col-md-6">Top 5 Supplier</h6>
+                                    <h6 class="card-title pl-4 col-md-6">Perbandingan</h6>
                                 </div>
-                                <table id="top5" class="table nowrap mb-0"  style="width:100%" >
-                                <thead>
-                                <tr>
-                                    <th>Nama</th>
-                                    <th>Qty(kg)</th>
-                                    <th>Harga Total</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>Saman</td>
-                                    <td>9.000</td>
-                                    <td>Rp 13.371.750</td>
-                                </tr>
-                                <tr>
-                                    <td>Andika</td>
-                                    <td>8.600</td>
-                                    <td>Rp 12.908.011</td>
-                                </tr>
-                                <tr>
-                                    <td>Rahma</td>
-                                    <td>7.000</td>
-                                    <td>Rp 11.900.000</td>
-                                </tr>
-                                <tr>
-                                    <td>Irwan</td>
-                                    <td>6.890</td>
-                                    <td>Rp 9.980.789</td>
-                                </tr>
-                                <tr>
-                                    <td>Marwan</td>
-                                    <td>6.700</td>
-                                    <td>Rp 8.909.897</td>
-                                </tr>
-                                
-                                </tbody>
-                                <!-- <tfoot>
-                                    <tr>
-                                    <td colspan="3">Total Booking</td>
-                                    <td>130.000 Kg</td>
-                                    </tr>
-                                </tfoot> -->
-                                
-                                </table>
+                                <div class="row no-margin">
+                                    <div class="col-md-6">
+                                        <table id="top5" class="table nowrap mb-0"  style="width:100%" >
+                                        <thead>
+                                        <tr>
+                                            <th>Nama</th>
+                                            <th>Qty(kg)</th>
+                                            <th>Harga Total</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>Saman</td>
+                                            <td>9.000</td>
+                                            <td>Rp 13.371.750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Andika</td>
+                                            <td>8.600</td>
+                                            <td>Rp 12.908.011</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rahma</td>
+                                            <td>7.000</td>
+                                            <td>Rp 11.900.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Irwan</td>
+                                            <td>6.890</td>
+                                            <td>Rp 9.980.789</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Marwan</td>
+                                            <td>6.700</td>
+                                            <td>Rp 8.909.897</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                        <!-- <tfoot>
+                                            <tr>
+                                            <td colspan="3">Total Booking</td>
+                                            <td>130.000 Kg</td>
+                                            </tr>
+                                        </tfoot> -->
+                                        
+                                        </table>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <table id="compares" class="table nowrap mb-0"  style="width:100%" >
+                                        <thead>
+                                        <tr>
+                                            <th>Nama</th>
+                                            <th>Qty(kg)</th>
+                                            <th>Harga Total</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>irine</td>
+                                            <td>9.000</td>
+                                            <td>Rp 13.371.750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Setiawan</td>
+                                            <td>8.600</td>
+                                            <td>Rp 12.908.011</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Iwan</td>
+                                            <td>7.000</td>
+                                            <td>Rp 11.900.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Machin</td>
+                                            <td>6.890</td>
+                                            <td>Rp 9.980.789</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Marwan</td>
+                                            <td>6.700</td>
+                                            <td>Rp 8.909.897</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                        <!-- <tfoot>
+                                            <tr>
+                                            <td colspan="3">Total Booking</td>
+                                            <td>130.000 Kg</td>
+                                            </tr>
+                                        </tfoot> -->
+                                        
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3 no-margin no-padding">
+                                <div class="font-title col-md-12 mb-2">
+                                  <h6 class="no-margin">Menampilkan Data</h6>
+                                </div>
+                                <ul class="nav nav-tabs btn-tab col">
+                                    <li>
+                                        <a class="btn btn-fourth mr-2" type="button" data-toggle="tab" data-target="#dashboardData">1 Hari</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth mr-2 active" type="button" data-toggle="tab" data-target="#dashboardData">1 Minggu</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth mr-2" type="button" data-toggle="tab" data-target="#dashboardData">1 Bulan</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth mr-2 " type="button" data-toggle="tab" data-target="#dashboardData">3 Bulan</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth mr-2 " type="button" data-toggle="tab" data-target="#dashboardData">1 tahun</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-fourth " type="button" data-toggle="tab" data-target="#dashboardData">5 tahun</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -446,9 +603,9 @@
                 responsive: true,
                 tooltips: {
                     callbacks: {
-                    label: function(tooltipItem) {
-                            return tooltipItem.yLabel;
-                    }
+                        label: function(tooltipItem) {
+                                return tooltipItem.yLabel;
+                                }
                     }
                 },
                 scales: { 
@@ -463,33 +620,33 @@
                             stepSize: 50000,
                             max: 800000,
                         }
-                     }] 
+                    }] 
                 }
             }
         });
 
         var ctx4 = document.getElementById("barChart1").getContext('2d');
         var myBarChart1 = new Chart(ctx4, {
-            type: "bar",
+            type: "line",
             data: {labels: ["29/08", "30/08", "31/08", "01/09", "02/09", "03/09", "04/09"],
             datasets: [
                 {
-                    label: "Target", 
-                    barPercentage: 0.5,
-                    barThickness: 5,
-                    maxBarThickness: 5,
-                    minBarLength: 2,
+                    label: "Target", lineTension: 0,  
                     data: [380, 300, 490, 180, 220, 200, 160],
-                    backgroundColor: "#009444",
+                    backgroundColor: "transparent",
+                    hoverBorderWidth: 2,
+                    hoverBorderColor: "#009444",
+                    borderWidth: 2,
+                    borderColor: "#009444"
                 },
                 {
-                    label: "Realisasi",  
-                    barPercentage: 1,
-                    barThickness: 5,
-                    maxBarThickness: 5,
-                    minBarLength: 2,
+                    label: "Realisasi", lineTension: 0,  
                     data: [320, 120, 290, 140, 160, 190, 140],
-                    backgroundColor: "#F26327",
+                    backgroundColor: "transparent",
+                    hoverBorderWidth: 2,
+                    hoverBorderColor: "#F26327",
+                    borderWidth: 2,
+                    borderColor: "#F26327"
                 }
             ]
 
@@ -498,14 +655,15 @@
                 responsive: true,
                 legend: {
                     display: true,
-                    position:'bottom',
-                    align: 'start',
+                    position:'top',
+                    align: 'end',
                 },
+                responsive: true,
                 tooltips: {
                     callbacks: {
-                    label: function(tooltipItem) {
-                            return tooltipItem.yLabel;
-                    }
+                        label: function(tooltipItem) {
+                                return tooltipItem.yLabel;
+                                }
                     }
                 },
                 scales: { 
@@ -520,7 +678,7 @@
                             stepSize: 100,
                             max: 500,
                         }
-                     }] 
+                    }] 
                 }
             }
         });

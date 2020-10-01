@@ -157,6 +157,12 @@ label {
 .nav-tabs.btn-tab {
     border: none;
 }
+.nav-tabs.btn-tab li a.btn {
+    font-size: 12px !important;
+    min-width: unset;
+    width: 80px;
+    margin-bottom: 10px;
+}
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-item .nav-link:hover {
     color: #009444 !important;
     background-color: transparent !important;

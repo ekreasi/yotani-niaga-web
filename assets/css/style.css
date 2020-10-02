@@ -204,6 +204,9 @@ label.btn-radio {
     color: #009444;
     border-color: #009444 !important;
 }
+.btn-radio.active:hover {
+    color: #009444;
+}
 .checkmark2 {
     position: absolute;
     top: 7px;

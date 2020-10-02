@@ -152,6 +152,9 @@
                     <div class="font-title col-md-12 mb-4">
                       <h6 class="no-margin">Daftar Pembayaran</h6>
                     </div>
+                    <div class="ml-auto mb-3 no-padding">
+                      <a href="ubah-profil-pabrik.html" class="btn btn-secondary mr-2">Tambah Pabrik</a>
+                    </div>
                     <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
                       <thead>
                       <tr>
@@ -189,9 +192,9 @@
                         <td>kartika@mail.com</td>
                         <td>082322abc</td>
                         <td>
-                            <a href="#"><span class="fa fa-eye orange ml-2"></span></a>
-                            <a href="ubah-profil-pabrik.html"><span class="fa fa-pencil orange ml-2"></span></a>
-                            <a href="#"><span class="fa fa-ban orange ml-2"></span></a>
+                            <a type="button" data-toggle="modal" data-target="#detailProfile"><span class="fa fa-eye orange ml-2"></span></a>
+                            <a type="button" href="ubah-profil-pabrik.html"><span class="fa fa-pencil orange ml-2"></span></a>
+                            <a type="button" href="#"><span class="fa fa-ban orange ml-2"></span></a>
                         </td>
                       </tr>
                       <tr>
@@ -210,9 +213,9 @@
                         <td>ayu@mail.com</td>
                         <td>011341vvv</td>
                         <td>
-                            <a href="#"><span class="fa fa-eye-slash orange ml-2"></span></a>
-                            <a href="ubah-profil-pabrik.html"><span class="fa fa-pencil orange ml-2"></span></a>
-                            <a href="#"><span class="fa fa-check-circle-o orange ml-2"></span></a>
+                            <a type="button" data-toggle="modal" data-target="#detailProfile"><span class="fa fa-eye-slash orange ml-2"></span></a>
+                            <a type="button" href="ubah-profil-pabrik.html"><span class="fa fa-pencil orange ml-2"></span></a>
+                            <a type="button" href="#"><span class="fa fa-check-circle-o orange ml-2"></span></a>
                         </td>
                       </tr>
                       <tr>
@@ -231,9 +234,9 @@
                         <td>sigit@mail.com</td>
                         <td>192322asc</td>
                         <td>
-                            <a href="#"><span class="fa fa-eye orange ml-2"></span></a>
-                            <a href="ubah-profil-pabrik.html"><span class="fa fa-pencil orange ml-2"></span></a>
-                            <a href="#"><span class="fa fa-ban orange ml-2"></span></a>
+                            <a type="button" data-toggle="modal" data-target="#detailProfile"><span class="fa fa-eye orange ml-2"></span></a>
+                            <a type="button" href="ubah-profil-pabrik.html"><span class="fa fa-pencil orange ml-2"></span></a>
+                            <a type="button" href="#"><span class="fa fa-ban orange ml-2"></span></a>
                         </td>
                       </tr>
                       
@@ -261,31 +264,226 @@
       <!-- Footer -->
 
       <!-- Modal -->
-      <!-- <div class="modal fade" id="addPrice" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="addPriceLabel" aria-hidden="true">
-          <div class="modal-dialog modal-md">
+      <div class="modal fade" id="detailProfile" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="detailProfileLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
               <div class="modal-content">
                   <div class="modal-header bg-hijau">
-                      <h6 class="modal-title" id="addPriceLabel">Detail Penerimaan</h6>
+                      <h6 class="modal-title" id="detailProfileLabel">Detail Penerimaan</h6>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                       </button>
                   </div>
-                  <div class="modal-body">
-                      <form>
-                          <div class="col-md-12 no-padding">
-                          <h6 class="green font-weight-bold mb-3">Petani</h6>
+                  <div class="modal-body p-0">
+                    <div class="row p-0 m-0">
+                      <ul class="nav nav-tabs col no-padding text-center">
+                          <li class="nav-item col-md-3">
+                              <a class="nav-link active" data-toggle="tab" data-target="#biodataPT">Biodata Perusahaan</a>
+                          </li>
+                          <li class="nav-item col-md-3">
+                              <a class="nav-link" data-toggle="tab" data-target="#alamatPT">Alamat</a>
+                          </li>
+                          <li class="nav-item col-md-3">
+                              <a class="nav-link" data-toggle="tab" data-target="#lahanPT">Info Lahan / Kebun</a>
+                          </li>
+                          <li class="nav-item col-md-3">
+                              <a class="nav-link" data-toggle="tab" data-target="#dokumenPT">Dokumen</a>
+                          </li>
+                      </ul>
+                    </div>
+                    <div class="tab-content card-body">
+                      <div id="biodataPT" class="container tab-pane active">
+                        <div class="col-md-6">
                           <div class="form-group">
-                              <label class="">Harga TBS<span class="text-danger"> *</span></label>
-                              <input type="text" class="form-control" required>
+                              <label for="" class="">Head Office<span class="text-danger"> *</span></label>
+                              <div class="btn-group d-block btn-group-toggle" data-toggle="buttons">
+                                  <label class="btn btn-radio mr-3 active disabled">
+                                  <input type="radio" name="options" id="picPusat" autocomplete="off" checked> Kantor Pusat
+                                  <span class="checkmark2"></span>
+                                  </label>
+                                  <label class="btn btn-radio disabled">
+                                  <input type="radio" name="options" id="picCabang" autocomplete="off"> Kantor Cabang
+                                  <span class="checkmark2"></span>
+                                  </label>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label for="" class="">Nama Perusahaan</label>
+                              <input type="text" id="" class="form-control-plaintext" placeholder="" value="PT. Padang Palma" readonly disabled>
+                          </div>
+                          <div class="form-group">
+                              <label for="" class="">Jumlah Karyawan</label>
+                              <input type="text" id="" class="form-control-plaintext" placeholder="" value="400.000" readonly disabled>
+                          </div>
+                          <div class="form-group">
+                              <label for="" class="">Website<span class="text-danger"> *</span></label>
+                              <input type="text" id="" class="form-control-plaintext" placeholder="" value="www.pdpalapa.com" readonly disabled>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <h4 class="font-weight-bold mb-3">PIC</h4>
+                          <div class="form-group">
+                              <label for="" class="">Nama PIC<span class="text-danger"> *</span></label>
+                              <input type="text" id="" class="form-control-plaintext" placeholder="" value="Kartika Wati" readonly disabled>
+                          </div>
+                          <div class="form-group">
+                              <label for="" class="">Nomor Telepon<span class="text-danger"> *</span></label>
+                              <input type="text" id="" class="form-control-plaintext" placeholder="" value="08232212345" readonly disabled>
+                          </div>
+                          <div class="form-group">
+                              <label for="" class="">Email<span class="text-danger"> *</span></label>
+                              <input type="email" id="" class="form-control-plaintext" placeholder="" value="kartika@mail.com" readonly disabled>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="alamatPT" class="container tab-pane fade">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="" class="">Titik Koordinat<span class="text-danger"> *</span></label>
+                              <div id="map" style="height: 220px;"></div>
+                          </div>
+                          <div class="form-group">
+                            <div class="col-md-6 no-padding-left">
+                              <label for="" class="">Longitude</label>
+                              <input type="text" id="" class="form-control" placeholder="">
+                            </div>
+                            <div class="col-md-6 no-padding-right">
+                              <label for="" class="">Latitude</label>
+                              <input type="text" id="" class="form-control" placeholder="">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                              <label for="" class="">Alamat<span class="text-danger"> *</span></label>
+                              <textarea type="text" id="" class="form-control" placeholder="Alamat Perusahaan" required style="height: 100px"></textarea>
                               <div class="invalid-feedback">Mohon isi kolom ini</div>
                           </div>
                           <div class="form-group">
-                              <label class="">Tanggal<span class="text-danger"> *</span></label>
-                              <input type="date" class="form-control" required>
+                            <div class="row no-margin">
+                              <div class="col no-padding-left">
+                                <label for="" class="">RT<span class="text-danger"> *</span></label>
+                                <input type="text" id="" class="form-control" placeholder="">
+                              </div>
+                              <div class="col no-padding-right">
+                                <label for="" class="">RW<span class="text-danger"> *</span></label>
+                                <input type="text" id="" class="form-control" placeholder="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                              <label for="" class="">Provinsi<span class="text-danger"> *</span></label>
+                              <input type="text" id="" class="form-control" placeholder="" required>
                               <div class="invalid-feedback">Mohon isi kolom ini</div>
                           </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="" class="">Kota / Kabupaten<span class="text-danger"> *</span></label>
+                            <input type="text" id="" class="form-control" placeholder="" required>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
                           </div>
-                      </form>
+                          <div class="form-group">
+                            <label for="" class="">Kecamatan<span class="text-danger"> *</span></label>
+                            <input type="text" id="" class="form-control" placeholder="" required>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                          <div class="form-group">
+                            <label for="" class="">Kelurahan / Desa<span class="text-danger"> *</span></label>
+                            <input type="text" id="" class="form-control" placeholder="" required>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                          <div class="form-group">
+                            <label for="" class="">Kode Pos<span class="text-danger"> *</span></label>
+                            <input type="text" id="" class="form-control" placeholder="" required>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="lahanPT" class="container tab-pane fade">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                              <label for="" class="">Head Office<span class="text-danger"> *</span></label>
+                              <div class="btn-group d-block btn-group-toggle" data-toggle="buttons">
+                                  <label class="btn btn-radio mr-3 active">
+                                  <input type="radio" name="options" id="picPusat" autocomplete="off" checked> Kantor Pusat
+                                  <span class="checkmark2"></span>
+                                  </label>
+                                  <label class="btn btn-radio">
+                                  <input type="radio" name="options" id="picCabang" autocomplete="off"> Kantor Cabang
+                                  <span class="checkmark2"></span>
+                                  </label>
+                                  <div class="invalid-feedback">Mohon isi kolom ini</div>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                              <label for="" class="">Kapasitas<span class="text-danger"> *</span></label>
+                              <select class="form-control no-margin" id="inputGroupSelect">
+                                <option selected>- Pilih -</option>
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                              </select>
+                              <label class="checkwrap mt-2">
+                                  <input type="checkbox" value=""> Line Extendable
+                                  <span class="checkmark"></span>
+                              </label>
+                              <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                      </div>
+                      <div id="dokumenPT" class="container tab-pane fade">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="" class="">NPWP<span class="text-danger"> *</span></label>
+                            <input type="text" id="" class="form-control" placeholder="" required>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                          <div class="form-group">
+                            <form>
+                              <p>Akta Perusahaan<span class="text-danger"> *</span></p>
+                              <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="customFile" name="filename">
+                                <label class="custom-file-label" for="customFile">Tidak ada data</label>
+                              </div>
+                              <p class="hint-text">Tipe file png/jpeg/jpg, setiap foto berukuran maksimal 2Mb</p>
+                            </form>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="" class="">No. Izin Berusaha<span class="text-danger"> *</span></label>
+                            <input type="text" id="" class="form-control" placeholder="" required>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                          <div class="form-group">
+                            <label for="" class="">Nama Akun Bank<span class="text-danger"> *</span></label>
+                            <input type="text" id="" class="form-control" placeholder="" required>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <div>
+                              <p>SIUP Pengolahan<span class="text-danger"> *</span></p>
+                              <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="customFile" name="filename">
+                                <label class="custom-file-label" for="customFile">Tidak ada data</label>
+                              </div>
+                              <p class="hint-text">Tipe file png/jpeg/jpg, setiap foto berukuran maksimal 2Mb</p>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="" class="">No. Rekening<span class="text-danger"> *</span></label>
+                            <input type="text" id="" class="form-control" placeholder="" required>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="modal-footer">
                   <div class="row no-margin">
@@ -299,7 +497,7 @@
                   </div>
               </div>
           </div>
-      </div> -->
+      </div>
   </div>
 
 

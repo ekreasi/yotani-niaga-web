@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
 html, body {
     height: 100%;
     color: #4d4d4d !important;
 }
-body, input {
-    font-family: 'Nunito', sans-serif !important;
+body, input, b {
+    font-family: 'Nunito Sans', sans-serif !important;
 }
 ::placeholder {
     color: #9d9d9d !important;
@@ -83,6 +83,15 @@ a:focus {
 }
 .notif .fa {
     font-size: 20px;
+}
+.notif .fa-bell {
+    color: #009444;
+}
+.show .notif .fa-bell {
+    color: #AC1D14;
+}
+.show .notif .navbar-badge {
+    display: none;
 }
 .dropdown-menu {
     position: absolute;
@@ -434,10 +443,10 @@ header {
     text-align: center;
 }
 .orange {
-    color: #F26327;
+    color: #F26327 !important;
 }
 .green {
-    color: #009444;
+    color: #009444 !important;
 }
 .timer-wrap {
     background-image: url(../img/img-time-otp.png);
@@ -484,6 +493,22 @@ header {
     display: flex;
     align-items: center;
     border-radius: 10px;
+    background-color: #009444;
+    color: #fff;
+}
+.highlight-price-lg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #009444;
+    color: #fff;
+    height: 100%;
+    align-items: center;
+    border-radius: 10px;
+}
+.highlight-price-lg .h-price {
+    font-size: 52px;
+    font-weight: 700;
 }
 .input-search input {
     background-color: #f7f7f7;
@@ -544,6 +569,9 @@ header {
     padding: 6px 15px !important;
     background-color: #F26327 !important;
     color: #fff !important;
+}
+.custom-file-input {
+    cursor: pointer !important;
 }
 .hint-text {
     color: #9d9d9d;

@@ -646,7 +646,6 @@ input.form-control-plaintext, textarea.form-control-plaintext {
 .modal-footer .row {
     align-items: center;
     justify-content: space-evenly;
-    width: 100%;
 }
 
 /* icons */

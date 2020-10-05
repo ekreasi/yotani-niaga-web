@@ -172,17 +172,19 @@
                     <div class="col-md-4">
                       <div class="form-group">
                         <label for="" class="">Titik Koordinat<span class="text-danger"> *</span></label>
-                          <div id="map" style="height: 220px;"></div>
+                          <!-- <div id="map" style="height: 220px;"></div> -->
+                          <div id="mapBox" style="height: 220px;"></div>
                       </div>
                       <div class="form-group">
-                        <div class="col-md-6 no-padding-left">
+                        <div id="dragStatus"></div>
+                        <!-- <div class="col-md-6 no-padding-left">
                           <label for="" class="">Longitude</label>
                           <input type="text" id="" class="form-control" placeholder="" readonly>
                         </div>
                         <div class="col-md-6 no-padding-right">
                           <label for="" class="">Latitude</label>
                           <input type="text" id="" class="form-control" placeholder="" readonly>
-                        </div>
+                        </div> -->
                       </div>
                     </div>
                     <div class="col-md-4">
@@ -295,19 +297,31 @@
 
 
     <!-- jQuery -->
+    <script src="http://maps.google.com/maps/api/js?sensor=false&.js"></script>
     <script>
-      let map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: -34.397, lng: 150.644 },
-          zoom: 8,
-        });
-      }
-    </script>
-    <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
-    defer
-  ></script>
+      var map = new google.maps.Map(document.getElementById('mapBox'), {
+      zoom: 15,
+      center: new google.maps.LatLng(-6.1754, 106.8272),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+
+      var myMarker = new google.maps.Marker({
+          position: new google.maps.LatLng(-6.1754, 106.8272),
+          draggable: true
+      });
+      google.maps.event.addListener(myMarker, 'dragend', function (evt) {
+          document.getElementById('dragStatus').innerHTML = '<div class="container no-padding"><div class="col-md-6 no-padding-left"><label>Longitude</label><div class="clearfix"></div><div class="disable-longlat">' + evt.latLng.lat().toFixed(4) + '</div></div> <div class="col-md-6 no-padding-right"><label>Latitude</label><div class="clearfix"></div><div class="disable-longlat">' + evt.latLng.lng().toFixed(4) + '</div></div></div>';
+          var point = marker.getPosition();
+            map.panTo(point);
+      });
+
+      google.maps.event.addListener(myMarker, 'dragstart', function (evt) {
+          //-------------
+          //------------
+      });
+
+      map.setCenter(myMarker.position);
+      myMarker.setMap(map);
     </script>
     <script src="assets/libs/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->

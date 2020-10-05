@@ -69,7 +69,7 @@
                                 <a  href="login.html" class="btn btn-secondary btn-block mt-4">Kembali</a>
                             </div>
                             <div class="col">
-                                <a href="index.html" class="btn btn-secondary-gradient btn-block mt-4">Daftar</a>
+                                <a data-toggle="modal" data-target="#fieldWarning" class="btn btn-secondary-gradient btn-block mt-4">Daftar</a>
                             </div>
                         </div>
                         <!-- <div class="container">
@@ -102,6 +102,30 @@
   
     </footer>
     <!-- Footer -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="fieldWarning" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="fieldWarningLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="popup-img-2">
+                        <img src="assets/img/popup-gagal.png" alt="">
+                    </div>
+                    <div class="col-md-12 text-center mb-3 px-4">
+                        <h6 class="orange font-weight-bold mb-1">Field Tidak Lengkap</h6>
+                        <p>Lengkapi field yang sudah ditandai</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row no-margin">
+                        <div class="col">
+                            <a data-dismiss="modal" class="btn btn-secondary-gradient btn-block">Oke</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <!-- Library  -->

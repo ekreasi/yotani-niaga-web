@@ -630,6 +630,24 @@ input.form-control-plaintext, textarea.form-control-plaintext {
     font-weight: 700;
     color: #F26327;
 }
+.popup-img {
+    margin-top: -80px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.popup-img-2 {
+    margin-top: -40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.modal .btn-secondary, .modal .btn-secondary-gradient {
+    padding: 10px 0;
+}
+.modal-footer .row {
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
 
 /* icons */
 .ic-round-pencil {
@@ -646,3 +664,4 @@ input.form-control-plaintext, textarea.form-control-plaintext {
     height: 33px;
     width: 33px;
 }
+/* icons end here */

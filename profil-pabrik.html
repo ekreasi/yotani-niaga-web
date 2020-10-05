@@ -294,16 +294,16 @@
                       <div id="biodataPT" class="container tab-pane active">
                         <div class="col-md-6">
                           <div class="form-group">
-                              <label for="" class="">Head Office<span class="text-danger"> *</span></label>
+                              <label for="" class="">Head Office</label>
                               <div class="btn-group d-block btn-group-toggle" data-toggle="buttons">
                                   <label class="btn btn-radio mr-3 active disabled">
                                   <input type="radio" name="options" id="picPusat" autocomplete="off" checked> Kantor Pusat
                                   <span class="checkmark2"></span>
                                   </label>
-                                  <label class="btn btn-radio disabled">
+                                  <!-- <label class="btn btn-radio disabled">
                                   <input type="radio" name="options" id="picCabang" autocomplete="off"> Kantor Cabang
                                   <span class="checkmark2"></span>
-                                  </label>
+                                  </label> -->
                               </div>
                           </div>
                           <div class="form-group">
@@ -315,22 +315,22 @@
                               <input type="text" id="" class="form-control-plaintext" placeholder="" value="400.000" readonly disabled>
                           </div>
                           <div class="form-group">
-                              <label for="" class="">Website<span class="text-danger"> *</span></label>
+                              <label for="" class="">Website</label>
                               <input type="text" id="" class="form-control-plaintext" placeholder="" value="www.pdpalapa.com" readonly disabled>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <h4 class="font-weight-bold mb-3">PIC</h4>
                           <div class="form-group">
-                              <label for="" class="">Nama PIC<span class="text-danger"> *</span></label>
+                              <label for="" class="">Nama PIC</label>
                               <input type="text" id="" class="form-control-plaintext" placeholder="" value="Kartika Wati" readonly disabled>
                           </div>
                           <div class="form-group">
-                              <label for="" class="">Nomor Telepon<span class="text-danger"> *</span></label>
+                              <label for="" class="">Nomor Telepon</label>
                               <input type="text" id="" class="form-control-plaintext" placeholder="" value="08232212345" readonly disabled>
                           </div>
                           <div class="form-group">
-                              <label for="" class="">Email<span class="text-danger"> *</span></label>
+                              <label for="" class="">Email</label>
                               <input type="email" id="" class="form-control-plaintext" placeholder="" value="kartika@mail.com" readonly disabled>
                           </div>
                         </div>
@@ -338,98 +338,82 @@
                       <div id="alamatPT" class="container tab-pane fade">
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="" class="">Titik Koordinat<span class="text-danger"> *</span></label>
+                            <label for="" class="">Titik Koordinat</label>
                               <div id="map" style="height: 220px;"></div>
                           </div>
                           <div class="form-group">
                             <div class="col-md-6 no-padding-left">
                               <label for="" class="">Longitude</label>
-                              <input type="text" id="" class="form-control" placeholder="">
+                              <input type="text" id="" class="form-control-plaintext" placeholder="" value="-2.4187087" readonly disabled>
                             </div>
                             <div class="col-md-6 no-padding-right">
                               <label for="" class="">Latitude</label>
-                              <input type="text" id="" class="form-control" placeholder="">
+                              <input type="text" id="" class="form-control-plaintext" placeholder="" value="116.357063" readonly disabled>
                             </div>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                              <label for="" class="">Alamat<span class="text-danger"> *</span></label>
-                              <textarea type="text" id="" class="form-control" placeholder="Alamat Perusahaan" required style="height: 100px"></textarea>
-                              <div class="invalid-feedback">Mohon isi kolom ini</div>
+                              <label for="" class="">Alamat</label>
+                              <!-- <textarea type="text" id="" class="form-control" placeholder="Alamat Perusahaan" required style="height: 100px"></textarea> -->
+                              <textarea type="text" id="" class="form-control-plaintext" placeholder=""style="height: 100px" readonly disabled>Jl. Binturung RT 001 RW 003,  Peurelak Timur, Seureubook Tengah, Aceh Timur 24452</textarea>
                           </div>
-                          <div class="form-group">
+                          <!-- <div class="form-group">
                             <div class="row no-margin">
                               <div class="col no-padding-left">
-                                <label for="" class="">RT<span class="text-danger"> *</span></label>
-                                <input type="text" id="" class="form-control" placeholder="">
+                                <label for="" class="">RT</label>
+                                <input type="text" id="" class="form-control-plaintext" placeholder="" value="001" readonly disabled>
                               </div>
                               <div class="col no-padding-right">
-                                <label for="" class="">RW<span class="text-danger"> *</span></label>
-                                <input type="text" id="" class="form-control" placeholder="">
+                                <label for="" class="">RW</label>
+                                <input type="text" id="" class="form-control-plaintext" placeholder="" value="003" readonly disabled>
                               </div>
                             </div>
                           </div>
                           <div class="form-group">
-                              <label for="" class="">Provinsi<span class="text-danger"> *</span></label>
-                              <input type="text" id="" class="form-control" placeholder="" required>
-                              <div class="invalid-feedback">Mohon isi kolom ini</div>
-                          </div>
+                              <label for="" class="">Provinsi</label>
+                              <input type="text" id="" class="form-control-plaintext" placeholder="" value="Aceh" readonly disabled>
+                          </div> -->
                         </div>
-                        <div class="col-md-4">
+                        <!-- <div class="col-md-4">
                           <div class="form-group">
-                            <label for="" class="">Kota / Kabupaten<span class="text-danger"> *</span></label>
-                            <input type="text" id="" class="form-control" placeholder="" required>
-                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                            <label for="" class="">Kota / Kabupaten</label>
+                            <input type="text" id="" class="form-control-plaintext" placeholder="" value="Aceh Timur" readonly disabled>
                           </div>
                           <div class="form-group">
-                            <label for="" class="">Kecamatan<span class="text-danger"> *</span></label>
-                            <input type="text" id="" class="form-control" placeholder="" required>
-                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                            <label for="" class="">Kecamatan</label>
+                            <input type="text" id="" class="form-control-plaintext" placeholder="" value="Seureubook Tengah" readonly disabled>
                           </div>
                           <div class="form-group">
-                            <label for="" class="">Kelurahan / Desa<span class="text-danger"> *</span></label>
-                            <input type="text" id="" class="form-control" placeholder="" required>
-                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                            <label for="" class="">Kelurahan / Desa</label>
+                            <input type="text" id="" class="form-control-plaintext" placeholder="" value="Peurelak Timur" readonly disabled>
                           </div>
                           <div class="form-group">
-                            <label for="" class="">Kode Pos<span class="text-danger"> *</span></label>
-                            <input type="text" id="" class="form-control" placeholder="" required>
-                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                            <label for="" class="">Kode Pos</label>
+                            <input type="text" id="" class="form-control-plaintext" placeholder="" value="24452" readonly disabled>
                           </div>
-                        </div>
+                        </div> -->
                       </div>
                       <div id="lahanPT" class="container tab-pane fade">
                         <div class="col-md-4">
                           <div class="form-group">
-                              <label for="" class="">Head Office<span class="text-danger"> *</span></label>
+                              <label for="" class="">Head Office</label>
                               <div class="btn-group d-block btn-group-toggle" data-toggle="buttons">
-                                  <label class="btn btn-radio mr-3 active">
-                                  <input type="radio" name="options" id="picPusat" autocomplete="off" checked> Kantor Pusat
-                                  <span class="checkmark2"></span>
-                                  </label>
-                                  <label class="btn btn-radio">
-                                  <input type="radio" name="options" id="picCabang" autocomplete="off"> Kantor Cabang
-                                  <span class="checkmark2"></span>
-                                  </label>
-                                  <div class="invalid-feedback">Mohon isi kolom ini</div>
+                                <label class="btn btn-radio mr-3 active disabled">
+                                <input type="radio" name="options" id="picPusat" autocomplete="off" checked> Kantor Pusat
+                                <span class="checkmark2"></span>
+                                </label>
                               </div>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                              <label for="" class="">Kapasitas<span class="text-danger"> *</span></label>
-                              <select class="form-control no-margin" id="inputGroupSelect">
-                                <option selected>- Pilih -</option>
-                                <option value="5">5</option>
-                                <option value="10">10</option>
-                                <option value="15">15</option>
-                              </select>
+                              <label for="" class="">Kapasitas</label>
+                              <input class="form-control-plaintext no-margin" id="inputGroupSelect" value="10" readonly disabled>
                               <label class="checkwrap mt-2">
-                                  <input type="checkbox" value=""> Line Extendable
+                                  <input type="checkbox" value="" readonly disabled  checked> Line Extendable
                                   <span class="checkmark"></span>
                               </label>
-                              <div class="invalid-feedback">Mohon isi kolom ini</div>
                           </div>
                         </div>
                         <div class="col-md-4">
@@ -438,48 +422,32 @@
                       <div id="dokumenPT" class="container tab-pane fade">
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="" class="">NPWP<span class="text-danger"> *</span></label>
-                            <input type="text" id="" class="form-control" placeholder="" required>
-                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                            <label for="" class="">NPWP</label>
+                            <input type="text" id="" class="form-control-plaintext" placeholder="" value="092542943407000" readonly disabled>
                           </div>
                           <div class="form-group">
-                            <form>
-                              <p>Akta Perusahaan<span class="text-danger"> *</span></p>
-                              <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="customFile" name="filename">
-                                <label class="custom-file-label" for="customFile">Tidak ada data</label>
-                              </div>
-                              <p class="hint-text">Tipe file png/jpeg/jpg, setiap foto berukuran maksimal 2Mb</p>
-                            </form>
+                            <label class="" for="">Akta Perusahaan</label>
+                            <input type="text" id="" class="form-control-plaintext" placeholder="" value="DOC-PT-120919.pdf" readonly disabled>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="" class="">No. Izin Berusaha<span class="text-danger"> *</span></label>
-                            <input type="text" id="" class="form-control" placeholder="" required>
-                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                            <label for="" class="">No. Izin Berusaha</label>
+                            <input type="text" id="" class="form-control-plaintext" placeholder="" value="092542943407000" readonly disabled>
                           </div>
                           <div class="form-group">
-                            <label for="" class="">Nama Akun Bank<span class="text-danger"> *</span></label>
-                            <input type="text" id="" class="form-control" placeholder="" required>
-                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                            <label for="" class="">Nama Akun Bank</label>
+                            <input type="text" id="" class="form-control-plaintext" placeholder="" value="PT. Padang Palma" readonly disabled>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <div>
-                              <p>SIUP Pengolahan<span class="text-danger"> *</span></p>
-                              <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="customFile" name="filename">
-                                <label class="custom-file-label" for="customFile">Tidak ada data</label>
-                              </div>
-                              <p class="hint-text">Tipe file png/jpeg/jpg, setiap foto berukuran maksimal 2Mb</p>
-                            </div>
+                            <label class="" for="">SIUP Pengolahan</label>
+                            <input type="text" id="" class="form-control-plaintext" placeholder="" value="L-PT-120919.pdf" readonly disabled>
                           </div>
                           <div class="form-group">
-                            <label for="" class="">No. Rekening<span class="text-danger"> *</span></label>
-                            <input type="text" id="" class="form-control" placeholder="" required>
-                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                            <label for="" class="">No. Rekening</label>
+                            <input type="text" id="" class="form-control-plaintext" placeholder="" value="99856423" readonly disabled>
                           </div>
                         </div>
                       </div>
@@ -487,11 +455,8 @@
                   </div>
                   <div class="modal-footer">
                   <div class="row no-margin">
-                      <div class="col pl-0">
-                          <a  href="" class="btn btn-secondary btn-block">Kembali</a>
-                      </div>
                       <div class="col pr-0">
-                          <a href="" class="btn btn-secondary-gradient btn-block">Simpan</a>
+                          <a data-dismiss="modal" class="btn btn-secondary btn-block">Kembali</a>
                       </div>
                   </div>
                   </div>

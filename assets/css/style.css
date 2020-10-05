@@ -198,7 +198,7 @@ label.btn-radio {
     color: #9d9d9d;
     background-color: #fff !important;
     border-color: #d5d5d5 !important;
-    padding: 4px 36px 4px 40px !important;
+    padding: 4px 20px 4px 38px !important;
 }
 .btn-radio.active {
     color: #009444;
@@ -573,13 +573,30 @@ header {
     background-color: #F26327 !important;
     color: #fff !important;
 }
+.custom-file-2 .custom-file-input:lang(en)~.custom-file-label::after {
+    content: "Tambah Dokumen Kepemilikan" !important;
+    border-radius: 4px !important;
+    padding: 6px 15px !important;
+    color: #F26327 !important;
+    border: 1px solid #F26327 !important;
+    background-color: #fff !important;
+    width: 100%;
+    text-align: center;
+}
+.custom-file-2 {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    margin-bottom: 0;
+}
 .custom-file-input {
     cursor: pointer !important;
 }
 .hint-text {
     color: #9d9d9d;
     font-size: 12px;
-    margin-top: 6px !important;
+    margin-bottom: 10px !important;
 }
 .form-control-plaintext {
     color: inherit !important;
@@ -592,4 +609,40 @@ input.form-control-plaintext, textarea.form-control-plaintext {
     display: flex;
     margin: 10px 0 28px;
     border-bottom: 1px solid #e0e0e0;
+}
+.uploaded-file {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+.uploaded-file > span {
+    width: 70%;
+}
+.uploaded-file a, .uploaded-file span {
+    display: block;
+}
+.uploaded-file p {
+    font-size: 14px;
+}
+.uploaded-file h6 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #F26327;
+}
+
+/* icons */
+.ic-round-pencil {
+    background-image: url(../img/ic-pencil-circle.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 33px;
+    width: 33px;
+}
+.ic-round-delete {
+    background-image: url(../img/ic-trash-circle.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 33px;
+    width: 33px;
 }

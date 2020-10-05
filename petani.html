@@ -303,7 +303,7 @@
                         <div class="clearfix"></div>
                         <div class="separator"></div>
                         <div class="col-md-12 no-padding">
-                            <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
+                            <table id="pabrik-modal" class="table table-bordered table-green nowrap"  style="width:100%" >
                               <thead>
                               <tr>
                                 <th>No</th>
@@ -394,6 +394,10 @@
     <script>
     $(function () {
       $("#pabrik").DataTable({
+        "scrollX": true
+       
+      });
+      $("#pabrik-modal").DataTable({
         "scrollX": true
        
       });

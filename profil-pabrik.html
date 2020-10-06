@@ -194,7 +194,7 @@
                         <td>
                             <a type="button" data-toggle="modal" data-target="#detailProfile"><span class="fa fa-eye orange ml-2"></span></a>
                             <a type="button" href="ubah-profil-pabrik.html"><span class="fa fa-pencil orange ml-2"></span></a>
-                            <a type="button" href="#"><span class="fa fa-ban orange ml-2"></span></a>
+                            <a type="button" data-toggle="modal" data-target="#deleteWarning"><span class="fa fa-ban orange ml-2"></span></a>
                         </td>
                       </tr>
                       <tr>
@@ -215,7 +215,7 @@
                         <td>
                             <a type="button" data-toggle="modal" data-target="#detailProfile"><span class="fa fa-eye-slash orange ml-2"></span></a>
                             <a type="button" href="ubah-profil-pabrik.html"><span class="fa fa-pencil orange ml-2"></span></a>
-                            <a type="button" href="#"><span class="fa fa-check-circle-o orange ml-2"></span></a>
+                            <a type="button" data-toggle="modal" data-target="#deleteWarning"><span class="fa fa-check-circle-o orange ml-2"></span></a>
                         </td>
                       </tr>
                       <tr>
@@ -236,7 +236,7 @@
                         <td>
                             <a type="button" data-toggle="modal" data-target="#detailProfile"><span class="fa fa-eye orange ml-2"></span></a>
                             <a type="button" href="ubah-profil-pabrik.html"><span class="fa fa-pencil orange ml-2"></span></a>
-                            <a type="button" href="#"><span class="fa fa-ban orange ml-2"></span></a>
+                            <a type="button" data-toggle="modal" data-target="#deleteWarning"><span class="fa fa-ban orange ml-2"></span></a>
                         </td>
                       </tr>
                       
@@ -464,6 +464,32 @@
               </div>
           </div>
       </div>
+
+      <div class="modal fade" id="deleteWarning" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="deleteWarningLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="popup-img">
+                        <img src="assets/img/popup-confirm.png" alt="">
+                    </div>
+                    <div class="col-md-12 text-center mb-3 px-4">
+                        <h6 class="font-weight-bold mb-1">Nonaktifkan Pabrik</h6>
+                        <p>Apakah anda yakin akan menonaktifkan pabrik ini?</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row w-100 no-margin">
+                        <div class="col pl-0">
+                            <a data-dismiss="modal" class="btn btn-secondary btn-block">Tidak, Kembali</a>
+                        </div>
+                        <div class="col pr-0">
+                            <a href="index.html" class="btn btn-secondary-gradient btn-block">Ya, Lanjutkan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
 
 

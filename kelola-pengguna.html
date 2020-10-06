@@ -253,184 +253,209 @@
 
     </footer>
     <!-- Footer -->
-  <!-- Modal -->
-  <div class="modal fade" id="addAdmin" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="addAdminLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header bg-hijau">
-                <h6 class="modal-title" id="addAdminLabel">Tambah Data Admin</h6>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="col-md-12 no-padding mb-3">
-                      <h6 class="green font-weight-bold mb-3">Admin Aktif</h6>
-                      <div class="col-md-6 no-padding-left">
-                        <div class="form-group">
-                          <label for="" class="">Nama Admin<span class="text-danger"> *</span></label>
-                          <input type="text" id="" class="form-control" placeholder="" required>
-                          <div class="invalid-feedback">Mohon isi kolom ini</div>
-                        </div>
-                        <div class="form-group">
-                          <label for="" class="">No. Telepon<span class="text-danger"> *</span></label>
-                          <input type="text" id="" class="form-control" placeholder="" required>
-                          <div class="invalid-feedback">Mohon isi kolom ini</div>
-                        </div>
-                        <div class="form-group">
-                          <label for="" class="">No. Rekening<span class="text-danger"> *</span></label>
-                          <input type="email" id="" class="form-control" placeholder="" required>
-                          <div class="invalid-feedback">Mohon isi kolom ini</div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 no-padding-right">
-                        <div class="form-group">
-                            <label for="" class="">PKS<span class="text-danger"> *</span></label>
-                            <select class="form-control no-margin" id="inputGroupSelect">
-                              <option selected>- Pilih -</option>
-                              <option value="5">5</option>
-                              <option value="10">10</option>
-                              <option value="15">15</option>
-                            </select>
-                            <div class="invalid-feedback">Mohon isi kolom ini</div>
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="">Provinsi</label>
-                            <input type="text" id="" class="form-control" placeholder="" value="" readonly>
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="">Kabupaten</label>
-                            <input type="text" id="" class="form-control" placeholder="" value="" readonly>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-12 no-padding">
-                      <h6 class="green font-weight-bold mb-3">Kata Sandi</h6>
-                      <div class="col-md-6 no-padding-left">
-                        <div class="form-group">
-                          <label for="" class="">Kata Sandi<span class="text-danger"> *</span></label>
-                          <input type="password" id="" class="form-control" placeholder="" required>
-                          <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
-                          <div class="invalid-feedback">Mohon isi kolom ini</div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 no-padding-right">
-                        <div class="form-group">
-                          <label for="" class="">Konfirmasi Kata Sandi<span class="text-danger"> *</span></label>
-                          <input type="password" id="" class="form-control" placeholder="" required>
-                          <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
-                          <div class="invalid-feedback">Mohon isi kolom ini</div>
-                        </div>
-                      </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-              <div class="row no-margin">
-                  <div class="col pl-0">
-                      <a data-dismiss="modal" class="btn btn-secondary btn-block">Kembali</a>
-                  </div>
-                  <div class="col pr-0">
-                      <a href="" class="btn btn-secondary-gradient btn-block">Simpan</a>
-                  </div>
+    <!-- Modal -->
+    <div class="modal fade" id="addAdmin" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="addAdminLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header bg-hijau">
+                  <h6 class="modal-title" id="addAdminLabel">Tambah Data Admin</h6>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
               </div>
-            </div>
-        </div>
+              <div class="modal-body">
+                  <form>
+                      <div class="col-md-12 no-padding mb-3">
+                        <h6 class="green font-weight-bold mb-3">Admin Aktif</h6>
+                        <div class="col-md-6 no-padding-left">
+                          <div class="form-group">
+                            <label for="" class="">Nama Admin<span class="text-danger"> *</span></label>
+                            <input type="text" id="" class="form-control" placeholder="" required>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                          <div class="form-group">
+                            <label for="" class="">No. Telepon<span class="text-danger"> *</span></label>
+                            <input type="text" id="" class="form-control" placeholder="" required>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                          <div class="form-group">
+                            <label for="" class="">No. Rekening<span class="text-danger"> *</span></label>
+                            <input type="email" id="" class="form-control" placeholder="" required>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 no-padding-right">
+                          <div class="form-group">
+                              <label for="" class="">PKS<span class="text-danger"> *</span></label>
+                              <select class="form-control no-margin" id="inputGroupSelect">
+                                <option selected>- Pilih -</option>
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                              </select>
+                              <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                          <div class="form-group">
+                              <label for="" class="">Provinsi</label>
+                              <input type="text" id="" class="form-control" placeholder="" value="" readonly>
+                          </div>
+                          <div class="form-group">
+                              <label for="" class="">Kabupaten</label>
+                              <input type="text" id="" class="form-control" placeholder="" value="" readonly>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12 no-padding">
+                        <h6 class="green font-weight-bold mb-3">Kata Sandi</h6>
+                        <div class="col-md-6 no-padding-left">
+                          <div class="form-group">
+                            <label for="" class="">Kata Sandi<span class="text-danger"> *</span></label>
+                            <input type="password" id="" class="form-control" placeholder="" required>
+                            <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 no-padding-right">
+                          <div class="form-group">
+                            <label for="" class="">Konfirmasi Kata Sandi<span class="text-danger"> *</span></label>
+                            <input type="password" id="" class="form-control" placeholder="" required>
+                            <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                        </div>
+                      </div>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                <div class="row no-margin">
+                    <div class="col pl-0">
+                        <a data-dismiss="modal" class="btn btn-secondary btn-block">Kembali</a>
+                    </div>
+                    <div class="col pr-0">
+                        <a href="" class="btn btn-secondary-gradient btn-block">Simpan</a>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
     </div>
-  </div>
 
-  <div class="modal fade" id="editUser" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="editUserLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header bg-hijau">
-                <h6 class="modal-title" id="editUserLabel">Ubah Data Admin</h6>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="col-md-12 no-padding mb-3">
-                      <h6 class="green font-weight-bold mb-3">Admin Aktif</h6>
-                      <div class="col-md-6 no-padding-left">
-                        <div class="form-group">
-                          <label for="" class="">Nama Admin<span class="text-danger"> *</span></label>
-                          <input type="text" id="" class="form-control" placeholder="" required value="Kartika Wati">
-                          <div class="invalid-feedback">Mohon isi kolom ini</div>
-                        </div>
-                        <div class="form-group">
-                          <label for="" class="">No. Telepon<span class="text-danger"> *</span></label>
-                          <input type="text" id="" class="form-control" placeholder="" required value="08123456789">
-                          <div class="invalid-feedback">Mohon isi kolom ini</div>
-                        </div>
-                        <div class="form-group">
-                          <label for="" class="">No. Rekening<span class="text-danger"> *</span></label>
-                          <input type="email" id="" class="form-control" placeholder="" required value="kartika.wati@email.com">
-                          <div class="invalid-feedback">Mohon isi kolom ini</div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 no-padding-right">
-                        <div class="form-group">
-                            <label for="" class="">PKS<span class="text-danger"> *</span></label>
-                            <select class="form-control no-margin" id="inputGroupSelect">
-                              <option>- Pilih -</option>
-                              <option selected value="5">PT Padang Palma</option>
-                              <option value="10">10</option>
-                              <option value="15">15</option>
-                            </select>
+    <div class="modal fade" id="editUser" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="editUserLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header bg-hijau">
+                  <h6 class="modal-title" id="editUserLabel">Ubah Data Admin</h6>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <div class="col-md-12 no-padding mb-3">
+                        <h6 class="green font-weight-bold mb-3">Admin Aktif</h6>
+                        <div class="col-md-6 no-padding-left">
+                          <div class="form-group">
+                            <label for="" class="">Nama Admin<span class="text-danger"> *</span></label>
+                            <input type="text" id="" class="form-control" placeholder="" required value="Kartika Wati">
                             <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                          <div class="form-group">
+                            <label for="" class="">No. Telepon<span class="text-danger"> *</span></label>
+                            <input type="text" id="" class="form-control" placeholder="" required value="08123456789">
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                          <div class="form-group">
+                            <label for="" class="">No. Rekening<span class="text-danger"> *</span></label>
+                            <input type="email" id="" class="form-control" placeholder="" required value="kartika.wati@email.com">
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
                         </div>
-                        <div class="form-group">
-                            <label for="" class="">Provinsi</label>
-                            <input type="text" id="" class="form-control" placeholder="" value="" readonly>
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="">Kabupaten</label>
-                            <input type="text" id="" class="form-control" placeholder="" value="" readonly>
+                        <div class="col-md-6 no-padding-right">
+                          <div class="form-group">
+                              <label for="" class="">PKS<span class="text-danger"> *</span></label>
+                              <select class="form-control no-margin" id="inputGroupSelect">
+                                <option>- Pilih -</option>
+                                <option selected value="5">PT Padang Palma</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                              </select>
+                              <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                          <div class="form-group">
+                              <label for="" class="">Provinsi</label>
+                              <input type="text" id="" class="form-control" placeholder="" value="" readonly>
+                          </div>
+                          <div class="form-group">
+                              <label for="" class="">Kabupaten</label>
+                              <input type="text" id="" class="form-control" placeholder="" value="" readonly>
+                          </div>
                         </div>
                       </div>
+                      <div class="col-md-12 no-padding">
+                        <h6 class="green font-weight-bold mb-3">Kata Sandi</h6>
+                        <div class="col-md-6 no-padding-left">
+                          <div class="form-group">
+                            <label for="" class="">Kata Sandi Lama<span class="text-danger"> *</span></label>
+                            <input type="password" id="" class="form-control" placeholder="" required value="12345678">
+                            <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                          <div class="form-group">
+                            <label for="" class="">Konfirmasi Kata Sandi Baru<span class="text-danger"> *</span></label>
+                            <input type="password" id="" class="form-control" placeholder="" required value="12345678">
+                            <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 no-padding-right">
+                          <div class="form-group">
+                            <label for="" class="">Kata Sandi Baru<span class="text-danger"> *</span></label>
+                            <input type="password" id="" class="form-control" placeholder="" required value="12345678">
+                            <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                            <div class="invalid-feedback">Mohon isi kolom ini</div>
+                          </div>
+                        </div>
+                      </div>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                <div class="row no-margin">
+                    <div class="col pl-0">
+                        <a data-dismiss="modal" class="btn btn-secondary btn-block">Kembali</a>
                     </div>
-                    <div class="col-md-12 no-padding">
-                      <h6 class="green font-weight-bold mb-3">Kata Sandi</h6>
-                      <div class="col-md-6 no-padding-left">
-                        <div class="form-group">
-                          <label for="" class="">Kata Sandi Lama<span class="text-danger"> *</span></label>
-                          <input type="password" id="" class="form-control" placeholder="" required value="12345678">
-                          <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
-                          <div class="invalid-feedback">Mohon isi kolom ini</div>
-                        </div>
-                        <div class="form-group">
-                          <label for="" class="">Konfirmasi Kata Sandi Baru<span class="text-danger"> *</span></label>
-                          <input type="password" id="" class="form-control" placeholder="" required value="12345678">
-                          <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
-                          <div class="invalid-feedback">Mohon isi kolom ini</div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 no-padding-right">
-                        <div class="form-group">
-                          <label for="" class="">Kata Sandi Baru<span class="text-danger"> *</span></label>
-                          <input type="password" id="" class="form-control" placeholder="" required value="12345678">
-                          <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
-                          <div class="invalid-feedback">Mohon isi kolom ini</div>
-                        </div>
-                      </div>
+                    <div class="col pr-0">
+                        <a href="" class="btn btn-secondary-gradient btn-block">Simpan</a>
                     </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-              <div class="row no-margin">
-                  <div class="col pl-0">
-                      <a data-dismiss="modal" class="btn btn-secondary btn-block">Kembali</a>
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="addSuccess" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="addSuccessLabel" aria-hidden="true">
+      <div class="modal-dialog modal-md">
+          <div class="modal-content">
+              <div class="modal-body">
+                  <div class="popup-img-2">
+                      <img src="assets/img/popup-gagal.png" alt="">
                   </div>
-                  <div class="col pr-0">
-                      <a href="" class="btn btn-secondary-gradient btn-block">Simpan</a>
+                  <div class="col-md-12 text-center mb-3 px-4">
+                      <h6 class="green font-weight-bold mb-1">Tambah Admin Berhasil</h6>
+                      <p>Sistem telah mengirimkan informasi login ke no hp / email yang didaftarkan</p>
                   </div>
               </div>
-            </div>
-        </div>
+              <div class="modal-footer">
+                  <div class="row w-100 no-margin">
+                      <div class="col">
+                          <a href="" class="btn btn-secondary-gradient btn-block">Ok</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
     </div>
-  </div>
+
   </div>
 
 

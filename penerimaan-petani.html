@@ -240,7 +240,7 @@
     <!-- Footer -->
     <!-- Modal -->
     <div class="modal fade" id="detailPenerimaan" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="detailPenerimaanLabel" aria-hidden="true">
-      <div class="modal-dialog modal-sm">
+      <div class="modal-dialog modal-lg">
           <div class="modal-content">
               <div class="modal-header bg-hijau">
                   <h6 class="modal-title" id="detailPenerimaanLabel">Detail Penerimaan</h6>
@@ -250,19 +250,90 @@
               </div>
               <div class="modal-body">
                   <div class="col-md-12 no-padding">
-                    <h6 class="green font-weight-bold mb-3">Petani</h6>
-                    <div class="form-group">
-                        <input type="text" class="form-control-plaintext" value="Kartika Wati" readonly disabled>
-                        <label class="">08123456789</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control-plaintext" value="Diana Santri" readonly disabled>
-                        <label class="">08123456789</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control-plaintext" value="Jaro Petang" readonly disabled>
-                        <label class="">089567827228</label>
-                    </div>
+                    <table id="pabrik-modal" class="table table-bordered table-green nowrap"  style="width:100%" >
+                      <thead>
+                        <tr>
+                          <th>No</th>
+                          <th>Nama Supplier</th>
+                          <th>Tanggal Pengiriman</th>
+                          <th>Status Transaksi</th>
+                          <th>Kebun Petani</th>
+                          <th>Lokasi Kebun</th>
+                          <th>Jumlah Penerimaan</th>
+                          <th>Nama Supplier</th>
+                          <th>No. Telepon</th>
+                          <th>Jumlah Tonase</th>
+                          <th>Lahan</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Sarman</td>
+                          <td>07/09/2020  08:00</td>
+                          <td>Proses</td>
+                          <td>Kebun 1</td>
+                          <td>Kebun Sektor 1</td>
+                          <td>50.000 Kg</td>
+                          <td>Kartika Wati</td>
+                          <td>08123456789</td>
+                          <td>2000 Kg</td>
+                          <td>Gambut</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>CV Palmia Loka Jaya</td>
+                          <td>07/09/2020  17:44</td>
+                          <td>Proses</td>
+                          <td>Kebun 1</td>
+                          <td>Kebun Sektor 2</td>
+                          <td>40.000 Kg</td>
+                          <td>Diana Santri</td>
+                          <td>08561234567</td>
+                          <td>1500 Kg</td>
+                          <td>Gambut</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>CV Palmia Loka Jaya</td>
+                          <td>07/09/2020  18:00</td>
+                          <td>Proses</td>
+                          <td>Kebun 2</td>
+                          <td>Kebun Sektor 3</td>
+                          <td>40.000 Kg</td>
+                          <td>Rifki Darmawan</td>
+                          <td>08122394891</td>
+                          <td>1200 Kg</td>
+                          <td>Gambut</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>CV Palmia Loka Jaya</td>
+                          <td>07/09/2020  17:55</td>
+                          <td>Proses</td>
+                          <td>Kebun 2</td>
+                          <td>Kebun Sektor 3</td>
+                          <td>40.000 Kg</td>
+                          <td>Sigit Prasetyo</td>
+                          <td>08134888921</td>
+                          <td>1200 Kg</td>
+                          <td>Gambut</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>Rahmawati</td>
+                          <td>07/09/2020  18:00</td>
+                          <td>Proses</td>
+                          <td>Kebun 2</td>
+                          <td>Kebun Sektor 3</td>
+                          <td>40.000 Kg</td>
+                          <td>Rahmawati</td>
+                          <td>08981234567</td>
+                          <td>1000 Kg</td>
+                          <td>Gambut</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
               </div>
           </div>
@@ -291,8 +362,16 @@
   <script>
   $(function () {
     $("#pabrik").DataTable({
-      "scrollX": true
+      "scrollX": true,
+      "bFilter": true,
      
+    });
+    $("#pabrik-modal").DataTable({
+      "scrollX": true,
+      "bLengthChange": false,
+      "searching": false,
+      "bInfo": false,
+      
     });
   });
 </script>

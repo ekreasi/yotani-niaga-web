@@ -309,17 +309,17 @@
                         <h6 class="green font-weight-bold mb-3">Kata Sandi</h6>
                         <div class="col-md-6 no-padding-left">
                           <div class="form-group">
-                            <label for="" class="">Kata Sandi<span class="text-danger"> *</span></label>
-                            <input type="password" id="" class="form-control" placeholder="" required>
-                            <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                            <label for="newPassword" class="">Kata Sandi<span class="text-danger"> *</span></label>
+                            <input type="password" id="newPassword" class="form-control" placeholder="" required>
+                            <span toggle="#newPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
                             <div class="invalid-feedback">Mohon isi kolom ini</div>
                           </div>
                         </div>
                         <div class="col-md-6 no-padding-right">
                           <div class="form-group">
-                            <label for="" class="">Konfirmasi Kata Sandi<span class="text-danger"> *</span></label>
-                            <input type="password" id="" class="form-control" placeholder="" required>
-                            <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                            <label for="retypePassword" class="">Konfirmasi Kata Sandi<span class="text-danger"> *</span></label>
+                            <input type="password" id="retypePassword" class="form-control" placeholder="" required>
+                            <span toggle="#retypePassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
                             <div class="invalid-feedback">Mohon isi kolom ini</div>
                           </div>
                         </div>
@@ -395,23 +395,23 @@
                         <h6 class="green font-weight-bold mb-3">Kata Sandi</h6>
                         <div class="col-md-6 no-padding-left">
                           <div class="form-group">
-                            <label for="" class="">Kata Sandi Lama<span class="text-danger"> *</span></label>
-                            <input type="password" id="" class="form-control" placeholder="" required value="12345678">
+                            <label for="inputPassword" class="">Kata Sandi Lama<span class="text-danger"> *</span></label>
+                            <input type="password" id="inputPassword" class="form-control" placeholder="" required value="12345678">
                             <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
                             <div class="invalid-feedback">Mohon isi kolom ini</div>
                           </div>
                           <div class="form-group">
-                            <label for="" class="">Konfirmasi Kata Sandi Baru<span class="text-danger"> *</span></label>
-                            <input type="password" id="" class="form-control" placeholder="" required value="12345678">
-                            <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                            <label for="retypePassword" class="">Konfirmasi Kata Sandi Baru<span class="text-danger"> *</span></label>
+                            <input type="password" id="retypePassword" class="form-control" placeholder="" required value="12345678">
+                            <span toggle="#retypePassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
                             <div class="invalid-feedback">Mohon isi kolom ini</div>
                           </div>
                         </div>
                         <div class="col-md-6 no-padding-right">
                           <div class="form-group">
-                            <label for="" class="">Kata Sandi Baru<span class="text-danger"> *</span></label>
-                            <input type="password" id="" class="form-control" placeholder="" required value="12345678">
-                            <span toggle="#inputPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                            <label for="newPassword" class="">Kata Sandi Baru<span class="text-danger"> *</span></label>
+                            <input type="password" id="newPassword" class="form-control" placeholder="" required value="12345678">
+                            <span toggle="#newPassword" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
                             <div class="invalid-feedback">Mohon isi kolom ini</div>
                           </div>
                         </div>
@@ -484,6 +484,18 @@
        
       });
     });
+    </script>
+    <script>
+        $(".toggle-password").click(function() {
+
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var input = $($(this).attr("toggle"));
+            if (input.attr("type") == "password") {
+            input.attr("type", "text");
+            } else {
+            input.attr("type", "password");
+            }
+        });
     </script>
 </body>
 </html>

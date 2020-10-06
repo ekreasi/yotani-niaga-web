@@ -275,6 +275,9 @@ label.btn-radio {
     width: 18px;
     border: 1px solid #ddd;
 }
+td .checkmark {
+    top: -7px;
+}
 .checkwrap input {
     position: absolute;
     opacity: 0;
@@ -641,7 +644,7 @@ input.form-control-plaintext, textarea.form-control-plaintext {
     text-align: center;
 }
 .modal .btn-secondary, .modal .btn-secondary-gradient {
-    padding: 10px 0;
+    padding: 6px 0;
 }
 .modal-footer .row {
     align-items: center;

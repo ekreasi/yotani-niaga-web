@@ -275,7 +275,7 @@ label.btn-radio {
     width: 18px;
     border: 1px solid #ddd;
 }
-td .checkmark {
+td .checkmark, th .checkmark {
     top: -7px;
 }
 .checkwrap input {
@@ -453,6 +453,9 @@ header {
 }
 .green {
     color: #009444 !important;
+}
+.danger {
+    color: #EA3232 !important;
 }
 .timer-wrap {
     background-image: url(../img/img-time-otp.png);

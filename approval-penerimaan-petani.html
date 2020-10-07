@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Yotani Niaga | Kuota Pabrik</title>
+  <title>Yotani Niaga | Penerimaan Dari Petani</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">  
@@ -52,11 +52,11 @@
           <a class="nav-link" href="petani.html">Petani</a>
           </li>
           <li class="nav-item active dropdown">
-            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Transaksi <span class="sr-only">(current)</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="">Kuota Pabrik</a>
+                <a class="dropdown-item" href="kuota-pabrik.html">Kuota Pabrik</a>
                 <a class="dropdown-item" href="list-penerimaan-tbs.html">Daftar Penerimaan TBS</a>
                 <a class="dropdown-item" href="penerimaan-petani.html">Penerimaan Dari Petani</a>
                 <a class="dropdown-item" href="approval-penerimaan-petani.html">Approval Penerimaan Dari Petani</a>
@@ -143,7 +143,7 @@
         <div aria-label="breadcrumb" class="row">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="transaksi.html">Transaksi</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Kuota Pabrik</li>
+            <li class="breadcrumb-item active" aria-current="page">Approval Penerimaan Dari Petani</li>
           </ol>
         </div>
       </div>
@@ -152,7 +152,7 @@
     <section class="content">
       <div class="container-fluid no-padding">
         <div class="card">
-          <div class="card-header">
+          <!-- <div class="card-header">
             <div class='container-fluid'>
               <div class="row align-items-center">
                 <div class="mr-auto ">
@@ -164,48 +164,92 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <div class="card-body">
             <div class="font-title col-md-12 mb-4">
-              <h6 class="no-margin">Daftar Supplier yang Telah Melakukan Booking Supply</h6>
+              <h6 class="no-margin">Approval Penerimaan Dari Petani</h6>
             </div>
             <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
               <thead>
               <tr>
                 <th>No</th>
-                <th>Nama Petani</th>
-                <th>Tanggal</th>
-                <th>Jumlah TBS</th>
+                <th>Tanggal Pengiriman</th>
+                <th>No. Penerimaan Barang</th>
+                <th>Nama Supplier</th>
+                <th>Plat Nomor</th>
+                <th>Tonase (Netto)</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Aksi</th>
+                <th>
+                  <label class="checkwrap ml-2">
+                    <input type="checkbox" onchange="checkAll(this)" name="chk[]">
+                    <span class="checkmark"></span>
+                  </label>
+                </th>
               </tr>
               </thead>
               <tbody>
               <tr>
                 <td>1</td>
+                <td>07/09/2020  08:00</td>
+                <td>IX/NPB/20200907/0800</td>
                 <td>Sarman</td>
-                <td>03/09/2020  11:00</td>
-                <td>50.000 Kg</td>
+                <td>BL6045LAH</td>
+                <td>19.100 Kg</td>
+                <td>Rp 34.991.200</td>
+                <td><span class="fa fa-times-circle danger ml-2"></span></td>
+                <td><a href=""><span class="fa fa-eye orange ml-2"></span></a></td>
+                <td>
+                  <label class="checkwrap ml-2">
+                    <input type="checkbox" name="chkbox[]" value="1">
+                    <span class="checkmark"></span>
+                  </label>
+                </td>
               </tr>
               <tr>
                 <td>2</td>
-                <td>Andika</td>
-                <td>03/09/2020  17:44</td>
-                <td>40.000 Kg</td>
+                <td>07/09/2020  17:44</td>
+                <td>IX/NPB/20200907/1744</td>
+                <td>CV Palmia Loka</td>
+                <td>BL5412AWT</td>
+                <td>28.700 Kg</td>
+                <td>Rp 52.578.400</td>
+                <td><span class="fa fa-check-circle green ml-2"></span></td>
+                <td><a href=""><span class="fa fa-eye orange ml-2"></span></a></td>
+                <td>
+                  <label class="checkwrap ml-2">
+                    <input type="checkbox" name="chkbox[]" value="2">
+                    <span class="checkmark"></span>
+                  </label>
+                </td>
               </tr>
               <tr>
-                <td>3</td>
+                <td>1</td>
+                <td>07/09/2020  18:00</td>
+                <td>IX/NPB/20200907/1800</td>
                 <td>Rahmawati</td>
-                <td>03/09/2020  10:00</td>
-                <td>40.000 Kg</td>
+                <td>BL4134LAH</td>
+                <td>19.900 Kg</td>
+                <td>Rp 36.456.800</td>
+                <td><span class="fa fa-check-circle green ml-2"></span></td>
+                <td><a href=""><span class="fa fa-eye orange ml-2"></span></a></td>
+                <td>
+                  <label class="checkwrap ml-2">
+                    <input type="checkbox" name="chkbox[]" value="3">
+                    <span class="checkmark"></span>
+                  </label>
+                </td>
               </tr>
               
               </tbody>
-              <tfoot>
+              <!-- <tfoot>
                 <tr>
                   <td colspan="3">Total Booking</td>
                   <td>130.000 Kg</td>
                 </tr>
-              </tfoot>
+              </tfoot> -->
               
             </table>
           </div>
@@ -223,98 +267,116 @@
       <div class="footer-copyright bg-green text-center py-3">Copyright © 2020 by PT Indocyber Global Teknologi</div>
       <!-- Copyright -->
 
-  </footer>
-  <!-- Footer -->
-  <!-- Modal -->
-  <div class="modal fade" id="filterModalForm" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="filterModalFormLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header bg-hijau">
-                <h6 class="modal-title" id="filterModalFormLabel">Atur Nilai Kuota</h6>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form id="transactionFilterForm">
-                    <div class="col-md-12 no-padding">
-                      <div class="col-md-6 float-left">
-                        <div class="form-group">
-                            <label for="" class="">Tipe Penerimaan<span class="text-danger"> *</span></label>
-                            <div class="btn-group d-block btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-radio font-weight-normal mr-3 active">
-                                <input type="radio" name="options" id="picYes" autocomplete="off" checked> Terbuka
-                                <span class="checkmark2"></span>
-                                </label>
-                                <label class="btn btn-radio font-weight-normal">
-                                <input type="radio" name="options" id="picNo" autocomplete="off"> Tertutup
-                                <span class="checkmark2"></span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="">Jam Operasional<span class="text-danger"> *</span></label>
-                            <div class="input-group">
-                              <input type="time" class="form-control" required>
-                              <span class="input-group-addon">-</span>
-                              <input type="time" class="form-control" required>
-                            </div>
-                            <div class="invalid-feedback">Mohon isi kolom ini</div>
-                        </div>
-                        <div class="form-group">
-                            <label class="">Kuota Pabrik<span class="text-danger"> *</span></label>
-                            <input type="email" class="form-control" required>
-                            <div class="invalid-feedback">Mohon isi kolom ini</div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 float-left">
-                        <div class="form-group checkbox">
-                          <label class="checkwrap">
-                            <input type="checkbox" value=""> Sedang dalam pemeliharaan
-                            <span class="checkmark"></span>
-                          </label>
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="">Periode Pemeliharaan</label>
-                            <div class="input-group">
-                              <input type="date" class="form-control">
-                              <span class="input-group-addon">-</span>
-                              <input type="time" class="form-control">
-                            </div>
-                            <div class="invalid-feedback">Mohon isi kolom ini</div>
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="">Mulai Beroperasi</label>
-                            <div class="input-group">
-                              <input type="date" class="form-control">
-                              <span class="input-group-addon">-</span>
-                              <input type="time" class="form-control">
-                            </div>
-                            <div class="invalid-feedback">Mohon isi kolom ini</div>
-                        </div>
-                        <div class="form-group">
-                            <label class="">Terakhir Terima</label>
-                            <input type="email" class="form-control">
-                            <div class="invalid-feedback">Mohon isi kolom ini</div>
-                        </div>
-                      </div>
-                    </div>
-                   
-                </form>
-            </div>
-            <div class="modal-footer">
-              <div class="row">
-                  <div class="col no-padding-left">
-                      <a data-dismiss="modal" class="btn btn-secondary btn-block">Kembali</a>
-                  </div>
-                  <div class="col no-padding-right">
-                      <a href="" class="btn btn-secondary-gradient btn-block">Simpan</a>
+    </footer>
+    <!-- Footer -->
+    <!-- Modal -->
+    <div class="modal fade" id="detailPenerimaan" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="detailPenerimaanLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header bg-hijau">
+                  <h6 class="modal-title" id="detailPenerimaanLabel">Detail Penerimaan</h6>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <div class="col-md-12 no-padding">
+                    <table id="pabrik-modal" class="table table-bordered table-green nowrap"  style="width:100%" >
+                      <thead>
+                        <tr>
+                          <th>No</th>
+                          <th>Nama Supplier</th>
+                          <th>Tanggal Pengiriman</th>
+                          <th>Status Transaksi</th>
+                          <th>Kebun Petani</th>
+                          <th>Lokasi Kebun</th>
+                          <th>Jumlah Penerimaan</th>
+                          <th>Nama Supplier</th>
+                          <th>No. Telepon</th>
+                          <th>Jumlah Tonase</th>
+                          <th>Lahan</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Sarman</td>
+                          <td>07/09/2020  08:00</td>
+                          <td>Proses</td>
+                          <td>Kebun 1</td>
+                          <td>Kebun Sektor 1</td>
+                          <td>50.000 Kg</td>
+                          <td>Kartika Wati</td>
+                          <td>08123456789</td>
+                          <td>2000 Kg</td>
+                          <td>Gambut</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>CV Palmia Loka Jaya</td>
+                          <td>07/09/2020  17:44</td>
+                          <td>Proses</td>
+                          <td>Kebun 1</td>
+                          <td>Kebun Sektor 2</td>
+                          <td>40.000 Kg</td>
+                          <td>Diana Santri</td>
+                          <td>08561234567</td>
+                          <td>1500 Kg</td>
+                          <td>Gambut</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>CV Palmia Loka Jaya</td>
+                          <td>07/09/2020  18:00</td>
+                          <td>Proses</td>
+                          <td>Kebun 2</td>
+                          <td>Kebun Sektor 3</td>
+                          <td>40.000 Kg</td>
+                          <td>Rifki Darmawan</td>
+                          <td>08122394891</td>
+                          <td>1200 Kg</td>
+                          <td>Gambut</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>CV Palmia Loka Jaya</td>
+                          <td>07/09/2020  17:55</td>
+                          <td>Proses</td>
+                          <td>Kebun 2</td>
+                          <td>Kebun Sektor 3</td>
+                          <td>40.000 Kg</td>
+                          <td>Sigit Prasetyo</td>
+                          <td>08134888921</td>
+                          <td>1200 Kg</td>
+                          <td>Gambut</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>Rahmawati</td>
+                          <td>07/09/2020  18:00</td>
+                          <td>Proses</td>
+                          <td>Kebun 2</td>
+                          <td>Kebun Sektor 3</td>
+                          <td>40.000 Kg</td>
+                          <td>Rahmawati</td>
+                          <td>08981234567</td>
+                          <td>1000 Kg</td>
+                          <td>Gambut</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
               </div>
-            </div>
-        </div>
+              <div class="modal-footer">
+                <div class="row no-margin">
+                    <div class="col pl-0">
+                        <a data-dismiss="modal" class="btn btn-secondary-gradient btn-block">Tutup</a>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
     </div>
-</div>
   </div>
 
   <!-- jQuery -->
@@ -338,10 +400,36 @@
   <script>
   $(function () {
     $("#pabrik").DataTable({
-      "scrollX": true
+      "scrollX": true,
+      "bFilter": true,
      
+    });
+    $("#pabrik-modal").DataTable({
+      "scrollX": true,
+      "bLengthChange": false,
+      "searching": false,
+      "bInfo": false,
+      
     });
   });
 </script>
+<script type="text/javascript">
+  function checkAll(ele) {
+       var checkboxes = document.getElementsByTagName('input');
+       if (ele.checked) {
+           for (var i = 0; i < checkboxes.length; i++) {
+               if (checkboxes[i].type == 'checkbox' ) {
+                   checkboxes[i].checked = true;
+               }
+           }
+       } else {
+           for (var i = 0; i < checkboxes.length; i++) {
+               if (checkboxes[i].type == 'checkbox') {
+                   checkboxes[i].checked = false;
+               }
+           }
+       }
+   }
+ </script>
 </body>
 </html>

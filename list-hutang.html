@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Yotani Niaga | Kuota Pabrik</title>
+  <title>Yotani Niaga | Daftar Hutang</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">  
@@ -53,15 +53,15 @@
           </li>
           <li class="nav-item active dropdown">
             <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Transaksi <span class="sr-only">(current)</span>
+              Transaksi<span class="sr-only">(current)</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="">Kuota Pabrik</a>
+                <a class="dropdown-item" href="kuota-pabrik.html">Kuota Pabrik</a>
                 <a class="dropdown-item" href="list-penerimaan-tbs.html">Daftar Penerimaan TBS</a>
                 <a class="dropdown-item" href="penerimaan-petani.html">Penerimaan Dari Petani</a>
                 <a class="dropdown-item" href="approval-penerimaan-petani.html">Approval Penerimaan Dari Petani</a>
                 <a class="dropdown-item" href="pembayaran.html">Pembayaran</a>
-                <a class="dropdown-item" href="list-hutang.html">Daftar Hutang</a>
+                <a class="dropdown-item" href="">Daftar Hutang</a>
             </div>
           </li>
           <li class="nav-item">
@@ -143,7 +143,7 @@
         <div aria-label="breadcrumb" class="row">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="transaksi.html">Transaksi</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Kuota Pabrik</li>
+            <li class="breadcrumb-item active" aria-current="page">Daftar Hutang</li>
           </ol>
         </div>
       </div>
@@ -152,7 +152,7 @@
     <section class="content">
       <div class="container-fluid no-padding">
         <div class="card">
-          <div class="card-header">
+          <!-- <div class="card-header">
             <div class='container-fluid'>
               <div class="row align-items-center">
                 <div class="mr-auto ">
@@ -164,52 +164,151 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <div class="card-body">
-            <div class="font-title col-md-12 mb-4">
-              <h6 class="no-margin">Daftar Supplier yang Telah Melakukan Booking Supply</h6>
+            <div class="row mb-3">
+                  <div class="col p-1 mb-2">
+                    <div class="highlight-price text-center flex-column p-2">
+                      <div class="col-md-12 p-0">
+                        <p class="small no-margin">Total Hutang Hari Ini</p>
+                      </div>
+                      <div class="col-md-12 p-0">
+                        <b>Rp 124.026.400,00</b>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-1 mb-2">
+                    <div class="highlight-price text-center flex-column p-2">
+                      <div class="col-md-12 p-0">
+                        <p class="small no-margin">Total Harus Terbayar</p>
+                      </div>
+                      <div class="col-md-12 p-0">
+                        <b>Rp 52.578.400,00</b>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-1 mb-2">
+                    <div class="highlight-price text-center flex-column p-2">
+                      <div class="col-md-12 p-0">
+                        <p class="small no-margin">Total Harus Terbayar Selanjutnya</p>
+                      </div>
+                      <div class="col-md-12 p-0">
+                        <b>Rp 34.991.200,00</b>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-1 mb-2">
+                    <div class="highlight-price text-center flex-column p-2">
+                      <div class="col-md-12 p-0">
+                        <p class="small no-margin">Total Hutang Selanjutnya</p>
+                      </div>
+                      <div class="col-md-12 p-0">
+                        <b>Rp 87.569.600,00</b>
+                      </div>
+                    </div>
+                  </div>
             </div>
-            <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
-              <thead>
-              <tr>
-                <th>No</th>
-                <th>Nama Petani</th>
-                <th>Tanggal</th>
-                <th>Jumlah TBS</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>1</td>
-                <td>Sarman</td>
-                <td>03/09/2020  11:00</td>
-                <td>50.000 Kg</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Andika</td>
-                <td>03/09/2020  17:44</td>
-                <td>40.000 Kg</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Rahmawati</td>
-                <td>03/09/2020  10:00</td>
-                <td>40.000 Kg</td>
-              </tr>
-              
-              </tbody>
-              <tfoot>
+            <div class="font-title col-md-12 mb-4">
+              <h6 class="no-margin">Daftar Hutang</h6>
+            </div>
+            <form id="submitPayment">
+              <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
+                <thead>
                 <tr>
-                  <td colspan="3">Total Booking</td>
-                  <td>130.000 Kg</td>
+                  <th>
+                    <label class="checkwrap ml-2">
+                      <input type="checkbox" onchange="checkAll(this)" name="chk[]">
+                      <span class="checkmark"></span>
+                    </label>
+                  </th>
+                  <th>No</th>
+                  <th>Tanggal</th>
+                  <th>No. Invoice</th>
+                  <th>No. Penerimaan Barang</th>
+                  <th>Plat Nomor</th>
+                  <th>Tonase (Netto)</th>
+                  <th>Total Hutang</th>
+                  <th>Tanggal Jatuh Tempo</th>
+                  <th>Status</th>
+                  <th>Aksi</th>
                 </tr>
-              </tfoot>
-              
-            </table>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>
+                    <label class="checkwrap ml-2">
+                      <input type="checkbox" name="chkbox[]" value="1">
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td>1</td>
+                  <td>07/09/2020  09:21</td>
+                  <td>VIII/XX/2020081/982922</td>
+                  <td>VIII/XX/2020081/982922</td>
+                  <td>BL6045LAH</td>
+                  <td>19.100 Kg</td>
+                  <td>Rp 34.991.200</td>
+                  <td>07/09/2020</td>
+                  <td>Saldo Terutang</td>
+                  <td><a href=""><span class="fa fa-eye orange ml-2"></span></a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="checkwrap ml-2">
+                      <input type="checkbox" name="chkbox[]" value="2">
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td>2</td>
+                  <td>07/09/2020  08:33</td>
+                  <td>VIII/XX/2020081/98229</td>
+                  <td>VIII/XX/2020081/98229</td>
+                  <td>BL5412AWT</td>
+                  <td>28.700 Kg</td>
+                  <td>Rp 52.578.400</td>
+                  <td>07/09/2020</td>
+                  <td>Saldo Terutang</td>
+                  <td><a href=""><span class="fa fa-eye orange ml-2"></span></a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="checkwrap ml-2">
+                      <input type="checkbox" name="chkbox[]" value="3">
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td>3</td>
+                  <td>06/09/2020  19:35</td>
+                  <td>VII/XX/2020081/232323</td>
+                  <td>VII/XX/2020081/232323</td>
+                  <td>BL4134LAH</td>
+                  <td>19.900 Kg</td>
+                  <td>Rp 36.456.800</td>
+                  <td>07/09/2020</td>
+                  <td>Lunas</td>
+                  <td><a href=""><span class="fa fa-eye orange ml-2"></span></a></td>
+                </tr>
+                
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="7">Total Hutang</td>
+                    <td colspan="4">Rp 124.026.400</td>
+                  </tr>
+                </tfoot>
+                
+              </table>
+            </form>
           </div>
           <!-- /.card-body -->
+          <!-- <div class="card-footer">
+            <div class="row no-margin">
+              <div class="col no-padding-right">
+                <a href="" onclick="document.getElementById('submitPayment').submit()" class="btn btn-primary btn-block">Submit Email</a>
+              </div>
+            </div>
+          </div> -->
         </div>
         <!-- /.card -->
       </div>
@@ -226,7 +325,7 @@
   </footer>
   <!-- Footer -->
   <!-- Modal -->
-  <div class="modal fade" id="filterModalForm" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="filterModalFormLabel" aria-hidden="true">
+  <!-- <div class="modal fade" id="filterModalForm" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="filterModalFormLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header bg-hijau">
@@ -268,11 +367,8 @@
                         </div>
                       </div>
                       <div class="col-md-6 float-left">
-                        <div class="form-group checkbox">
-                          <label class="checkwrap">
-                            <input type="checkbox" value=""> Sedang dalam pemeliharaan
-                            <span class="checkmark"></span>
-                          </label>
+                        <div class="form-group">
+                            <input type="checkbox" autocomplete="off"> Sedang dalam pemeliharaan
                         </div>
                         <div class="form-group">
                             <label for="" class="">Periode Pemeliharaan</label>
@@ -305,7 +401,7 @@
             <div class="modal-footer">
               <div class="row">
                   <div class="col no-padding-left">
-                      <a data-dismiss="modal" class="btn btn-secondary btn-block">Kembali</a>
+                      <a  href="" class="btn btn-secondary btn-block">Kembali</a>
                   </div>
                   <div class="col no-padding-right">
                       <a href="" class="btn btn-secondary-gradient btn-block">Simpan</a>
@@ -314,8 +410,8 @@
             </div>
         </div>
     </div>
+    </div> -->
 </div>
-  </div>
 
   <!-- jQuery -->
   <script src="assets/libs/jquery/jquery.min.js"></script>
@@ -348,9 +444,26 @@
           "previous":   "Sebelumnya"
         },
       },
-     
     });
   });
 </script>
+<script type="text/javascript">
+  function checkAll(ele) {
+       var checkboxes = document.getElementsByTagName('input');
+       if (ele.checked) {
+           for (var i = 0; i < checkboxes.length; i++) {
+               if (checkboxes[i].type == 'checkbox' ) {
+                   checkboxes[i].checked = true;
+               }
+           }
+       } else {
+           for (var i = 0; i < checkboxes.length; i++) {
+               if (checkboxes[i].type == 'checkbox') {
+                   checkboxes[i].checked = false;
+               }
+           }
+       }
+   }
+ </script>
 </body>
 </html>

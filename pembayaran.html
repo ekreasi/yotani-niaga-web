@@ -180,9 +180,10 @@
                   <th>Tanggal</th>
                   <th>Jumlah TBS</th>
                   <th>Rekening Tujuan</th>
-                  <th>Jumlah</th>
+                  <th>Harga Total Pembelian</th>
+                  <th>Nilai Transfer</th>
                   <th>Status Transaksi</th>
-                  <th>Aksi</th>
+                  <!-- <th>Aksi</th> -->
                 </tr>
                 </thead>
                 <tbody>
@@ -194,13 +195,14 @@
                   <td>50.000 Kg</td>
                   <td>BCA</td>
                   <td>Rp 355.980,93</td>
+                  <td>Rp 349.000,92</td>
                   <td>Baru</td>
-                  <td>
+                  <!-- <td>
                     <label class="checkwrap ml-2">
                       <input type="checkbox" value="remember-me">
                       <span class="checkmark"></span>
                   </label>
-                  </td>
+                  </td> -->
                 </tr>
                 <tr>
                   <td>2</td>
@@ -210,13 +212,14 @@
                   <td>40.000 Kg</td>
                   <td>BCA</td>
                   <td>Rp 245.095,08</td>
+                  <td>Rp 233.432,89</td>
                   <td>Proses</td>
-                  <td>
+                  <!-- <td>
                     <label class="checkwrap ml-2">
                       <input type="checkbox" value="remember-me">
                       <span class="checkmark"></span>
                   </label>
-                  </td>
+                  </td> -->
                 </tr>
                 <tr>
                   <td>3</td>
@@ -225,36 +228,37 @@
                   <td>06/09/2020  19:35</td>
                   <td>40.000 Kg</td>
                   <td>Mandiri</td>
+                  <td>Rp 36.456.800</td>
                   <td>Rp 1.282.400,68</td>
                   <td>Proses</td>
-                  <td>
+                  <!-- <td>
                     <label class="checkwrap ml-2">
                       <input type="checkbox" value="remember-me">
                       <span class="checkmark"></span>
                     </label>
-                  </td>
+                  </td> -->
                 </tr>
                 
                 </tbody>
-                <tfoot>
+                <!-- <tfoot>
                   <tr>
                     <td colspan="6">Total Transaksi</td>
                     <td>Rp 582.433,81</td>
                     <td colspan="2"></td>
                   </tr>
-                </tfoot>
+                </tfoot> -->
                 
               </table>
             </form>
           </div>
           <!-- /.card-body -->
-          <div class="card-footer">
+          <!-- <div class="card-footer">
             <div class="row no-margin">
               <div class="col no-padding-right">
                 <a href="" onclick="document.getElementById('submitPayment').submit()" class="btn btn-primary btn-block">Submit Email</a>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <!-- /.card -->
       </div>
@@ -380,7 +384,16 @@
   <script>
   $(function () {
     $("#pabrik").DataTable({
-      "scrollX": true
+      "scrollX": true,
+      "language": {
+        "search": "Cari",
+        "lengthMenu": "Tampilkan _MENU_",
+        "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
+        "paginate": {
+          "next":       "Berikutnya",
+          "previous":   "Sebelumnya"
+        },
+      },
      
     });
   });

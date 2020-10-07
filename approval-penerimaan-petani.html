@@ -173,6 +173,12 @@
             <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
               <thead>
               <tr>
+                <th>
+                  <label class="checkwrap ml-2">
+                    <input type="checkbox" onchange="checkAll(this)" name="chk[]">
+                    <span class="checkmark"></span>
+                  </label>
+                </th>
                 <th>No</th>
                 <th>Tanggal Pengiriman</th>
                 <th>No. Penerimaan Barang</th>
@@ -182,16 +188,16 @@
                 <th>Total</th>
                 <th>Status</th>
                 <th>Aksi</th>
-                <th>
-                  <label class="checkwrap ml-2">
-                    <input type="checkbox" onchange="checkAll(this)" name="chk[]">
-                    <span class="checkmark"></span>
-                  </label>
-                </th>
               </tr>
               </thead>
               <tbody>
               <tr>
+                <td>
+                  <label class="checkwrap ml-2">
+                    <input type="checkbox" name="chkbox[]" value="1">
+                    <span class="checkmark"></span>
+                  </label>
+                </td>
                 <td>1</td>
                 <td>07/09/2020  08:00</td>
                 <td>IX/NPB/20200907/0800</td>
@@ -200,15 +206,15 @@
                 <td>19.100 Kg</td>
                 <td>Rp 34.991.200</td>
                 <td><span class="fa fa-times-circle danger ml-2"></span></td>
-                <td><a href=""><span class="fa fa-eye orange ml-2"></span></a></td>
+                <td><a data-toggle="modal" data-target="#detailPetani"><span class="fa fa-eye orange ml-2"></span></a></td>
+              </tr>
+              <tr>
                 <td>
                   <label class="checkwrap ml-2">
-                    <input type="checkbox" name="chkbox[]" value="1">
+                    <input type="checkbox" name="chkbox[]" value="2">
                     <span class="checkmark"></span>
                   </label>
                 </td>
-              </tr>
-              <tr>
                 <td>2</td>
                 <td>07/09/2020  17:44</td>
                 <td>IX/NPB/20200907/1744</td>
@@ -217,16 +223,16 @@
                 <td>28.700 Kg</td>
                 <td>Rp 52.578.400</td>
                 <td><span class="fa fa-check-circle green ml-2"></span></td>
-                <td><a href=""><span class="fa fa-eye orange ml-2"></span></a></td>
+                <td><a data-toggle="modal" data-target="#detailPetani"><span class="fa fa-eye orange ml-2"></span></a></td>
+              </tr>
+              <tr>
                 <td>
                   <label class="checkwrap ml-2">
-                    <input type="checkbox" name="chkbox[]" value="2">
+                    <input type="checkbox" name="chkbox[]" value="3">
                     <span class="checkmark"></span>
                   </label>
                 </td>
-              </tr>
-              <tr>
-                <td>1</td>
+                <td>3</td>
                 <td>07/09/2020  18:00</td>
                 <td>IX/NPB/20200907/1800</td>
                 <td>Rahmawati</td>
@@ -234,13 +240,7 @@
                 <td>19.900 Kg</td>
                 <td>Rp 36.456.800</td>
                 <td><span class="fa fa-check-circle green ml-2"></span></td>
-                <td><a href=""><span class="fa fa-eye orange ml-2"></span></a></td>
-                <td>
-                  <label class="checkwrap ml-2">
-                    <input type="checkbox" name="chkbox[]" value="3">
-                    <span class="checkmark"></span>
-                  </label>
-                </td>
+                <td><a  data-toggle="modal" data-target="#detailPetani"><span class="fa fa-eye orange ml-2"></span></a></td>
               </tr>
               
               </tbody>
@@ -270,113 +270,98 @@
     </footer>
     <!-- Footer -->
     <!-- Modal -->
-    <div class="modal fade" id="detailPenerimaan" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="detailPenerimaanLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-              <div class="modal-header bg-hijau">
-                  <h6 class="modal-title" id="detailPenerimaanLabel">Detail Penerimaan</h6>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
-              <div class="modal-body">
-                  <div class="col-md-12 no-padding">
-                    <table id="pabrik-modal" class="table table-bordered table-green nowrap"  style="width:100%" >
-                      <thead>
-                        <tr>
-                          <th>No</th>
-                          <th>Nama Supplier</th>
-                          <th>Tanggal Pengiriman</th>
-                          <th>Status Transaksi</th>
-                          <th>Kebun Petani</th>
-                          <th>Lokasi Kebun</th>
-                          <th>Jumlah Penerimaan</th>
-                          <th>Nama Supplier</th>
-                          <th>No. Telepon</th>
-                          <th>Jumlah Tonase</th>
-                          <th>Lahan</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>1</td>
-                          <td>Sarman</td>
-                          <td>07/09/2020  08:00</td>
-                          <td>Proses</td>
-                          <td>Kebun 1</td>
-                          <td>Kebun Sektor 1</td>
-                          <td>50.000 Kg</td>
-                          <td>Kartika Wati</td>
-                          <td>08123456789</td>
-                          <td>2000 Kg</td>
-                          <td>Gambut</td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                          <td>CV Palmia Loka Jaya</td>
-                          <td>07/09/2020  17:44</td>
-                          <td>Proses</td>
-                          <td>Kebun 1</td>
-                          <td>Kebun Sektor 2</td>
-                          <td>40.000 Kg</td>
-                          <td>Diana Santri</td>
-                          <td>08561234567</td>
-                          <td>1500 Kg</td>
-                          <td>Gambut</td>
-                        </tr>
-                        <tr>
-                          <td>3</td>
-                          <td>CV Palmia Loka Jaya</td>
-                          <td>07/09/2020  18:00</td>
-                          <td>Proses</td>
-                          <td>Kebun 2</td>
-                          <td>Kebun Sektor 3</td>
-                          <td>40.000 Kg</td>
-                          <td>Rifki Darmawan</td>
-                          <td>08122394891</td>
-                          <td>1200 Kg</td>
-                          <td>Gambut</td>
-                        </tr>
-                        <tr>
-                          <td>4</td>
-                          <td>CV Palmia Loka Jaya</td>
-                          <td>07/09/2020  17:55</td>
-                          <td>Proses</td>
-                          <td>Kebun 2</td>
-                          <td>Kebun Sektor 3</td>
-                          <td>40.000 Kg</td>
-                          <td>Sigit Prasetyo</td>
-                          <td>08134888921</td>
-                          <td>1200 Kg</td>
-                          <td>Gambut</td>
-                        </tr>
-                        <tr>
-                          <td>5</td>
-                          <td>Rahmawati</td>
-                          <td>07/09/2020  18:00</td>
-                          <td>Proses</td>
-                          <td>Kebun 2</td>
-                          <td>Kebun Sektor 3</td>
-                          <td>40.000 Kg</td>
-                          <td>Rahmawati</td>
-                          <td>08981234567</td>
-                          <td>1000 Kg</td>
-                          <td>Gambut</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-              </div>
-              <div class="modal-footer">
-                <div class="row no-margin">
-                    <div class="col pl-0">
-                        <a data-dismiss="modal" class="btn btn-secondary-gradient btn-block">Tutup</a>
-                    </div>
+      <div class="modal fade" id="detailPetani" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="detailPetaniLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header bg-hijau">
+                    <h6 class="modal-title" id="detailPetaniLabel">Detail Data Petani</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-              </div>
-          </div>
+                <div class="modal-body">
+                  <form>
+                      <div class="col-md-12 no-padding">
+                          <div class="col-md-4">
+                              <div class="form-group">
+                                  <label class="">Foto Profil</label>
+                                  <img class="d-flex m-auto" src="assets/img/image-def.png" alt="" width="100%">
+                              </div>
+                          </div>
+                          <div class="col-md-4">
+                              <div class="form-group">
+                                  <label class="">Nama Lengkap</label>
+                                  <input type="text" class="form-control-plaintext" value="Sarman" readonly disabled>
+                              </div>
+                              <div class="form-group">
+                                  <label class="">No. Telepon</label>
+                                  <input type="text" class="form-control-plaintext" value="08123456789" readonly disabled>
+                              </div>
+                              <div class="form-group">
+                                  <label class="">No. KTP</label>
+                                  <input type="text" class="form-control-plaintext" value="3320050909790004" readonly disabled>
+                              </div>
+                              <div class="form-group">
+                                  <label class="">No. NPWP</label>
+                                  <input type="text" class="form-control-plaintext" value="091219879898000" readonly disabled>
+                              </div>
+                          </div>
+                          <div class="col-md-4">
+                              <div class="form-group">
+                                  <label class="">Alamat Petani</label>
+                                  <textarea type="text" class="form-control-plaintext" style="height: 100px" readonly disabled>Jl. Medan - Banda Aceh No. 21 RT 001, RW 003, Kel. Seureubok Teungoh, Kec. Peurelok Timur, Kab. Aceh Timur, Prov. Aceh, 24452</textarea>
+                                  <div class="invalid-feedback">Mohon isi kolom ini</div>
+                              </div>
+                              <div class="form-group">
+                                  <label class="">No. KK</label>
+                                  <input type="text" class="form-control-plaintext" value="98900509097900004" readonly disabled>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="separator"></div>
+                      <div class="col-md-12 no-padding">
+                          <h6 class="col green font-weight-bold mb-3">Badan Hukum</h6>
+                          <div class="col-md-4">
+                              <div class="form-group">
+                                  <label class="">Nama PT/CV/UD/Kop</label>
+                                  <input type="text" class="form-control-plaintext" value="PT. Padang Palma Permai" readonly disabled>
+                              </div>
+                          </div>
+                          <div class="col-md-4">
+                              <div class="form-group">
+                                  <label class="">No. NPWP</label>
+                                  <input type="text" class="form-control-plaintext" value="091219879898000" readonly disabled>
+                              </div>
+                          </div>
+                          <div class="col-md-4">
+                          </div>
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="separator"></div>
+                      <div class="col-md-12 no-padding">
+                        <div class="row m-0">
+                          <h6 class="col-12 green font-weight-bold mb-3">Dokumen</h6>
+                          <div class="px-2">
+                            <img src="assets/img/ex-doc-1.jpg" alt="">
+                          </div>
+                          <div class="px-2">
+                            <img src="assets/img/ex-doc-2.jpg" alt="">
+                          </div>
+                        </div>
+                      </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <div class="row no-margin">
+                      <div class="col pl-0">
+                          <a data-dismiss="modal" class="btn btn-secondary btn-block">Kembali</a>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
       </div>
-    </div>
   </div>
 
   <!-- jQuery -->
@@ -402,6 +387,15 @@
     $("#pabrik").DataTable({
       "scrollX": true,
       "bFilter": true,
+      "language": {
+        "search": "Cari",
+        "lengthMenu": "Tampilkan _MENU_",
+        "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
+        "paginate": {
+          "next":       "Berikutnya",
+          "previous":   "Sebelumnya"
+        },
+      },
      
     });
     $("#pabrik-modal").DataTable({
@@ -409,6 +403,15 @@
       "bLengthChange": false,
       "searching": false,
       "bInfo": false,
+      "language": {
+        "search": "Cari",
+        "lengthMenu": "Tampilkan _MENU_",
+        "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
+        "paginate": {
+          "next":       "Berikutnya",
+          "previous":   "Sebelumnya"
+        },
+      },
       
     });
   });

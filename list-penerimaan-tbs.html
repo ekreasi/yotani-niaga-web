@@ -178,68 +178,70 @@
             <div class="font-title col-md-12 mb-4">
               <h6 class="no-margin">Daftar Penerimaan TBS</h6>
             </div>
-            <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
-              <thead>
-              <tr>
-                <th>No</th>
-                <th>Tanggal Pengiriman</th>
-                <th>No. Penerimaan Barang</th>
-                <th>Nama Supplier</th>
-                <th>Plat Nomor</th>
-                <th>Tonase (Netto)</th>
-                <th>Total</th>
-                <th>Status</th>
-                <th>ACC PKS</th>
-                <th>Aksi</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>1</td>
-                <td>07/09/2020  08:00</td>
-                <td>IX/NPB/20200907/0800</td>
-                <td>Sarman</td>
-                <td>BL6045LAH</td>
-                <td>19.100 Kg</td>
-                <td>Rp 34.991.200</td>
-                <td><span class="fa fa-times-circle danger ml-2"></span></td>
-                <td><span class="fa fa-check-circle green ml-2"></span></td>
-                <td><a href=""><span class="fa fa-eye orange ml-2"></span></a></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>07/09/2020  17:44</td>
-                <td>IX/NPB/20200907/1744</td>
-                <td>CV Palmia Loka</td>
-                <td>BL5412AWT</td>
-                <td>28.700 Kg</td>
-                <td>Rp 52.578.400</td>
-                <td><span class="fa fa-check-circle green ml-2"></span></td>
-                <td><span class="fa fa-times-circle danger ml-2"></span></td>
-                <td><a href=""><span class="fa fa-eye orange ml-2"></span></a></td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>07/09/2020  18:00</td>
-                <td>IX/NPB/20200907/1800</td>
-                <td>Rahmawati</td>
-                <td>BL4134LAH</td>
-                <td>19.900 Kg</td>
-                <td>Rp 36.456.800</td>
-                <td><span class="fa fa-check-circle green ml-2"></span></td>
-                <td><span class="fa fa-check-circle green ml-2"></span></td>
-                <td><a href=""><span class="fa fa-eye orange ml-2"></span></a></td>
-              </tr>
-              
-              </tbody>
-              <!-- <tfoot>
+            <div class="custom-filter">
+              <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
+                <thead>
                 <tr>
-                  <td colspan="3">Total Booking</td>
-                  <td>130.000 Kg</td>
+                  <th>No</th>
+                  <th>Tanggal Pengiriman</th>
+                  <th>No. Penerimaan Barang</th>
+                  <th>Nama Supplier</th>
+                  <th>Plat Nomor</th>
+                  <th>Tonase (Netto)</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                  <th>ACC PKS</th>
+                  <th>Aksi</th>
                 </tr>
-              </tfoot> -->
-              
-            </table>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>07/09/2020  08:00</td>
+                  <td>IX/NPB/20200907/0800</td>
+                  <td>Sarman</td>
+                  <td>BL6045LAH</td>
+                  <td>19.100 Kg</td>
+                  <td>Rp 34.991.200</td>
+                  <td><span class="fa fa-times-circle danger ml-2"></span></td>
+                  <td><span class="fa fa-check-circle green ml-2"></span></td>
+                  <td><a href=""><span class="fa fa-eye orange ml-2"></span></a></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>07/09/2020  17:44</td>
+                  <td>IX/NPB/20200907/1744</td>
+                  <td>CV Palmia Loka</td>
+                  <td>BL5412AWT</td>
+                  <td>28.700 Kg</td>
+                  <td>Rp 52.578.400</td>
+                  <td><span class="fa fa-check-circle green ml-2"></span></td>
+                  <td><span class="fa fa-times-circle danger ml-2"></span></td>
+                  <td><a href=""><span class="fa fa-eye orange ml-2"></span></a></td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>07/09/2020  18:00</td>
+                  <td>IX/NPB/20200907/1800</td>
+                  <td>Rahmawati</td>
+                  <td>BL4134LAH</td>
+                  <td>19.900 Kg</td>
+                  <td>Rp 36.456.800</td>
+                  <td><span class="fa fa-check-circle green ml-2"></span></td>
+                  <td><span class="fa fa-check-circle green ml-2"></span></td>
+                  <td><a href=""><span class="fa fa-eye orange ml-2"></span></a></td>
+                </tr>
+                
+                </tbody>
+                <!-- <tfoot>
+                  <tr>
+                    <td colspan="3">Total Booking</td>
+                    <td>130.000 Kg</td>
+                  </tr>
+                </tfoot> -->
+                
+              </table>
+            </div>
           </div>
           <!-- /.card-body -->
         </div>
@@ -391,7 +393,8 @@
       "scrollX": true,
       "bFilter": true,
       "language": {
-        "search": "Cari",
+        "search": "_INPUT_",
+        "searchPlaceholder": "Pencarian",
         "lengthMenu": "Tampilkan _MENU_",
         "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
         "paginate": {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Yotani Niaga | Report</title>
+  <title>Yotani Niaga | Report Hutang</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">  
@@ -184,52 +184,54 @@
               <a class="btn btn-secondary mr-2" data-toggle="" data-target="">Export Excel</a>
               <a class="btn btn-secondary " data-toggle="" data-target="">Export PDF</a>
             </div>
-            <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
-              <thead>
-              <tr>
-                <th>No</th>
-                <th>Nama Supplier</th>
-                <th>Tanggal Pembayaran</th>
-                <th>Tonase</th>
-                <th>Nominal</th>
-                <th>Informasi Rekening</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>1</td>
-                <td>Marwan</td>
-                <td>08/09/2020</td>
-                <td>9.851 Kg</td>
-                <td>Rp 10.638.092,00</td>
-                <td>BCA - 1609092929</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Rahmawati</td>
-                <td>07/09/2020</td>
-                <td>20.000 Kg</td>
-                <td>Rp 37.840.000,00</td>
-                <td>Mandiri - 128900919020</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Irwan</td>
-                <td>06/09/2020</td>
-                <td>13.780 Kg</td>
-                <td>Rp 26.071.760,00</td>
-                <td>BRI - 12902139843998</td>
-              </tr>
-              
-              </tbody>
-              <!-- <tfoot>
+            <div class="custom-filter">
+              <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
+                <thead>
                 <tr>
-                  <td colspan="3">Total Booking</td>
-                  <td>130.000 Kg</td>
+                  <th>No</th>
+                  <th>Nama Supplier</th>
+                  <th>Tanggal Pembayaran</th>
+                  <th>Tonase</th>
+                  <th>Nominal</th>
+                  <th>Informasi Rekening</th>
                 </tr>
-              </tfoot> -->
-              
-            </table>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Marwan</td>
+                  <td>08/09/2020</td>
+                  <td>9.851 Kg</td>
+                  <td>Rp 10.638.092,00</td>
+                  <td>BCA - 1609092929</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Rahmawati</td>
+                  <td>07/09/2020</td>
+                  <td>20.000 Kg</td>
+                  <td>Rp 37.840.000,00</td>
+                  <td>Mandiri - 128900919020</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Irwan</td>
+                  <td>06/09/2020</td>
+                  <td>13.780 Kg</td>
+                  <td>Rp 26.071.760,00</td>
+                  <td>BRI - 12902139843998</td>
+                </tr>
+                
+                </tbody>
+                <!-- <tfoot>
+                  <tr>
+                    <td colspan="3">Total Booking</td>
+                    <td>130.000 Kg</td>
+                  </tr>
+                </tfoot> -->
+                
+              </table>
+            </div>
           </div>
           <!-- /.card-body -->
         </div>
@@ -312,7 +314,8 @@
     $("#pabrik").DataTable({
       "scrollX": true,
       "language": {
-        "search": "Cari",
+        "search": "_INPUT_",
+        "searchPlaceholder": "Pencarian",
         "lengthMenu": "Tampilkan _MENU_",
         "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
         "paginate": {

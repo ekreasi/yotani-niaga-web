@@ -178,60 +178,62 @@
             <div class="font-title col-md-12 mb-4">
               <h6 class="no-margin">Daftar Penerimaan dari Petani</h6>
             </div>
-            <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
-              <thead>
-              <tr>
-                <th>No</th>
-                <th>Nama Supplier</th>
-                <th>Tanggal Pengiriman</th>
-                <th>Status Transaksi</th>
-                <th>Kebun Petani</th>
-                <th>Lokasi Kebun</th>
-                <th>Jumlah Penerimaan</th>
-                <th>Aksi</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>1</td>
-                <td>Sarman</td>
-                <td>07/09/2020  08:00</td>
-                <td>Proses</td>
-                <td>Kebun 1</td>
-                <td>Kebun Sektor 1</td>
-                <td>50.000 Kg</td>
-                <td><a href="#"><span class="fa fa-eye orange d-none ml-2"></span></a></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>CV Palmia Loka Jaya</td>
-                <td>07/09/2020  17:44</td>
-                <td>Proses</td>
-                <td>Kebun 1</td>
-                <td>Kebun Sektor 2</td>
-                <td>40.000 Kg</td>
-                <td><a type="button" data-toggle="modal" data-target="#detailPenerimaan"><span class="fa fa-eye orange ml-2"></span></a></td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Rahmawati</td>
-                <td>07/09/2020  18:00</td>
-                <td>Proses</td>
-                <td>Kebun 2</td>
-                <td>Kebun Sektor 3</td>
-                <td>40.000 Kg</td>
-                <td><a href="#"><span class="fa fa-eye orange d-none ml-2"></span></a></td>
-              </tr>
-              
-              </tbody>
-              <!-- <tfoot>
+            <div class="custom-filter">
+              <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
+                <thead>
                 <tr>
-                  <td colspan="3">Total Booking</td>
-                  <td>130.000 Kg</td>
+                  <th>No</th>
+                  <th>Nama Supplier</th>
+                  <th>Tanggal Pengiriman</th>
+                  <th>Status Transaksi</th>
+                  <th>Kebun Petani</th>
+                  <th>Lokasi Kebun</th>
+                  <th>Jumlah Penerimaan</th>
+                  <th>Aksi</th>
                 </tr>
-              </tfoot> -->
-              
-            </table>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Sarman</td>
+                  <td>07/09/2020  08:00</td>
+                  <td>Proses</td>
+                  <td>Kebun 1</td>
+                  <td>Kebun Sektor 1</td>
+                  <td>50.000 Kg</td>
+                  <td><a href="#"><span class="fa fa-eye orange d-none ml-2"></span></a></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>CV Palmia Loka Jaya</td>
+                  <td>07/09/2020  17:44</td>
+                  <td>Proses</td>
+                  <td>Kebun 1</td>
+                  <td>Kebun Sektor 2</td>
+                  <td>40.000 Kg</td>
+                  <td><a type="button" data-toggle="modal" data-target="#detailPenerimaan"><span class="fa fa-eye orange ml-2"></span></a></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Rahmawati</td>
+                  <td>07/09/2020  18:00</td>
+                  <td>Proses</td>
+                  <td>Kebun 2</td>
+                  <td>Kebun Sektor 3</td>
+                  <td>40.000 Kg</td>
+                  <td><a href="#"><span class="fa fa-eye orange d-none ml-2"></span></a></td>
+                </tr>
+                
+                </tbody>
+                <!-- <tfoot>
+                  <tr>
+                    <td colspan="3">Total Booking</td>
+                    <td>130.000 Kg</td>
+                  </tr>
+                </tfoot> -->
+                
+              </table>
+            </div>
           </div>
           <!-- /.card-body -->
         </div>
@@ -383,7 +385,8 @@
       "scrollX": true,
       "bFilter": true,
       "language": {
-        "search": "Cari",
+        "search": "_INPUT_",
+        "searchPlaceholder": "Pencarian",
         "lengthMenu": "Tampilkan _MENU_",
         "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
         "paginate": {
@@ -399,7 +402,8 @@
       "searching": false,
       "bInfo": false,
       "language": {
-        "search": "Cari",
+        "search": "_INPUT_",
+        "searchPlaceholder": "Pencarian",
         "lengthMenu": "Tampilkan _MENU_",
         "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
         "paginate": {

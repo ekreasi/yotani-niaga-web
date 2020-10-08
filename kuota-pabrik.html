@@ -178,44 +178,46 @@
             <div class="font-title col-md-12 mb-4">
               <h6 class="no-margin">Daftar Supplier yang Telah Melakukan Booking Supply</h6>
             </div>
-            <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
-              <thead>
-              <tr>
-                <th>No</th>
-                <th>Nama Petani</th>
-                <th>Tanggal</th>
-                <th>Jumlah TBS</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>1</td>
-                <td>Sarman</td>
-                <td>03/09/2020  11:00</td>
-                <td>50.000 Kg</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Andika</td>
-                <td>03/09/2020  17:44</td>
-                <td>40.000 Kg</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Rahmawati</td>
-                <td>03/09/2020  10:00</td>
-                <td>40.000 Kg</td>
-              </tr>
-              
-              </tbody>
-              <tfoot>
+            <div class="custom-filter">
+              <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
+                <thead>
                 <tr>
-                  <td colspan="3">Total Booking</td>
-                  <td>130.000 Kg</td>
+                  <th>No</th>
+                  <th>Nama Petani</th>
+                  <th>Tanggal</th>
+                  <th>Jumlah TBS</th>
                 </tr>
-              </tfoot>
-              
-            </table>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Sarman</td>
+                  <td>03/09/2020  11:00</td>
+                  <td>50.000 Kg</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Andika</td>
+                  <td>03/09/2020  17:44</td>
+                  <td>40.000 Kg</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Rahmawati</td>
+                  <td>03/09/2020  10:00</td>
+                  <td>40.000 Kg</td>
+                </tr>
+                
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="3">Total Booking</td>
+                    <td>130.000 Kg</td>
+                  </tr>
+                </tfoot>
+                
+              </table>
+            </div>
           </div>
           <!-- /.card-body -->
         </div>
@@ -348,7 +350,8 @@
     $("#pabrik").DataTable({
       "scrollX": true,
       "language": {
-        "search": "Cari",
+        "search": "_INPUT_",
+        "searchPlaceholder": "Pencarian",
         "lengthMenu": "Tampilkan _MENU_",
         "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
         "paginate": {

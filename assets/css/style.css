@@ -696,3 +696,25 @@ tr td {
 .top-5 table thead tr th {
     border-top: none !important;
 }
+.custom-filter input[type="search"] {
+    background-color: #f7f7f7;
+    border: none;
+    font-style: italic;
+    /* margin-right: 40px; */
+}
+.custom-filter input[type="search"]:focus {
+    border: 1px solid #d1d1d1;
+    /* margin-right: 40px; */
+}
+/* .custom-filter .dataTables_filter label::after {
+    content: "\f002";
+    position: absolute;
+    color: #fff;
+    top: 0;
+    right: 8px;
+    display: block;
+    width: 40px;
+    height: 31px;
+    border-radius: 0 0.2rem 0.2rem 0;
+    background-color: #F26327;
+} */

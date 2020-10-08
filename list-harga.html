@@ -179,44 +179,46 @@
             <div class="ml-auto mb-3 no-padding">
               <a class="btn btn-secondary " data-toggle="modal" data-target="#addPrice">Tambah Harga</a>
             </div>
-            <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
-              <thead>
-              <tr>
-                <th>No</th>
-                <th>Harga TBS</th>
-                <th>Tanggal</th>
-                <th>Aksi</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>1</td>
-                <td>Rp 1.485,72</td>
-                <td>08/09/2020</td>
-                <td><a type="button" data-toggle="modal" data-target="#editPrice"><span class="fa fa-pencil orange ml-2"></span></a></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Rp 1.860,43</td>
-                <td>07/09/2020</td>
-                <td><a type="button" data-toggle="modal" data-target="#editPrice"><span class="fa fa-pencil orange ml-2"></span></a></td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Rp 1.648,80</td>
-                <td>06/09/2020</td>
-                <td><a type="button" data-toggle="modal" data-target="#editPrice"><span class="fa fa-pencil orange ml-2"></span></a></td>
-              </tr>
-              
-              </tbody>
-              <!-- <tfoot>
+            <div class="custom-filter">
+              <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
+                <thead>
                 <tr>
-                  <td colspan="3">Total Booking</td>
-                  <td>130.000 Kg</td>
+                  <th>No</th>
+                  <th>Harga TBS</th>
+                  <th>Tanggal</th>
+                  <th>Aksi</th>
                 </tr>
-              </tfoot> -->
-              
-            </table>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Rp 1.485,72</td>
+                  <td>08/09/2020</td>
+                  <td><a type="button" data-toggle="modal" data-target="#editPrice"><span class="fa fa-pencil orange ml-2"></span></a></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Rp 1.860,43</td>
+                  <td>07/09/2020</td>
+                  <td><a type="button" data-toggle="modal" data-target="#editPrice"><span class="fa fa-pencil orange ml-2"></span></a></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Rp 1.648,80</td>
+                  <td>06/09/2020</td>
+                  <td><a type="button" data-toggle="modal" data-target="#editPrice"><span class="fa fa-pencil orange ml-2"></span></a></td>
+                </tr>
+                
+                </tbody>
+                <!-- <tfoot>
+                  <tr>
+                    <td colspan="3">Total Booking</td>
+                    <td>130.000 Kg</td>
+                  </tr>
+                </tfoot> -->
+                
+              </table>
+            </div>
           </div>
           <!-- /.card-body -->
         </div>
@@ -339,7 +341,8 @@
     $("#pabrik").DataTable({
       "scrollX": true,
       "language": {
-        "search": "Cari",
+        "search": "_INPUT_",
+        "searchPlaceholder": "Pencarian",
         "lengthMenu": "Tampilkan _MENU_",
         "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
         "paginate": {

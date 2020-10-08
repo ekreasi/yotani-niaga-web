@@ -180,7 +180,8 @@
             <div class="ml-auto mb-3 no-padding">
               <a class="btn btn-secondary " data-toggle="modal" data-target="#addAdmin">Tambah Admin</a>
             </div>
-            <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
+            <div class="custom-filter">
+              <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
                 <thead>
                 <tr>
                   <th>No</th>
@@ -247,6 +248,7 @@
                 </tfoot> -->
                 
               </table>
+            <div class="custom-filter">
           </div>
           <!-- /.card-body -->
         </div>
@@ -493,7 +495,8 @@
       $("#pabrik").DataTable({
         "scrollX": true,
         "language": {
-          "search": "Cari",
+        "search": "_INPUT_",
+        "searchPlaceholder": "Pencarian",
           "lengthMenu": "Tampilkan _MENU_",
           "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
           "paginate": {

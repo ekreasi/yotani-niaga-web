@@ -63,7 +63,7 @@ a:focus {
 .dropdown-item.active, .dropdown-item:active {
     color: #009444 !important;
     text-decoration: none !important;
-    background-color: #f8f9fa !important;
+    background-color: #fff !important;
 }
 .navbar-collapse, .navbar-nav {
     align-items: center;

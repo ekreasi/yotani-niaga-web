@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yotani Niaga | Report</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">  
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/libs/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/icons/fontawesome/styles.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <link rel="stylesheet" href="assets/libs/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <link rel="stylesheet" href="assets/libs/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="assets/libs/jqvmap/jqvmap.min.css">
+  <link rel="stylesheet" href="assets/css/adminlte.min.css">
+  <link rel="stylesheet" href="assets/libs/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="assets/libs/daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="assets/libs/summernote/summernote-bs4.css">
+
+  <!-- DataTables -->
+  <link rel="stylesheet" href="assets/libs/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="assets/libs/datatables-responsive/css/responsive.bootstrap4.min.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-white navbar-light">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/yotani-logo.svg" class="d-inline-block align-middle" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <!-- Menu Bar -->
+      <div class="collapse navbar-collapse font-weight-medium" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profil-pabrik.html">Profil Pabrik</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kelola-pengguna.html">Kelola Pengguna</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="petani.html">Petani</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="transactionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Transaksi
+            </a>
+            <div class="dropdown-menu" aria-labelledby="transactionDropdown">
+                <a class="dropdown-item" href="kuota-pabrik.html">Kuota Pabrik</a>
+                <a class="dropdown-item" href="list-penerimaan-tbs.html">Daftar Penerimaan TBS</a>
+                <a class="dropdown-item" href="penerimaan-petani.html">Penerimaan Dari Petani</a>
+                <a class="dropdown-item" href="approval-penerimaan-petani.html">Approval Penerimaan Dari Petani</a>
+                <a class="dropdown-item" href="pembayaran.html">Pembayaran</a>
+                <a class="dropdown-item" href="list-hutang.html">Daftar Hutang</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="list-harga.html">List Harga</a>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="" id="reportDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Report
+            </a>
+            <div class="dropdown-menu" aria-labelledby="reportDropdown">
+                <a class="dropdown-item active" href="report-supplier.html">Report Supplier</a>
+                <a class="dropdown-item" href="report-pembayaran.html">Report Pembayaran</a>
+                <a class="dropdown-item" href="report-trace.html">Report Tracebility</a>
+                <a class="dropdown-item" href="report-hutang.html">Report Hutang</a>
+            </div>
+          </li>
+        </ul>
+        <!-- Notif -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown notification-wrap no-arrow">
+            <a class="nav-link notif" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-bell fa-fw"></i>
+                <!-- Counter - Alerts -->
+                <span class="badge badge-warning badge-counter navbar-badge"> </span>
+            </a>
+            <!-- Dropdown - Alerts -->
+            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header text-left green">
+                Notifikasi
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                <div>
+                    <span class="font-weight-bold">Approval Order</span>
+                    <p class="mb-1">Order telah di approve Kelompok Tani </p>
+                    <div class="small text-gray-500">03 Agustus 2020 09:30 WIB</div>
+                </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                <div>
+                    <span class="font-weight-bold">Approval Admin Timbangan</span>
+                    <p class="mb-1">Hasil timbangan telah diterima</p>
+                    <div class="small text-gray-500">03 Agustus 2020 09:30 WIB</div>
+                </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                <div>
+                    <span class="font-weight-bold">Approval Finance</span>
+                    <p class="mb-1">Transaksi sudah selesai..</p>
+                    <div class="small text-gray-500">03 Agustus 2020 09:30 WIB</div>
+                </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item text-center small text-gray-500" href="#">
+                    <i class="fa fa-ellipsis-h"></i></a>
+            </div>
+          </li>
+          <li class="nav-item dropdown no-arrow">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img class="img-profile rounded-circle mr-1" width="24px" height="24px" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+              <span class="mr-3 d-none d-lg-inline font-weight-normal">Valerie Luna</span>
+            </a>
+            <!-- Dropdown - User Information -->
+            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+              <a class="dropdown-item" href="profile.html">
+                Profile
+              </a>
+              <a class="dropdown-item" href="settings.html">
+                Settings
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="login.html" data-toggle="" data-target="">
+                Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+        <!-- /Notif -->
+      </div>
+      <!-- /Menu Bar -->
+
+    </nav>
+  </header>
+
+  <div class="content-wrapper no-margin">
+    <div class="content-header bg-white">
+      <div class="container-fluid">
+        <div aria-label="breadcrumb" class="row">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">Report</li>
+            <li class="breadcrumb-item active" aria-current="page"></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid no-padding">
+        <div class="card">
+          <!-- <div class="card-header">
+            <div class='container-fluid'>
+              <div class="row align-items-center">
+                <div class="mr-auto ">
+                  <h6 class="no-margin">Kuota Hari ini belum diatur</h6>
+                </div>
+                <div class="ml-auto no-padding">
+                  <a class="btn btn-secondary " data-toggle="modal" data-target="#filterModalForm">Tambah Harga</a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="card-body">
+            <div class="font-title col-md-12 mb-3">
+              <h6 class="no-margin">Report Pembayaran</h6>
+            </div>
+            <div class="ml-auto mb-3 no-padding">
+              <a class="btn btn-secondary mr-2" data-toggle="" data-target="">Export Excel</a>
+              <a class="btn btn-secondary " data-toggle="" data-target="">Export PDF</a>
+            </div>
+            <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
+              <thead>
+              <tr>
+                <th>No</th>
+                <th>No. Invoice</th>
+                <th>Supplier</th>
+                <th>Tanggal</th>
+                <th>Jumlah</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>1</td>
+                <td>INV/20200804/XX/VIII/597807677</td>
+                <td>Marwan</td>
+                <td>08/09/2020</td>
+                <td>Rp 2.399.898,88</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>INV/20200804/XX/VIII/597807688</td>
+                <td>Rahmawati</td>
+                <td>07/09/2020</td>
+                <td>Rp 4.335.898,88</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>INV/20200804/XX/VIII/597801123</td>
+                <td>Irwan</td>
+                <td>06/09/2020</td>
+                <td>Rp 1.902.222,46</td>
+              </tr>
+              
+              </tbody>
+              <!-- <tfoot>
+                <tr>
+                  <td colspan="3">Total Booking</td>
+                  <td>130.000 Kg</td>
+                </tr>
+              </tfoot> -->
+              
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+    </section>
+    <!-- /Main content -->
+
+    <!-- Footer -->
+    <footer class="text-muted">
+
+      <!-- Copyright -->
+      <div class="footer-copyright bg-green text-center py-3">Copyright © 2020 by PT Indocyber Global Teknologi</div>
+      <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="addPrice" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="addPriceLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header bg-hijau">
+                <h6 class="modal-title" id="addPriceLabel">Detail Penerimaan</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="col-md-12 no-padding">
+                      <h6 class="green font-weight-bold mb-3">Petani</h6>
+                      <div class="form-group">
+                          <label class="">Harga TBS<span class="text-danger"> *</span></label>
+                          <input type="text" class="form-control" required>
+                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                      </div>
+                      <div class="form-group">
+                          <label class="">Tanggal<span class="text-danger"> *</span></label>
+                          <input type="date" class="form-control" required>
+                          <div class="invalid-feedback">Mohon isi kolom ini</div>
+                      </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <div class="row no-margin">
+                  <div class="col pl-0">
+                      <a  href="" class="btn btn-secondary btn-block">Kembali</a>
+                  </div>
+                  <div class="col pr-0">
+                      <a href="" class="btn btn-secondary-gradient btn-block">Simpan</a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div> -->
+  </div>
+
+  <!-- jQuery -->
+  <script src="assets/libs/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="assets/libs/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="assets/js/adminlte.min.js"></script>
+  <script src="assets/js/demo.js"></script>
+  <!-- DataTables -->
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+  <script src="assets/libs/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="assets/libs/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="assets/libs/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script>
+  $(function () {
+    $("#pabrik").DataTable({
+      "scrollX": true,
+      "language": {
+        "search": "Cari",
+        "lengthMenu": "Tampilkan _MENU_",
+        "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
+        "paginate": {
+          "next":       "Berikutnya",
+          "previous":   "Sebelumnya"
+        },
+      },
+     
+    });
+  });
+</script>
+</body>
+</html>

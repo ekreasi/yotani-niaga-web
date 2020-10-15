@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/libs/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="assets/css/icons/fontawesome/styles.min.css">
+  <link rel="stylesheet" href="assets/css/basic.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <link rel="stylesheet" href="assets/libs/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
@@ -185,6 +186,33 @@
               <a class="btn btn-secondary " data-toggle="" data-target="">Export PDF</a>
             </div>
             <div class="custom-filter">
+              <div class="row">
+                <div class="col-md-6 col-sm-12">
+                  <div class="dataTables_length" id="pabrik_length">
+                    <label>Tampilkan 
+                      <select name="pabrik_length" aria-controls="pabrik" class="custom-select custom-select-sm form-control form-control-sm">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                      </select>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <div id="pabrik_filter" class="dataTables_filter">
+                    <label>
+                      <div class="input-group input-search">
+                        <input type="search" class="form-control" placeholder="Pencarian" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                          <button class="btn btn-third" type="button" id="button-addon2"><i class="fa fa-search"></i></button>
+                        </div>
+                      </div>
+                    </label>
+                    <a data-toggle="modal" data-target="#tableFilter" class="btn btn-fifth" type="button"><i class="fa fa-filter"></i></a>
+                  </div>
+                </div>
+              </div>
               <table id="pabrik" class="table table-bordered table-green nowrap"  style="width:100%" >
                 <thead>
                 <tr>
@@ -293,7 +321,51 @@
         </div>
     </div>
   </div> -->
+  
+  <div class="modal fade" id="tableFilter" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="tableFilterLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header bg-hijau">
+              <h6 class="modal-title" id="tableFilterLabel">Filter</h6>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <form>
+                  <div class="col-md-12 no-padding">
+                    <!-- <h6 class="green font-weight-bold mb-3">Petani</h6> -->
+                    <div class="form-group col-md-5">
+                        <label class="">Tanggal Awal<span class="text-danger"> *</span></label>
+                        <input type="date" class="form-control" required>
+                        <div class="invalid-feedback">Mohon isi kolom ini</div>
+                    </div>
+                    <div class="col-md-2 pt-2 mt-4 text-center px-0">—</div>
+                    <div class="form-group col-md-5">
+                        <label class="">Tanggal Akhir<span class="text-danger"> *</span></label>
+                        <input type="date" class="form-control" required>
+                        <div class="invalid-feedback">Mohon isi kolom ini</div>
+                    </div>
+                  </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+            <div class="row no-margin">
+                <div class="col pl-0">
+                    <a type="button" data-dismiss="modal" class="btn btn-secondary btn-block">Kembali</a>
+                </div>
+                <div class="col pr-0">
+                    <a type="button" class="btn btn-secondary btn-block">Reset</a>
+                </div>
+                <div class="col pr-0">
+                    <a type="button" href="" class="btn btn-secondary-gradient btn-block">Terapkan</a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
   </div>
+</div>
 
   <!-- jQuery -->
   <script src="assets/libs/jquery/jquery.min.js"></script>
@@ -317,10 +389,12 @@
   $(function () {
     $("#pabrik").DataTable({
       "scrollX": true,
+      "searching": false,
+      "bLengthChange" : false,
       "language": {
-        "search": "_INPUT_",
-        "searchPlaceholder": "Pencarian",
-        "lengthMenu": "Tampilkan _MENU_",
+        // "search": "_INPUT_",
+        // "searchPlaceholder": "Pencarian",
+        // "lengthMenu": "Tampilkan _MENU_",
         "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
         "paginate": {
           "next":       "Berikutnya",

@@ -668,6 +668,9 @@ input.form-control-plaintext, textarea.form-control-plaintext {
     margin-bottom: 20px;
     text-align: center;
 }
+.modal::-webkit-scrollbar {
+    display: none;
+}
 .modal .btn-secondary, .modal .btn-secondary-gradient {
     padding: 6px 0;
 }
